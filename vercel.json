@@ -19,6 +19,14 @@
       "dest": "/clientes/ana-fernandes-nails/$1"
     },
     {
+      "src": "/maria-tatiane-nails",
+      "dest": "/clientes/maria-tatiane-nails/index.html"
+    },
+    {
+      "src": "/maria-tatiane-nails/(.*)",
+      "dest": "/clientes/maria-tatiane-nails/$1"
+    },
+    {
       "src": "/(.*)",
       "dest": "/clientes/$1"
     }
