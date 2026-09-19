@@ -11,6 +11,14 @@
       "dest": "/clientes/esmalteria-brandao/$1"
     },
     {
+      "src": "/ana-fernandes-nails",
+      "dest": "/clientes/ana-fernandes-nails/index.html"
+    },
+    {
+      "src": "/ana-fernandes-nails/(.*)",
+      "dest": "/clientes/ana-fernandes-nails/$1"
+    },
+    {
       "src": "/(.*)",
       "dest": "/clientes/$1"
     }
