@@ -1,0 +1,1441 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marianna Nail Arts | Nail Designer em Praia Grande - Guilhermina</title>
+    <meta name="description" content="Marianna Nail Designer em Praia Grande. 3 anos de experiência, nota 5,0 no Google com 20 avaliações. Unhas perfeitas na Guilhermina. Agende pelo WhatsApp!">
+    <meta name="keywords" content="nail designer Praia Grande, manicure Guilhermina, unhas decoradas, nail art, alongamento">
+    <!-- DEMO: noindex para não aparecer no Google antes de aprovar -->
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="canonical" href="https://mariannanailarts.com.br">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Marianna Nail Arts | Nail Designer Profissional">
+    <meta property="og:description" content="Unhas perfeitas na Guilhermina, Praia Grande. Nota 5,0 no Google!">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+
+    <!-- Google Fonts - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "NailSalon",
+        "name": "Marianna Nail Arts",
+        "image": "",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "R. América Latina, 301",
+            "addressLocality": "Praia Grande",
+            "addressRegion": "SP",
+            "postalCode": "11702-170",
+            "addressCountry": "BR"
+        },
+        "telephone": "+5513997774145",
+        "url": "https://mariannanailarts.com.br",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "20"
+        },
+        "priceRange": "$$"
+    }
+    </script>
+
+    <style>
+        /* ===== RESET & VARIABLES ===== */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            /* Paleta coral/pêssego - moderna e fresh */
+            --coral: #FF6B6B;
+            --coral-dark: #EE5A5A;
+            --coral-light: #FF8E8E;
+            --peach: #FFEAA7;
+            --peach-light: #FFF5D6;
+            --cream: #FFFAF0;
+            --mint: #81ECEC;
+            --white: #FFFFFF;
+            --text-dark: #2D3436;
+            --text-gray: #636E72;
+            --whatsapp: #25D366;
+
+            --gradient-main: linear-gradient(135deg, var(--coral) 0%, #FD79A8 100%);
+            --gradient-warm: linear-gradient(135deg, var(--peach) 0%, var(--coral-light) 100%);
+            --gradient-overlay: linear-gradient(135deg, rgba(255, 107, 107, 0.88) 0%, rgba(253, 121, 168, 0.85) 100%);
+
+            --shadow-coral: 0 8px 30px rgba(255, 107, 107, 0.35);
+            --shadow-card: 0 10px 40px rgba(45, 52, 54, 0.08);
+            --shadow-soft: 0 4px 20px rgba(255, 107, 107, 0.15);
+
+            --radius: 16px;
+            --radius-lg: 24px;
+            --radius-xl: 32px;
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--cream);
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===== TYPOGRAPHY ===== */
+        h1, h2, h3 {
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        @media (min-width: 768px) {
+            .section-title {
+                font-size: 2.75rem;
+            }
+        }
+
+        .section-title span {
+            background: var(--gradient-main);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            font-weight: 400;
+            text-align: center;
+            color: var(--text-gray);
+            max-width: 550px;
+            margin: 0 auto 3rem;
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 18px 36px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all var(--transition);
+            text-align: center;
+            min-height: 56px;
+        }
+
+        .btn-primary {
+            background: var(--gradient-main);
+            color: var(--white);
+            box-shadow: var(--shadow-coral);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 40px rgba(255, 107, 107, 0.45);
+        }
+
+        .btn-white {
+            background: var(--white);
+            color: var(--coral);
+            box-shadow: var(--shadow-card);
+        }
+
+        .btn-white:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid rgba(255, 255, 255, 0.8);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: white;
+            transform: translateY(-2px);
+        }
+
+        .btn-whatsapp {
+            background: var(--whatsapp);
+            color: white;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+        }
+
+        .btn-whatsapp:hover {
+            background: #20BA5A;
+            transform: translateY(-3px);
+        }
+
+        .btn svg {
+            width: 22px;
+            height: 22px;
+            flex-shrink: 0;
+        }
+
+        /* ===== HEADER ===== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 20px 0;
+            transition: all var(--transition);
+        }
+
+        .header.scrolled {
+            background: rgba(255, 107, 107, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 12px 0;
+            box-shadow: 0 4px 30px rgba(255, 107, 107, 0.3);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: white;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo-icon {
+            font-size: 1.6rem;
+        }
+
+        .header-cta {
+            padding: 12px 24px;
+            font-size: 0.9rem;
+            min-height: auto;
+        }
+
+        /* ===== HERO BANNER ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* IMAGEM DE FUNDO DO BANNER */
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1604654894610-df63bc536371?w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-overlay);
+        }
+
+        /* Blobs decorativos */
+        .hero-blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.4;
+        }
+
+        .hero-blob-1 {
+            width: 400px;
+            height: 400px;
+            background: var(--peach);
+            top: -100px;
+            right: -100px;
+        }
+
+        .hero-blob-2 {
+            width: 300px;
+            height: 300px;
+            background: var(--mint);
+            bottom: -50px;
+            left: -50px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: white;
+            padding: 100px 0 60px;
+            width: 100%;
+        }
+
+        @media (min-width: 768px) {
+            .hero-content {
+                text-align: center;
+                max-width: 800px;
+                margin: 0 auto;
+            }
+        }
+
+        .hero-emoji {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: white;
+            margin-bottom: 24px;
+            backdrop-filter: blur(10px);
+            animation: slideDown 0.8s ease forwards;
+            opacity: 0;
+        }
+
+        .hero-badge svg {
+            width: 18px;
+            height: 18px;
+            color: var(--peach);
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+            animation: slideUp 0.8s ease 0.2s forwards;
+            opacity: 0;
+        }
+
+        @media (min-width: 768px) {
+            .hero-title {
+                font-size: 3.5rem;
+            }
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            font-weight: 400;
+            opacity: 0.95;
+            margin-bottom: 36px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+            animation: slideUp 0.8s ease 0.4s forwards;
+            opacity: 0;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+            animation: slideUp 0.8s ease 0.6s forwards;
+            opacity: 0;
+        }
+
+        @media (min-width: 480px) {
+            .hero-buttons {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+
+        .hero-buttons .btn {
+            width: 100%;
+            max-width: 280px;
+        }
+
+        @media (min-width: 480px) {
+            .hero-buttons .btn {
+                width: auto;
+            }
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            animation: bounce 2s infinite;
+        }
+
+        .scroll-indicator svg {
+            width: 28px;
+            height: 28px;
+            color: white;
+            opacity: 0.7;
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
+            40% { transform: translateY(-10px) translateX(-50%); }
+            60% { transform: translateY(-5px) translateX(-50%); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== SERVICES SECTION ===== */
+        .services {
+            padding: 80px 0;
+            background: var(--white);
+            position: relative;
+        }
+
+        @media (min-width: 768px) {
+            .services {
+                padding: 120px 0;
+            }
+        }
+
+        .services::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 200px;
+            background: linear-gradient(to bottom, var(--cream) 0%, var(--white) 100%);
+        }
+
+        .services-grid {
+            display: grid;
+            gap: 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        @media (min-width: 600px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 900px) {
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            transition: all var(--transition);
+            box-shadow: var(--shadow-card);
+            border: 2px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--coral-light);
+            box-shadow: var(--shadow-coral);
+        }
+
+        .service-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .service-content {
+            padding: 28px;
+        }
+
+        .service-emoji {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+
+        .service-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .service-desc {
+            font-size: 0.95rem;
+            color: var(--text-gray);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .service-card .btn {
+            width: 100%;
+            padding: 14px;
+            font-size: 0.9rem;
+        }
+
+        /* ===== GALERIA SECTION ===== */
+        .galeria {
+            padding: 80px 0;
+            background: var(--gradient-warm);
+        }
+
+        @media (min-width: 768px) {
+            .galeria {
+                padding: 120px 0;
+            }
+        }
+
+        .galeria .section-title {
+            color: var(--text-dark);
+        }
+
+        .galeria .section-title span {
+            color: var(--coral-dark);
+            -webkit-text-fill-color: var(--coral-dark);
+        }
+
+        .galeria-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        @media (min-width: 600px) {
+            .galeria-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 20px;
+            }
+        }
+
+        .galeria-item {
+            aspect-ratio: 1;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            box-shadow: var(--shadow-card);
+        }
+
+        .galeria-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.5s ease;
+        }
+
+        .galeria-item::before {
+            content: '✨';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            font-size: 2rem;
+            z-index: 2;
+            transition: all var(--transition);
+        }
+
+        .galeria-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 107, 107, 0.5);
+            opacity: 0;
+            transition: opacity var(--transition);
+        }
+
+        .galeria-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .galeria-item:hover::before {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .galeria-item:hover::after {
+            opacity: 1;
+        }
+
+        .galeria-cta {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .btn-instagram {
+            background: linear-gradient(135deg, #833AB4 0%, #E1306C 50%, #F77737 100%);
+            color: white;
+            box-shadow: 0 8px 30px rgba(225, 48, 108, 0.4);
+        }
+
+        .btn-instagram:hover {
+            transform: translateY(-3px) scale(1.02);
+        }
+
+        /* ===== DEPOIMENTOS SECTION ===== */
+        .depoimentos {
+            padding: 80px 0;
+            background: var(--white);
+        }
+
+        @media (min-width: 768px) {
+            .depoimentos {
+                padding: 120px 0;
+            }
+        }
+
+        .depoimentos-grid {
+            display: grid;
+            gap: 24px;
+        }
+
+        @media (min-width: 768px) {
+            .depoimentos-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .depoimento-card {
+            background: var(--cream);
+            border-radius: var(--radius-xl);
+            padding: 32px;
+            position: relative;
+            transition: all var(--transition);
+        }
+
+        .depoimento-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-coral);
+        }
+
+        .depoimento-card::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            right: 28px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 5rem;
+            font-weight: 800;
+            background: var(--gradient-main);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            opacity: 0.2;
+            line-height: 1;
+        }
+
+        .depoimento-stars {
+            display: flex;
+            gap: 4px;
+            margin-bottom: 16px;
+        }
+
+        .depoimento-stars svg {
+            width: 20px;
+            height: 20px;
+            color: var(--coral);
+            fill: var(--coral);
+        }
+
+        .depoimento-text {
+            font-size: 1rem;
+            color: var(--text-dark);
+            line-height: 1.7;
+            margin-bottom: 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .depoimento-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .depoimento-avatar {
+            width: 48px;
+            height: 48px;
+            background: var(--gradient-main);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .depoimento-name {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .depoimento-label {
+            font-size: 0.85rem;
+            color: var(--text-gray);
+        }
+
+        /* ===== CTA SECTION ===== */
+        .cta-section {
+            padding: 80px 0;
+            background: var(--gradient-main);
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            top: -200px;
+            right: -200px;
+        }
+
+        .cta-emoji {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .cta-title {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+
+        @media (min-width: 768px) {
+            .cta-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        .cta-subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 32px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ===== LOCATION SECTION ===== */
+        .location {
+            padding: 80px 0;
+            background: var(--cream);
+        }
+
+        @media (min-width: 768px) {
+            .location {
+                padding: 120px 0;
+            }
+        }
+
+        .location-grid {
+            display: grid;
+            gap: 40px;
+        }
+
+        @media (min-width: 900px) {
+            .location-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 60px;
+            }
+        }
+
+        .location-card {
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            padding: 32px;
+            box-shadow: var(--shadow-card);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .card-header-icon {
+            width: 56px;
+            height: 56px;
+            background: var(--gradient-main);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .card-header h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .info-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 16px;
+            background: var(--cream);
+            border-radius: var(--radius);
+        }
+
+        .info-icon {
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .info-text {
+            color: var(--text-gray);
+            line-height: 1.5;
+        }
+
+        .info-text strong {
+            color: var(--text-dark);
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .mapa {
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-card);
+            height: 100%;
+            min-height: 350px;
+        }
+
+        .mapa iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 350px;
+            border: none;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--text-dark);
+            color: white;
+            padding: 50px 0 30px;
+        }
+
+        .footer-content {
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .footer-tagline {
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 24px;
+        }
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 30px;
+        }
+
+        .footer-social a {
+            width: 48px;
+            height: 48px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: all var(--transition);
+        }
+
+        .footer-social a:hover {
+            background: var(--coral);
+            transform: translateY(-3px);
+        }
+
+        .footer-social svg {
+            width: 22px;
+            height: 22px;
+        }
+
+        .footer-copy {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.4);
+            padding-top: 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* ===== WHATSAPP FLUTUANTE ===== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 999;
+            width: 64px;
+            height: 64px;
+            background: var(--whatsapp);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float svg {
+            width: 36px;
+            height: 36px;
+            color: white;
+        }
+
+        @media (min-width: 768px) {
+            .whatsapp-float {
+                bottom: 32px;
+                right: 32px;
+                width: 70px;
+                height: 70px;
+            }
+
+            .whatsapp-float svg {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        /* ===== ACCESSIBILITY ===== */
+        :focus-visible {
+            outline: 3px solid var(--coral);
+            outline-offset: 3px;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--coral);
+            color: white;
+            padding: 14px 28px;
+            border-radius: var(--radius);
+            z-index: 10000;
+            transition: top 0.3s;
+            font-weight: 600;
+        }
+
+        .skip-link:focus {
+            top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Ir para o conteúdo principal</a>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="#" class="logo">
+                    <span class="logo-icon">✨</span>
+                    Marianna
+                </a>
+                <a href="https://wa.me/message/QDEKHOPUYYKPJ1" class="btn btn-white header-cta" target="_blank" rel="noopener">
+                    Agendar
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero Banner -->
+        <section class="hero">
+            <div class="hero-bg" role="img" aria-label="Nail art profissional"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-blob hero-blob-1"></div>
+            <div class="hero-blob hero-blob-2"></div>
+
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        5,0 no Google · 20 avaliações
+                    </div>
+
+                    <h1 class="hero-title">Nail Designer apaixonada por fazer você brilhar ✨</h1>
+
+                    <p class="hero-subtitle">3 anos transformando unhas na Guilhermina, Praia Grande. Cada trabalho é feito com amor e capricho!</p>
+
+                    <div class="hero-buttons">
+                        <a href="https://wa.me/message/QDEKHOPUYYKPJ1" class="btn btn-white" target="_blank" rel="noopener">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                            </svg>
+                            Agendar pelo WhatsApp
+                        </a>
+                        <a href="#galeria" class="btn btn-outline">Ver meus trabalhos</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-indicator" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Serviços -->
+        <section id="servicos" class="services">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Meus <span>Serviços</span></h2>
+                <p class="section-subtitle animate-on-scroll">Unhas feitas com amor e técnica profissional</p>
+
+                <div class="services-grid">
+                    <article class="service-card animate-on-scroll">
+                        <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80" alt="Alongamento de Unhas" class="service-img" loading="lazy">
+                        <div class="service-content">
+                            <div class="service-emoji">💅</div>
+                            <h3 class="service-title">Alongamento</h3>
+                            <p class="service-desc">Unhas alongadas com acabamento perfeito e durabilidade incrível.</p>
+                            <a href="https://wa.me/message/QDEKHOPUYYKPJ1" class="btn btn-primary" target="_blank" rel="noopener">Agendar</a>
+                        </div>
+                    </article>
+
+                    <article class="service-card animate-on-scroll">
+                        <img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?w=600&q=80" alt="Esmaltação em Gel" class="service-img" loading="lazy">
+                        <div class="service-content">
+                            <div class="service-emoji">✨</div>
+                            <h3 class="service-title">Esmaltação em Gel</h3>
+                            <p class="service-desc">Brilho intenso e duradouro por semanas sem descascar.</p>
+                            <a href="https://wa.me/message/QDEKHOPUYYKPJ1" class="btn btn-primary" target="_blank" rel="noopener">Agendar</a>
+                        </div>
+                    </article>
+
+                    <article class="service-card animate-on-scroll">
+                        <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?w=600&q=80" alt="Nail Art Decorada" class="service-img" loading="lazy">
+                        <div class="service-content">
+                            <div class="service-emoji">🎨</div>
+                            <h3 class="service-title">Nail Art</h3>
+                            <p class="service-desc">Designs exclusivos e personalizados para seu estilo.</p>
+                            <a href="https://wa.me/message/QDEKHOPUYYKPJ1" class="btn btn-primary" target="_blank" rel="noopener">Agendar</a>
+                        </div>
+                    </article>
+
+                    <article class="service-card animate-on-scroll">
+                        <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?w=600&q=80" alt="Manicure e Pedicure" class="service-img" loading="lazy">
+                        <div class="service-content">
+                            <div class="service-emoji">🌸</div>
+                            <h3 class="service-title">Manicure & Pedicure</h3>
+                            <p class="service-desc">Cuidado completo para mãos e pés sempre bonitos.</p>
+                            <a href="https://wa.me/message/QDEKHOPUYYKPJ1" class="btn btn-primary" target="_blank" rel="noopener">Agendar</a>
+                        </div>
+                    </article>
+
+                    <article class="service-card animate-on-scroll">
+                        <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80" alt="Banho de Gel" class="service-img" loading="lazy">
+                        <div class="service-content">
+                            <div class="service-emoji">💎</div>
+                            <h3 class="service-title">Banho de Gel</h3>
+                            <p class="service-desc">Fortalecimento e proteção com brilho natural.</p>
+                            <a href="https://wa.me/message/QDEKHOPUYYKPJ1" class="btn btn-primary" target="_blank" rel="noopener">Agendar</a>
+                        </div>
+                    </article>
+
+                    <article class="service-card animate-on-scroll">
+                        <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80" alt="Manutenção" class="service-img" loading="lazy">
+                        <div class="service-content">
+                            <div class="service-emoji">🔄</div>
+                            <h3 class="service-title">Manutenção</h3>
+                            <p class="service-desc">Suas unhas sempre impecáveis com manutenções regulares.</p>
+                            <a href="https://wa.me/message/QDEKHOPUYYKPJ1" class="btn btn-primary" target="_blank" rel="noopener">Agendar</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galeria -->
+        <section id="galeria" class="galeria">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Meus <span>Trabalhos</span></h2>
+                <p class="section-subtitle animate-on-scroll">Cada unha feita com carinho e dedicação</p>
+
+                <div class="galeria-grid">
+                    <div class="galeria-item animate-on-scroll">
+                        <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=500&q=80" alt="Nail art colorida" loading="lazy">
+                    </div>
+                    <div class="galeria-item animate-on-scroll">
+                        <img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?w=500&q=80" alt="Alongamento elegante" loading="lazy">
+                    </div>
+                    <div class="galeria-item animate-on-scroll">
+                        <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?w=500&q=80" alt="Francesinha moderna" loading="lazy">
+                    </div>
+                    <div class="galeria-item animate-on-scroll">
+                        <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?w=500&q=80" alt="Unhas decoradas" loading="lazy">
+                    </div>
+                    <div class="galeria-item animate-on-scroll">
+                        <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=500&q=80" alt="Design criativo" loading="lazy">
+                    </div>
+                    <div class="galeria-item animate-on-scroll">
+                        <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=500&q=80" alt="Nude sofisticado" loading="lazy">
+                    </div>
+                    <div class="galeria-item animate-on-scroll">
+                        <img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?w=500&q=80" alt="Glitter e brilho" loading="lazy">
+                    </div>
+                    <div class="galeria-item animate-on-scroll">
+                        <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?w=500&q=80" alt="Unhas para festa" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="galeria-cta animate-on-scroll">
+                    <a href="https://www.instagram.com/marianna.nailarts" class="btn btn-instagram" target="_blank" rel="noopener">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                        Siga @marianna.nailarts
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Depoimentos -->
+        <section class="depoimentos">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">O que <span>dizem</span> sobre mim</h2>
+                <p class="section-subtitle animate-on-scroll">Avaliações reais do Google</p>
+
+                <div class="depoimentos-grid">
+                    <article class="depoimento-card animate-on-scroll">
+                        <div class="depoimento-stars">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <p class="depoimento-text">"Bom acabamento, dura muito, atendimento excelente e boa profissional!!!"</p>
+                        <div class="depoimento-author">
+                            <div class="depoimento-avatar">T</div>
+                            <div>
+                                <p class="depoimento-name">Thais Oliveira</p>
+                                <p class="depoimento-label">Via Google</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="depoimento-card animate-on-scroll">
+                        <div class="depoimento-stars">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <p class="depoimento-text">"Fui a primeira vez hoje e surpreendeu. Super recomendo!"</p>
+                        <div class="depoimento-author">
+                            <div class="depoimento-avatar">B</div>
+                            <div>
+                                <p class="depoimento-name">Bruna Barbosa</p>
+                                <p class="depoimento-label">Via Google</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="depoimento-card animate-on-scroll">
+                        <div class="depoimento-stars">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <p class="depoimento-text">"A Mari é uma excelente profissional, o resultado ficou impecável!"</p>
+                        <div class="depoimento-author">
+                            <div class="depoimento-avatar">I</div>
+                            <div>
+                                <p class="depoimento-name">Isabelly Marques</p>
+                                <p class="depoimento-label">Via Google</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-emoji animate-on-scroll">💖</div>
+                <h2 class="cta-title animate-on-scroll">Bora deixar suas unhas lindas?</h2>
+                <p class="cta-subtitle animate-on-scroll">Agende agora e venha se sentir ainda mais bonita!</p>
+                <a href="https://wa.me/message/QDEKHOPUYYKPJ1" class="btn btn-white animate-on-scroll" target="_blank" rel="noopener">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                    Agendar pelo WhatsApp
+                </a>
+            </div>
+        </section>
+
+        <!-- Localização -->
+        <section class="location">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Onde me <span>encontrar</span></h2>
+                <p class="section-subtitle animate-on-scroll">Studio na Guilhermina, Praia Grande</p>
+
+                <div class="location-grid">
+                    <div class="location-card animate-on-scroll">
+                        <div class="card-header">
+                            <div class="card-header-icon">📍</div>
+                            <h3>Informações</h3>
+                        </div>
+
+                        <div class="info-list">
+                            <div class="info-item">
+                                <span class="info-icon">🏠</span>
+                                <div class="info-text">
+                                    <strong>Endereço</strong>
+                                    R. América Latina, 301<br>
+                                    Guilhermina, Praia Grande - SP<br>
+                                    CEP: 11702-170
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <span class="info-icon">📞</span>
+                                <div class="info-text">
+                                    <strong>Telefone</strong>
+                                    (13) 99777-4145
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <span class="info-icon">⏰</span>
+                                <div class="info-text">
+                                    <strong>Atendimento</strong>
+                                    Agende pelo WhatsApp
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="https://wa.me/message/QDEKHOPUYYKPJ1" class="btn btn-primary" target="_blank" rel="noopener" style="width: 100%; margin-top: 24px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                            </svg>
+                            Falar com Mari
+                        </a>
+                    </div>
+
+                    <div class="mapa animate-on-scroll">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3645.5!2d-46.42!3d-24.01!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zUi4gQW3DqXJpY2EgTGF0aW5hLCAzMDEgLSBHdWlsaGVybWluYSwgUHJhaWEgR3JhbmRl!5e0!3m2!1spt-BR!2sbr!4v1"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Localização do studio Marianna Nail Arts no mapa">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-logo">✨ Marianna Nail Arts</p>
+                <p class="footer-tagline">Nail Designer Profissional • Guilhermina, Praia Grande</p>
+
+                <div class="footer-social">
+                    <a href="https://wa.me/message/QDEKHOPUYYKPJ1" target="_blank" rel="noopener" aria-label="WhatsApp">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/marianna.nailarts" target="_blank" rel="noopener" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <p class="footer-copy">
+                    &copy; 2024 Marianna Nail Arts. Todos os direitos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Flutuante -->
+    <a href="https://wa.me/message/QDEKHOPUYYKPJ1" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Agendar pelo WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', function() {
+                header.classList.toggle('scrolled', window.scrollY > 100);
+            });
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        const parent = entry.target.parentElement;
+                        const siblings = parent.querySelectorAll('.animate-on-scroll');
+                        let delay = 0;
+                        siblings.forEach(function(sibling, i) {
+                            if (sibling === entry.target) delay = i * 80;
+                        });
+                        setTimeout(function() {
+                            entry.target.classList.add('visible');
+                        }, delay);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.animate-on-scroll').forEach(function(el) {
+                observer.observe(el);
+            });
+
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

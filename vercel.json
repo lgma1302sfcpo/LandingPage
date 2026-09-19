@@ -27,6 +27,14 @@
       "dest": "/clientes/maria-tatiane-nails/$1"
     },
     {
+      "src": "/marianna-nailarts",
+      "dest": "/clientes/marianna-nailarts/index.html"
+    },
+    {
+      "src": "/marianna-nailarts/(.*)",
+      "dest": "/clientes/marianna-nailarts/$1"
+    },
+    {
       "src": "/(.*)",
       "dest": "/clientes/$1"
     }
