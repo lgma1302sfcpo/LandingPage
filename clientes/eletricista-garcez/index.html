@@ -1,0 +1,1707 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Eletricista Garcez | Eletricista 24h em Praia Grande SP - Projetos e Climatização</title>
+    <meta name="description" content="Eletricista 24 horas em Praia Grande SP. Nota 4.9 no Google com 302 avaliações. Projetos elétricos, laudos SPDA, automação, ar-condicionado e manutenção predial. Atendimento de emergência!">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Electrician",
+        "name": "Eletricista Garcez",
+        "description": "Eletricista 24 horas em Praia Grande SP. Projetos elétricos, laudos, automação residencial, climatização e manutenção predial.",
+        "telephone": "+5513982138280",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "R. Particular - Guilhermina",
+            "addressLocality": "Praia Grande",
+            "addressRegion": "SP",
+            "postalCode": "11702-290",
+            "addressCountry": "BR"
+        },
+        "areaServed": {
+            "@type": "City",
+            "name": "Praia Grande"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "302"
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                "opens": "00:00",
+                "closes": "23:59"
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --yellow-electric: #FFC400;
+            --navy-dark: #0B1D3A;
+            --blue-electric: #1E6BFF;
+            --white: #FFFFFF;
+            --bg-light: #F4F7FB;
+            --text-dark: #1A1A1A;
+            --gradient-navy: linear-gradient(135deg, #0B1D3A 0%, #1E6BFF 100%);
+            --gradient-reverse: linear-gradient(135deg, #1E6BFF 0%, #0B1D3A 100%);
+            --shadow-yellow: 0 8px 30px rgba(255, 196, 0, 0.4);
+            --shadow-navy: 0 8px 30px rgba(11, 29, 58, 0.3);
+            --whatsapp-green: #25D366;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ========== HEADER ========== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            background: var(--navy-dark);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--yellow-electric);
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--yellow-electric);
+        }
+
+        .header-phone {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--yellow-electric);
+            color: var(--navy-dark);
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .header-phone:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-yellow);
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .menu-toggle span {
+            width: 28px;
+            height: 3px;
+            background: var(--white);
+            border-radius: 3px;
+            transition: all 0.3s;
+        }
+
+        /* ========== HERO BANNER ========== */
+        .hero {
+            min-height: 100vh;
+            /* Imagem: eletricista profissional trabalhando - TROCAR pela foto real */
+            background: url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1920&q=80') center/cover no-repeat;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(11, 29, 58, 0.92) 0%, rgba(30, 107, 255, 0.8) 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            animation: slideUp 1s ease-out;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero-badges {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255,255,255,0.95);
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            color: var(--navy-dark);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            font-size: 0.95rem;
+        }
+
+        .badge .stars {
+            color: var(--yellow-electric);
+        }
+
+        .badge-yellow {
+            background: var(--yellow-electric);
+            color: var(--navy-dark);
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            text-shadow: 0 4px 30px rgba(0,0,0,0.3);
+        }
+
+        .hero h1 .highlight {
+            color: var(--yellow-electric);
+        }
+
+        .hero p {
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            color: rgba(255,255,255,0.95);
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-yellow {
+            background: var(--yellow-electric);
+            color: var(--navy-dark);
+            box-shadow: var(--shadow-yellow);
+        }
+
+        .btn-yellow:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 40px rgba(255, 196, 0, 0.5);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-outline:hover {
+            background: var(--white);
+            color: var(--navy-dark);
+            transform: translateY(-3px);
+        }
+
+        .hero-note {
+            color: rgba(255,255,255,0.8);
+            font-size: 0.95rem;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            animation: bounce 2s infinite;
+        }
+
+        .scroll-indicator span {
+            display: block;
+            width: 30px;
+            height: 50px;
+            border: 2px solid rgba(255,255,255,0.6);
+            border-radius: 20px;
+            position: relative;
+        }
+
+        .scroll-indicator span::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 6px;
+            height: 6px;
+            background: var(--yellow-electric);
+            border-radius: 50%;
+            animation: scrollDown 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(-10px); }
+        }
+
+        @keyframes scrollDown {
+            0% { opacity: 1; top: 8px; }
+            100% { opacity: 0; top: 30px; }
+        }
+
+        /* ========== EMERGENCY BAR ========== */
+        .emergency-bar {
+            background: var(--yellow-electric);
+            padding: 1.5rem 5%;
+            text-align: center;
+        }
+
+        .emergency-bar p {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--navy-dark);
+            margin-bottom: 1rem;
+        }
+
+        .emergency-bar .btn {
+            background: var(--navy-dark);
+            color: var(--white);
+        }
+
+        .emergency-bar .btn:hover {
+            background: var(--blue-electric);
+        }
+
+        /* ========== SECTIONS GENERAL ========== */
+        section {
+            padding: 5rem 5%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 700;
+            color: var(--navy-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title h2 .highlight {
+            color: var(--blue-electric);
+        }
+
+        .section-title p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .section-title.light h2,
+        .section-title.light p {
+            color: var(--white);
+        }
+
+        /* ========== SERVICES TABS ========== */
+        .services {
+            background: var(--bg-light);
+        }
+
+        .services-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            padding: 0.8rem 2rem;
+            border: none;
+            background: var(--white);
+            color: var(--navy-dark);
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .tab-btn.active,
+        .tab-btn:hover {
+            background: var(--gradient-navy);
+            color: var(--white);
+        }
+
+        .services-grid {
+            display: none;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .services-grid.active {
+            display: grid;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(11, 29, 58, 0.1);
+            transition: all 0.3s;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .service-card.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(11, 29, 58, 0.2);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .service-card-content {
+            padding: 1.5rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--navy-dark);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .service-card h3 span {
+            color: var(--yellow-electric);
+        }
+
+        .service-card p {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .service-card .btn {
+            width: 100%;
+            justify-content: center;
+            padding: 0.8rem;
+            font-size: 0.9rem;
+        }
+
+        .btn-navy {
+            background: var(--gradient-navy);
+            color: var(--white);
+            box-shadow: var(--shadow-navy);
+        }
+
+        .btn-navy:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(11, 29, 58, 0.4);
+        }
+
+        /* ========== DIFFERENTIALS ========== */
+        .differentials {
+            background: var(--gradient-navy);
+            padding: 5rem 5%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .differentials::before {
+            content: '⚡';
+            position: absolute;
+            font-size: 20rem;
+            opacity: 0.05;
+            right: -5rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .diff-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .diff-card {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s;
+        }
+
+        .diff-card:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-5px);
+        }
+
+        .diff-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--yellow-electric);
+        }
+
+        .diff-card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--yellow-electric);
+            margin-bottom: 0.5rem;
+        }
+
+        .diff-card p {
+            color: rgba(255,255,255,0.85);
+            font-size: 0.95rem;
+        }
+
+        /* ========== HOW IT WORKS ========== */
+        .how-it-works {
+            background: var(--white);
+        }
+
+        .steps {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .step {
+            flex: 1;
+            min-width: 250px;
+            max-width: 300px;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-navy);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--yellow-electric);
+            margin: 0 auto 1.5rem;
+            box-shadow: var(--shadow-navy);
+        }
+
+        .step h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--navy-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .step p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .step-arrow {
+            position: absolute;
+            right: -1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            color: var(--yellow-electric);
+        }
+
+        /* ========== ABOUT ========== */
+        .about {
+            background: var(--bg-light);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            /* Imagem: equipe ou profissional - TROCAR pela foto real */
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(11, 29, 58, 0.2);
+        }
+
+        .about-image::before {
+            content: '⚡';
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            font-size: 4rem;
+            color: var(--yellow-electric);
+            text-shadow: 0 4px 20px rgba(255, 196, 0, 0.5);
+        }
+
+        .about-text h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--navy-dark);
+            margin-bottom: 1rem;
+        }
+
+        .about-text h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--blue-electric);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text p {
+            color: #555;
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+        }
+
+        .about-badges {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .about-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--white);
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--navy-dark);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        /* ========== AREAS ========== */
+        .areas {
+            background: var(--white);
+        }
+
+        .areas-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .area-chip {
+            background: var(--bg-light);
+            color: var(--navy-dark);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .area-chip:hover {
+            border-color: var(--blue-electric);
+            background: var(--white);
+        }
+
+        .area-chip.main {
+            background: var(--gradient-navy);
+            color: var(--white);
+        }
+
+        /* ========== TESTIMONIALS ========== */
+        .testimonials {
+            background: var(--bg-light);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(11, 29, 58, 0.08);
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 5rem;
+            font-family: Georgia, serif;
+            color: var(--bg-light);
+            line-height: 1;
+        }
+
+        .testimonial-stars {
+            color: var(--yellow-electric);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-card p {
+            color: #555;
+            font-size: 1rem;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-navy);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--yellow-electric);
+        }
+
+        .author-name {
+            font-weight: 600;
+            color: var(--navy-dark);
+        }
+
+        /* ========== FAQ ========== */
+        .faq {
+            background: var(--white);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--bg-light);
+            border-radius: 16px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: var(--navy-dark);
+            padding: 1.5rem;
+            transition: background 0.3s;
+        }
+
+        .faq-question:hover {
+            background: var(--white);
+        }
+
+        .faq-icon {
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+            color: var(--blue-electric);
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+        }
+
+        .faq-answer-content {
+            padding: 0 1.5rem 1.5rem;
+        }
+
+        /* ========== CTA SECTION ========== */
+        .cta-section {
+            /* Imagem: trabalho elétrico profissional - TROCAR pela foto real */
+            background: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=80') center/cover no-repeat;
+            position: relative;
+            padding: 6rem 5%;
+            text-align: center;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(11, 29, 58, 0.95) 0%, rgba(30, 107, 255, 0.85) 100%);
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cta-section h2 {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ========== FOOTER ========== */
+        footer {
+            background: var(--navy-dark);
+            color: var(--white);
+            padding: 3rem 5% 1.5rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-col h4 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--yellow-electric);
+        }
+
+        .footer-col p,
+        .footer-col a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .footer-col a:hover {
+            color: var(--yellow-electric);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .footer-social a {
+            width: 45px;
+            height: 45px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            transition: all 0.3s;
+        }
+
+        .footer-social a:hover {
+            background: var(--yellow-electric);
+            color: var(--navy-dark);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+        }
+
+        /* ========== WHATSAPP FLOAT (Desktop) ========== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 65px;
+            height: 65px;
+            background: var(--whatsapp-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            text-decoration: none;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 35px rgba(37, 211, 102, 0.5);
+        }
+
+        /* ========== MOBILE BOTTOM BAR ========== */
+        .mobile-bar {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: var(--white);
+            padding: 0.8rem;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+        }
+
+        .mobile-bar-buttons {
+            display: flex;
+            gap: 0.8rem;
+        }
+
+        .mobile-bar a {
+            flex: 1;
+            padding: 1rem;
+            border-radius: 12px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 1rem;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .mobile-bar .btn-whatsapp {
+            background: var(--whatsapp-green);
+            color: var(--white);
+        }
+
+        .mobile-bar .btn-call {
+            background: var(--yellow-electric);
+            color: var(--navy-dark);
+        }
+
+        /* ========== MOBILE RESPONSIVE ========== */
+        @media (max-width: 900px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image {
+                order: -1;
+            }
+
+            .about-image::before {
+                display: none;
+            }
+
+            .step-arrow {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 70%;
+                height: 100vh;
+                background: var(--navy-dark);
+                flex-direction: column;
+                padding: 5rem 2rem;
+                transition: right 0.3s;
+                box-shadow: -5px 0 30px rgba(0,0,0,0.3);
+            }
+
+            nav.active {
+                right: 0;
+            }
+
+            nav a {
+                font-size: 1.2rem;
+                padding: 0.5rem 0;
+            }
+
+            .header-phone {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-badges {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .whatsapp-float {
+                display: none;
+            }
+
+            .mobile-bar {
+                display: block;
+            }
+
+            body {
+                padding-bottom: 80px;
+            }
+
+            .emergency-bar p {
+                font-size: 1rem;
+            }
+        }
+
+        /* ========== ANIMATIONS ========== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header id="header">
+        <a href="#" class="logo">⚡ <span>Garcez</span> Elétrica</a>
+        <nav id="nav">
+            <a href="#servicos">Serviços</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#depoimentos">Depoimentos</a>
+            <a href="#duvidas">Dúvidas</a>
+            <a href="tel:+5513982138280" class="header-phone">📞 (13) 98213-8280</a>
+        </nav>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <!-- HERO BANNER -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badges">
+                <div class="badge">
+                    <span class="stars">★★★★★</span>
+                    <span>4.9 no Google · 302 avaliações</span>
+                </div>
+                <div class="badge badge-yellow">
+                    ⚡ Atendimento 24 horas
+                </div>
+            </div>
+            <h1>Soluções elétricas completas para sua casa e <span class="highlight">empresa ⚡</span></h1>
+            <p>Eletricista em Praia Grande: projetos, laudos, automação, climatização e emergências. Profissionais qualificados com garantia de qualidade.</p>
+            <div class="hero-buttons">
+                <a href="https://wa.me/5513982138280?text=Olá!%20Vim%20pelo%20site%20e%20preciso%20de%20um%20eletricista." class="btn btn-yellow" target="_blank">
+                    💬 Chamar no WhatsApp
+                </a>
+                <a href="tel:+5513982138280" class="btn btn-outline">
+                    📞 Ligar agora
+                </a>
+            </div>
+            <p class="hero-note">Orçamento sem compromisso · Resposta rápida · Preço justo</p>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- EMERGENCY BAR -->
+    <div class="emergency-bar">
+        <p>⚡ Emergência elétrica? Atendemos 24 horas em Praia Grande e região!</p>
+        <a href="https://wa.me/5513982138280?text=Olá!%20Estou%20com%20uma%20emergência%20elétrica%20e%20preciso%20de%20atendimento%20urgente." class="btn" target="_blank">
+            Chamar eletricista de emergência
+        </a>
+    </div>
+
+    <!-- SERVICES -->
+    <section class="services" id="servicos">
+        <div class="section-title fade-in">
+            <h2>Nossos <span class="highlight">Serviços</span></h2>
+            <p>Soluções completas em elétrica e climatização</p>
+        </div>
+
+        <div class="services-tabs">
+            <button class="tab-btn active" onclick="showServices('eletrica')">⚡ Elétrica</button>
+            <button class="tab-btn" onclick="showServices('climatizacao')">❄️ Climatização</button>
+            <button class="tab-btn" onclick="showServices('projetos')">📐 Projetos e Laudos</button>
+        </div>
+
+        <!-- Serviços Elétrica -->
+        <div class="services-grid active" id="eletrica">
+            <div class="service-card">
+                <!-- Imagem: manutenção elétrica residencial - TROCAR pela foto real -->
+                <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&q=80" alt="Elétrica Residencial" loading="lazy">
+                <div class="service-card-content">
+                    <h3><span>⚡</span> Elétrica Residencial</h3>
+                    <p>Instalações, reparos, troca de fiação, tomadas, disjuntores e toda parte elétrica da sua casa.</p>
+                    <a href="https://wa.me/5513982138280?text=Olá!%20Vim%20pelo%20site%20e%20preciso%20de%20serviço%20de%20elétrica%20residencial." class="btn btn-navy" target="_blank">Pedir orçamento</a>
+                </div>
+            </div>
+            <div class="service-card">
+                <!-- Imagem: manutenção predial - TROCAR pela foto real -->
+                <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&q=80" alt="Manutenção Predial" loading="lazy">
+                <div class="service-card-content">
+                    <h3><span>⚡</span> Manutenção Predial</h3>
+                    <p>Manutenção elétrica completa para condomínios, prédios comerciais e residenciais.</p>
+                    <a href="https://wa.me/5513982138280?text=Olá!%20Vim%20pelo%20site%20e%20preciso%20de%20manutenção%20predial." class="btn btn-navy" target="_blank">Pedir orçamento</a>
+                </div>
+            </div>
+            <div class="service-card">
+                <!-- Imagem: automação residencial - TROCAR pela foto real -->
+                <img src="https://images.unsplash.com/photo-1558002038-1055907df827?w=600&q=80" alt="Automação Residencial" loading="lazy">
+                <div class="service-card-content">
+                    <h3><span>⚡</span> Automação Residencial</h3>
+                    <p>Transforme sua casa em um ambiente inteligente com controle de iluminação, cortinas e muito mais.</p>
+                    <a href="https://wa.me/5513982138280?text=Olá!%20Vim%20pelo%20site%20e%20tenho%20interesse%20em%20automação%20residencial." class="btn btn-navy" target="_blank">Pedir orçamento</a>
+                </div>
+            </div>
+            <div class="service-card">
+                <!-- Imagem: retrofit elétrico - TROCAR pela foto real -->
+                <img src="https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?w=600&q=80" alt="Retrofit Elétrico" loading="lazy">
+                <div class="service-card-content">
+                    <h3><span>⚡</span> Retrofit de Instalações</h3>
+                    <p>Modernização completa de instalações elétricas antigas, adequando às normas atuais.</p>
+                    <a href="https://wa.me/5513982138280?text=Olá!%20Vim%20pelo%20site%20e%20preciso%20de%20retrofit%20elétrico." class="btn btn-navy" target="_blank">Pedir orçamento</a>
+                </div>
+            </div>
+            <div class="service-card">
+                <!-- Imagem: cabine primária - TROCAR pela foto real -->
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Cabines Primárias" loading="lazy">
+                <div class="service-card-content">
+                    <h3><span>⚡</span> Cabines Primárias</h3>
+                    <p>Manutenção preventiva e corretiva em cabines primárias de média tensão.</p>
+                    <a href="https://wa.me/5513982138280?text=Olá!%20Vim%20pelo%20site%20e%20preciso%20de%20manutenção%20em%20cabine%20primária." class="btn btn-navy" target="_blank">Pedir orçamento</a>
+                </div>
+            </div>
+            <div class="service-card">
+                <!-- Imagem: emergência elétrica - TROCAR pela foto real -->
+                <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600&q=80" alt="Emergência Elétrica" loading="lazy">
+                <div class="service-card-content">
+                    <h3><span>⚡</span> Emergência 24h</h3>
+                    <p>Atendimento de emergência para curto-circuito, falta de energia e problemas urgentes.</p>
+                    <a href="https://wa.me/5513982138280?text=Olá!%20Estou%20com%20uma%20emergência%20elétrica!" class="btn btn-navy" target="_blank">Chamar agora</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Serviços Climatização -->
+        <div class="services-grid" id="climatizacao">
+            <div class="service-card">
+                <!-- Imagem: ar condicionado - TROCAR pela foto real -->
+                <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&q=80" alt="Instalação de Ar Condicionado" loading="lazy">
+                <div class="service-card-content">
+                    <h3><span>❄️</span> Instalação de Ar-Condicionado</h3>
+                    <p>Instalação profissional de splits, multi-splits e sistemas de climatização com infra elétrica completa.</p>
+                    <a href="https://wa.me/5513982138280?text=Olá!%20Vim%20pelo%20site%20e%20preciso%20de%20instalação%20de%20ar-condicionado." class="btn btn-navy" target="_blank">Pedir orçamento</a>
+                </div>
+            </div>
+            <div class="service-card">
+                <!-- Imagem: manutenção ar condicionado - TROCAR pela foto real -->
+                <img src="https://images.unsplash.com/photo-1631545806609-35d4ae440431?w=600&q=80" alt="Manutenção de Ar Condicionado" loading="lazy">
+                <div class="service-card-content">
+                    <h3><span>❄️</span> Manutenção Preventiva</h3>
+                    <p>Contratos de manutenção preventiva para garantir o funcionamento ideal do seu ar-condicionado.</p>
+                    <a href="https://wa.me/5513982138280?text=Olá!%20Vim%20pelo%20site%20e%20preciso%20de%20manutenção%20de%20ar-condicionado." class="btn btn-navy" target="_blank">Pedir orçamento</a>
+                </div>
+            </div>
+            <div class="service-card">
+                <!-- Imagem: projeto climatização - TROCAR pela foto real -->
+                <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=80" alt="Projeto de Climatização" loading="lazy">
+                <div class="service-card-content">
+                    <h3><span>❄️</span> Projeto de Climatização</h3>
+                    <p>Projetos personalizados para climatização de ambientes residenciais e comerciais.</p>
+                    <a href="https://wa.me/5513982138280?text=Olá!%20Vim%20pelo%20site%20e%20preciso%20de%20projeto%20de%20climatização." class="btn btn-navy" target="_blank">Pedir orçamento</a>
+                </div>
+            </div>
+            <div class="service-card">
+                <!-- Imagem: PMOC - TROCAR pela foto real -->
+                <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&q=80" alt="PMOC" loading="lazy">
+                <div class="service-card-content">
+                    <h3><span>❄️</span> PMOC</h3>
+                    <p>Plano de Manutenção, Operação e Controle para sistemas de climatização conforme legislação.</p>
+                    <a href="https://wa.me/5513982138280?text=Olá!%20Vim%20pelo%20site%20e%20preciso%20de%20PMOC." class="btn btn-navy" target="_blank">Pedir orçamento</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Serviços Projetos e Laudos -->
+        <div class="services-grid" id="projetos">
+            <div class="service-card">
+                <!-- Imagem: projeto elétrico - TROCAR pela foto real -->
+                <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&q=80" alt="Projetos Elétricos" loading="lazy">
+                <div class="service-card-content">
+                    <h3><span>📐</span> Projetos Elétricos</h3>
+                    <p>Desenvolvimento de projetos elétricos residenciais, comerciais e industriais seguindo as normas técnicas.</p>
+                    <a href="https://wa.me/5513982138280?text=Olá!%20Vim%20pelo%20site%20e%20preciso%20de%20projeto%20elétrico." class="btn btn-navy" target="_blank">Pedir orçamento</a>
+                </div>
+            </div>
+            <div class="service-card">
+                <!-- Imagem: laudo SPDA - TROCAR pela foto real -->
+                <img src="https://images.unsplash.com/photo-1534224039826-c7a0eda0e6b3?w=600&q=80" alt="Laudo SPDA" loading="lazy">
+                <div class="service-card-content">
+                    <h3><span>📐</span> Laudos SPDA</h3>
+                    <p>Laudos técnicos do Sistema de Proteção contra Descargas Atmosféricas (para-raios).</p>
+                    <a href="https://wa.me/5513982138280?text=Olá!%20Vim%20pelo%20site%20e%20preciso%20de%20laudo%20SPDA." class="btn btn-navy" target="_blank">Pedir orçamento</a>
+                </div>
+            </div>
+            <div class="service-card">
+                <!-- Imagem: laudo elétrico - TROCAR pela foto real -->
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80" alt="Laudos Elétricos" loading="lazy">
+                <div class="service-card-content">
+                    <h3><span>📐</span> Laudos Elétricos</h3>
+                    <p>Laudos técnicos de instalações elétricas para regularização, seguros e conformidade.</p>
+                    <a href="https://wa.me/5513982138280?text=Olá!%20Vim%20pelo%20site%20e%20preciso%20de%20laudo%20elétrico." class="btn btn-navy" target="_blank">Pedir orçamento</a>
+                </div>
+            </div>
+            <div class="service-card">
+                <!-- Imagem: termografia - TROCAR pela foto real -->
+                <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&q=80" alt="Termografia" loading="lazy">
+                <div class="service-card-content">
+                    <h3><span>📐</span> Termografia</h3>
+                    <p>Inspeção termográfica para identificar pontos de aquecimento e prevenir falhas elétricas.</p>
+                    <a href="https://wa.me/5513982138280?text=Olá!%20Vim%20pelo%20site%20e%20preciso%20de%20termografia." class="btn btn-navy" target="_blank">Pedir orçamento</a>
+                </div>
+            </div>
+            <div class="service-card">
+                <!-- Imagem: projeto luminotécnico - TROCAR pela foto real -->
+                <img src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=600&q=80" alt="Projeto Luminotécnico" loading="lazy">
+                <div class="service-card-content">
+                    <h3><span>📐</span> Projeto Luminotécnico</h3>
+                    <p>Projetos de iluminação eficientes e personalizados para ambientes residenciais e comerciais.</p>
+                    <a href="https://wa.me/5513982138280?text=Olá!%20Vim%20pelo%20site%20e%20preciso%20de%20projeto%20luminotécnico." class="btn btn-navy" target="_blank">Pedir orçamento</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIFFERENTIALS -->
+    <section class="differentials">
+        <div class="section-title light fade-in">
+            <h2>Por que escolher a Garcez Elétrica?</h2>
+            <p>Nossa reputação é baseada na confiança e satisfação do cliente</p>
+        </div>
+        <div class="diff-grid">
+            <div class="diff-card fade-in">
+                <div class="diff-icon">⚡</div>
+                <h3>Atendimento 24 Horas</h3>
+                <p>Emergências elétricas não têm hora. Estamos disponíveis quando você mais precisa.</p>
+            </div>
+            <div class="diff-card fade-in">
+                <div class="diff-icon">👨‍🔧</div>
+                <h3>Profissionais Capacitados</h3>
+                <p>Equipe treinada e experiente para resolver qualquer problema elétrico.</p>
+            </div>
+            <div class="diff-card fade-in">
+                <div class="diff-icon">✅</div>
+                <h3>Garantia de Qualidade</h3>
+                <p>Todos os serviços são executados com garantia e dentro das normas técnicas.</p>
+            </div>
+            <div class="diff-card fade-in">
+                <div class="diff-icon">💰</div>
+                <h3>Preços Transparentes</h3>
+                <p>Orçamentos claros e detalhados. Você sabe exatamente o que está pagando.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="how-it-works">
+        <div class="section-title fade-in">
+            <h2>Como <span class="highlight">Funciona</span></h2>
+            <p>Simples e rápido para você</p>
+        </div>
+        <div class="steps">
+            <div class="step fade-in">
+                <div class="step-number">1</div>
+                <h3>Entre em contato</h3>
+                <p>Chame no WhatsApp ou ligue e explique o que você precisa.</p>
+                <span class="step-arrow">→</span>
+            </div>
+            <div class="step fade-in">
+                <div class="step-number">2</div>
+                <h3>Análise e orçamento</h3>
+                <p>Analisamos seu problema e enviamos um orçamento detalhado.</p>
+                <span class="step-arrow">→</span>
+            </div>
+            <div class="step fade-in">
+                <div class="step-number">3</div>
+                <h3>Execução com qualidade</h3>
+                <p>Realizamos o serviço com garantia e dentro das normas técnicas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="sobre">
+        <div class="about-content">
+            <div class="about-image fade-in">
+                <!-- Imagem: equipe Garcez - TROCAR pela foto real -->
+                <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&q=80" alt="Equipe Eletricista Garcez">
+            </div>
+            <div class="about-text fade-in">
+                <h2>Eletricista Garcez</h2>
+                <h3>Soluções Elétricas Completas em Praia Grande</h3>
+                <p>Somos especialistas em serviços elétricos residenciais, comerciais e industriais. Nossa equipe oferece desde pequenos reparos até projetos complexos, laudos técnicos e sistemas de climatização.</p>
+                <p>Com atendimento 24 horas e profissionais qualificados, garantimos a segurança e eficiência que você precisa. Nossa reputação é construída na confiança e satisfação dos nossos clientes.</p>
+                <div class="about-badges">
+                    <span class="about-badge">⭐ 4.9 no Google</span>
+                    <span class="about-badge">💬 302 Avaliações</span>
+                    <span class="about-badge">⚡ 24 Horas</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AREAS -->
+    <section class="areas">
+        <div class="section-title fade-in">
+            <h2>Área de <span class="highlight">Atendimento</span></h2>
+            <p>Atendemos Praia Grande e toda a região</p>
+        </div>
+        <div class="areas-grid fade-in">
+            <span class="area-chip main">⚡ Praia Grande</span>
+            <span class="area-chip">Guilhermina</span>
+            <span class="area-chip">Boqueirão</span>
+            <span class="area-chip">Aviação</span>
+            <span class="area-chip">Tupi</span>
+            <span class="area-chip">Ocian</span>
+            <span class="area-chip">Caiçara</span>
+            <span class="area-chip">Mirim</span>
+            <span class="area-chip">Vila Caiçara</span>
+            <span class="area-chip">Real</span>
+            <span class="area-chip">Anhanguera</span>
+            <span class="area-chip">E toda a região</span>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials" id="depoimentos">
+        <div class="section-title fade-in">
+            <h2>O que nossos <span class="highlight">clientes</span> dizem</h2>
+            <p>302 avaliações no Google com nota 4.9</p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card fade-in">
+                <div class="testimonial-stars">★★★★★</div>
+                <p>"Ótimo lugar, ótimos profissionais. Me atenderam bem e fizeram um bom serviço. Recomendo!"</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">J</div>
+                    <span class="author-name">Jorge Antero</span>
+                </div>
+            </div>
+            <div class="testimonial-card fade-in">
+                <div class="testimonial-stars">★★★★★</div>
+                <p>"Chamei o Lucas para um reparo em casa e foi um ótimo atendimento. Profissional e pontual!"</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">E</div>
+                    <span class="author-name">Edna Lima</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="duvidas">
+        <div class="section-title fade-in">
+            <h2>Dúvidas <span class="highlight">Frequentes</span></h2>
+            <p>Respondemos suas principais perguntas</p>
+        </div>
+        <div class="faq-container">
+            <div class="faq-item fade-in">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    Vocês atendem emergência 24 horas?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Sim! Atendemos emergências elétricas 24 horas, todos os dias. Entre em contato pelo WhatsApp ou telefone para atendimento imediato.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item fade-in">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    O orçamento é cobrado?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        O orçamento inicial é gratuito e sem compromisso. Passamos todas as informações detalhadas antes de começar qualquer serviço.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item fade-in">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    Vocês emitem laudo técnico?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Sim! Emitimos laudos elétricos, laudos SPDA (para-raios) e relatórios de termografia para regularização e conformidade.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item fade-in">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    Fazem instalação de ar-condicionado?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Sim! Fazemos instalação completa de ar-condicionado, incluindo a parte elétrica (infra) e também oferecemos contratos de manutenção preventiva (PMOC).
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item fade-in">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    Atendem condomínios e empresas?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Sim! Atendemos residências, condomínios, comércios e indústrias. Oferecemos manutenção predial, cabines primárias e projetos elétricos completos.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section">
+        <div class="cta-content fade-in">
+            <h2>Não arrisque sua segurança ⚡</h2>
+            <p>Serviço elétrico profissional com garantia de qualidade. Fale com a Garcez Elétrica agora.</p>
+            <div class="cta-buttons">
+                <a href="https://wa.me/5513982138280?text=Olá!%20Vim%20pelo%20site%20e%20preciso%20de%20um%20eletricista." class="btn btn-yellow" target="_blank">
+                    💬 Chamar no WhatsApp
+                </a>
+                <a href="tel:+5513982138280" class="btn btn-outline">
+                    📞 Ligar agora
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>⚡ Eletricista Garcez</h4>
+                <p>Soluções elétricas completas</p>
+                <p>Praia Grande - SP</p>
+                <p>Atendimento 24 horas</p>
+                <div class="footer-social">
+                    <a href="https://wa.me/5513982138280" target="_blank" title="WhatsApp">💬</a>
+                    <a href="tel:+5513982138280" title="Telefone">📞</a>
+                    <a href="https://www.instagram.com/garcezeletrica_manutencoes/" target="_blank" title="Instagram">📸</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Serviços</h4>
+                <a href="https://wa.me/5513982138280?text=Olá!%20Preciso%20de%20elétrica%20residencial.">Elétrica Residencial</a>
+                <a href="https://wa.me/5513982138280?text=Olá!%20Preciso%20de%20projeto%20elétrico.">Projetos Elétricos</a>
+                <a href="https://wa.me/5513982138280?text=Olá!%20Preciso%20de%20laudo%20SPDA.">Laudos SPDA</a>
+                <a href="https://wa.me/5513982138280?text=Olá!%20Preciso%20de%20ar-condicionado.">Ar-Condicionado</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contato</h4>
+                <p>📍 Guilhermina - Praia Grande/SP</p>
+                <p>📱 (13) 98213-8280</p>
+                <p>📸 @garcezeletrica_manutencoes</p>
+                <p>⏰ Atendimento 24 horas</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Eletricista Garcez. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOAT (Desktop) -->
+    <a href="https://wa.me/5513982138280?text=Olá!%20Vim%20pelo%20site%20e%20preciso%20de%20um%20eletricista." class="whatsapp-float" target="_blank" title="Fale conosco no WhatsApp">
+        💬
+    </a>
+
+    <!-- MOBILE BOTTOM BAR -->
+    <div class="mobile-bar">
+        <div class="mobile-bar-buttons">
+            <a href="https://wa.me/5513982138280?text=Olá!%20Vim%20pelo%20site%20e%20preciso%20de%20um%20eletricista." class="btn-whatsapp" target="_blank">
+                💬 WhatsApp
+            </a>
+            <a href="tel:+5513982138280" class="btn-call">
+                📞 Ligar
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        function toggleMenu() {
+            document.getElementById('nav').classList.toggle('active');
+        }
+
+        // Close menu when clicking a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('nav').classList.remove('active');
+            });
+        });
+
+        // Services tabs
+        function showServices(category) {
+            // Remove active from all tabs and grids
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.services-grid').forEach(grid => grid.classList.remove('active'));
+
+            // Add active to clicked tab and corresponding grid
+            event.target.classList.add('active');
+            document.getElementById(category).classList.add('active');
+
+            // Animate cards
+            document.querySelectorAll(`#${category} .service-card`).forEach((card, index) => {
+                card.classList.remove('animate');
+                setTimeout(() => {
+                    card.classList.add('animate');
+                }, index * 100);
+            });
+        }
+
+        // FAQ toggle
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            faqItem.classList.toggle('active');
+        }
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    if (entry.target.classList.contains('service-card')) {
+                        entry.target.classList.add('animate');
+                    }
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in, .service-card').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Animate first tab cards on load
+        setTimeout(() => {
+            document.querySelectorAll('#eletrica .service-card').forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add('animate');
+                }, index * 100);
+            });
+        }, 500);
+    </script>
+</body>
+</html>
