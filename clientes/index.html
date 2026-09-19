@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Demos - Landing Pages</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #E6007E 0%, #7A0F3A 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            border-radius: 24px;
+            padding: 48px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        h1 {
+            font-size: 2rem;
+            color: #1A1A1A;
+            margin-bottom: 12px;
+        }
+        p {
+            color: #666;
+            margin-bottom: 32px;
+        }
+        .demos {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        a {
+            display: block;
+            padding: 18px 24px;
+            background: linear-gradient(135deg, #E6007E 0%, #7A0F3A 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(230, 0, 126, 0.4);
+        }
+        .badge {
+            display: inline-block;
+            background: #FFF0F6;
+            color: #E6007E;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Demos Disponíveis</h1>
+        <p>Clique para visualizar cada landing page</p>
+
+        <div class="demos">
+            <a href="/esmalteria-brandao">
+                Esmalteria Brandão
+                <span class="badge">Manicure</span>
+            </a>
+
+            <!-- Adicione novos clientes aqui:
+            <a href="/nome-do-cliente">
+                Nome do Cliente
+                <span class="badge">Segmento</span>
+            </a>
+            -->
+        </div>
+    </div>
+</body>
+</html>

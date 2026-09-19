@@ -1,0 +1,33 @@
+{
+  "version": 2,
+  "name": "demos-landing-pages",
+  "routes": [
+    {
+      "src": "/esmalteria-brandao",
+      "dest": "/clientes/esmalteria-brandao/index.html"
+    },
+    {
+      "src": "/esmalteria-brandao/(.*)",
+      "dest": "/clientes/esmalteria-brandao/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/clientes/$1"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        }
+      ]
+    }
+  ]
+}
