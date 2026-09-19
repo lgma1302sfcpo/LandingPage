@@ -35,6 +35,14 @@
       "dest": "/clientes/marianna-nailarts/$1"
     },
     {
+      "src": "/instituto-belle-vie",
+      "dest": "/clientes/instituto-belle-vie/index.html"
+    },
+    {
+      "src": "/instituto-belle-vie/(.*)",
+      "dest": "/clientes/instituto-belle-vie/$1"
+    },
+    {
       "src": "/(.*)",
       "dest": "/clientes/$1"
     }
