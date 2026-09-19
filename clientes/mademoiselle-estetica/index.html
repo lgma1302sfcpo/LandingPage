@@ -1,0 +1,1663 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Mademoiselle Estética | Estética Facial e Corporal em Praia Grande</title>
+    <meta name="description" content="Clínica de estética em Praia Grande. Estética facial e corporal, extensão de cílios, design de sobrancelhas, drenagem linfática. Nota 4.9 no Google. Agende sua avaliação!">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BeautySalon",
+        "name": "Mademoiselle Estética",
+        "description": "Clínica de estética facial e corporal em Praia Grande. Realçamos sua essência com naturalidade e carinho.",
+        "url": "https://www.instagram.com/mademoiselleestetica/",
+        "telephone": "+5513996800070",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "R. Oswaldo de Oliveira, 170 - 1º andar, sala 17",
+            "addressLocality": "Praia Grande",
+            "addressRegion": "SP",
+            "postalCode": "11701-120",
+            "addressCountry": "BR"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -24.0058,
+            "longitude": -46.4128
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "47"
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "16:00"
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --purple-deep: #5B1A8C;
+            --magenta: #C2185B;
+            --gold: #D4A017;
+            --lilac-bg: #F8F2FC;
+            --text-dark: #1A1A1A;
+            --white: #FFFFFF;
+            --gradient-main: linear-gradient(135deg, #5B1A8C 0%, #C2185B 100%);
+            --gradient-reverse: linear-gradient(135deg, #C2185B 0%, #5B1A8C 100%);
+            --shadow-gold: 0 8px 30px rgba(212, 160, 23, 0.4);
+            --shadow-purple: 0 8px 30px rgba(91, 26, 140, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ========== HEADER ========== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            background: var(--white);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        header.scrolled .logo {
+            color: var(--purple-deep);
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        header.scrolled nav a {
+            color: var(--text-dark);
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .menu-toggle span {
+            width: 28px;
+            height: 3px;
+            background: var(--white);
+            border-radius: 3px;
+            transition: all 0.3s;
+        }
+
+        header.scrolled .menu-toggle span {
+            background: var(--purple-deep);
+        }
+
+        /* ========== HERO BANNER ========== */
+        .hero {
+            min-height: 100vh;
+            /* Imagem: mulher recebendo tratamento facial em ambiente elegante - TROCAR pela foto real */
+            background: url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1920&q=80') center/cover no-repeat;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(91, 26, 140, 0.85) 0%, rgba(194, 24, 91, 0.75) 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            animation: slideUp 1s ease-out;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .rating-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255,255,255,0.95);
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            margin-bottom: 2rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        .rating-badge .stars {
+            color: var(--gold);
+            font-size: 1.1rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            text-shadow: 0 4px 30px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: clamp(1rem, 2.5vw, 1.4rem);
+            color: rgba(255,255,255,0.95);
+            margin-bottom: 2.5rem;
+            font-weight: 400;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-gold {
+            background: var(--gold);
+            color: var(--text-dark);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 40px rgba(212, 160, 23, 0.5);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-outline:hover {
+            background: var(--white);
+            color: var(--purple-deep);
+            transform: translateY(-3px);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            animation: bounce 2s infinite;
+        }
+
+        .scroll-indicator span {
+            display: block;
+            width: 30px;
+            height: 50px;
+            border: 2px solid rgba(255,255,255,0.6);
+            border-radius: 20px;
+            position: relative;
+        }
+
+        .scroll-indicator span::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 6px;
+            height: 6px;
+            background: var(--white);
+            border-radius: 50%;
+            animation: scrollDown 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(-10px); }
+        }
+
+        @keyframes scrollDown {
+            0% { opacity: 1; top: 8px; }
+            100% { opacity: 0; top: 30px; }
+        }
+
+        /* ========== SECTIONS GENERAL ========== */
+        section {
+            padding: 5rem 5%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 700;
+            color: var(--purple-deep);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        /* ========== HIGHLIGHT BAR ========== */
+        .highlight-bar {
+            background: var(--gradient-main);
+            padding: 3rem 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .highlight-item {
+            color: var(--white);
+        }
+
+        .highlight-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--gold);
+            line-height: 1;
+        }
+
+        .highlight-label {
+            font-size: 1rem;
+            font-weight: 500;
+            margin-top: 0.5rem;
+        }
+
+        /* ========== TREATMENTS ========== */
+        .treatments {
+            background: var(--lilac-bg);
+        }
+
+        .treatments-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            padding: 0.8rem 2rem;
+            border: none;
+            background: var(--white);
+            color: var(--text-dark);
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .tab-btn.active,
+        .tab-btn:hover {
+            background: var(--gradient-main);
+            color: var(--white);
+        }
+
+        .treatments-grid {
+            display: none;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .treatments-grid.active {
+            display: grid;
+        }
+
+        .treatment-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(91, 26, 140, 0.1);
+            transition: all 0.3s;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .treatment-card.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .treatment-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(91, 26, 140, 0.2);
+        }
+
+        .treatment-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .treatment-card-content {
+            padding: 1.5rem;
+        }
+
+        .treatment-card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--purple-deep);
+            margin-bottom: 0.5rem;
+        }
+
+        .treatment-card p {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .treatment-card .btn {
+            width: 100%;
+            justify-content: center;
+            padding: 0.8rem;
+            font-size: 0.9rem;
+        }
+
+        .btn-purple {
+            background: var(--gradient-main);
+            color: var(--white);
+            box-shadow: var(--shadow-purple);
+        }
+
+        .btn-purple:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(91, 26, 140, 0.4);
+        }
+
+        /* ========== ABOUT ========== */
+        .about {
+            background: var(--white);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            /* Imagem: profissional ou ambiente da clínica - TROCAR pela foto real */
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(91, 26, 140, 0.2);
+        }
+
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 100%;
+            height: 100%;
+            border: 4px solid var(--gold);
+            border-radius: 20px;
+            z-index: -1;
+        }
+
+        .about-text h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--purple-deep);
+            margin-bottom: 1rem;
+        }
+
+        .about-text .tagline {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--magenta);
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .about-text p {
+            color: #555;
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+        }
+
+        .about-badges {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .about-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--lilac-bg);
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--purple-deep);
+        }
+
+        /* ========== DIFFERENTIALS ========== */
+        .differentials {
+            background: var(--gradient-main);
+            padding: 5rem 5%;
+        }
+
+        .differentials .section-title h2,
+        .differentials .section-title p {
+            color: var(--white);
+        }
+
+        .diff-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .diff-card {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s;
+        }
+
+        .diff-card:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-5px);
+        }
+
+        .diff-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .diff-card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .diff-card p {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.95rem;
+        }
+
+        /* ========== HOW IT WORKS ========== */
+        .how-it-works {
+            background: var(--white);
+        }
+
+        .steps {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .step {
+            flex: 1;
+            min-width: 250px;
+            max-width: 300px;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-main);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--white);
+            margin: 0 auto 1.5rem;
+            box-shadow: var(--shadow-purple);
+        }
+
+        .step h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--purple-deep);
+            margin-bottom: 0.5rem;
+        }
+
+        .step p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .step-arrow {
+            position: absolute;
+            right: -1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            color: var(--gold);
+        }
+
+        /* ========== GALLERY ========== */
+        .gallery {
+            background: var(--lilac-bg);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(91, 26, 140, 0.6), transparent);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .gallery-item:hover::after {
+            opacity: 1;
+        }
+
+        /* ========== TESTIMONIALS ========== */
+        .testimonials {
+            background: var(--lilac-bg);
+            padding: 5rem 5%;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(91, 26, 140, 0.1);
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 5rem;
+            font-family: Georgia, serif;
+            color: var(--lilac-bg);
+            line-height: 1;
+        }
+
+        .testimonial-stars {
+            color: var(--gold);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-card p {
+            color: #555;
+            font-size: 1rem;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-main);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        .author-name {
+            font-weight: 600;
+            color: var(--purple-deep);
+        }
+
+        /* ========== FAQ ========== */
+        .faq {
+            background: var(--white);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 1.5rem 0;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--purple-deep);
+            transition: color 0.3s;
+        }
+
+        .faq-question:hover {
+            color: var(--magenta);
+        }
+
+        .faq-icon {
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+            color: var(--gold);
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding-top: 1rem;
+        }
+
+        /* ========== CTA SECTION ========== */
+        .cta-section {
+            /* Imagem: ambiente relaxante de spa/estética - TROCAR pela foto real */
+            background: url('https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1920&q=80') center/cover no-repeat;
+            position: relative;
+            padding: 6rem 5%;
+            text-align: center;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(91, 26, 140, 0.9) 0%, rgba(194, 24, 91, 0.85) 100%);
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cta-section h2 {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        /* ========== LOCATION ========== */
+        .location {
+            background: var(--lilac-bg);
+        }
+
+        .location-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: start;
+        }
+
+        .location-info h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--purple-deep);
+            margin-bottom: 1.5rem;
+        }
+
+        .location-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .location-icon {
+            font-size: 1.5rem;
+            color: var(--magenta);
+        }
+
+        .location-item strong {
+            display: block;
+            color: var(--purple-deep);
+            margin-bottom: 0.3rem;
+        }
+
+        .location-item span {
+            color: #666;
+        }
+
+        .hours-list {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 16px;
+            margin-top: 1rem;
+        }
+
+        .hours-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .hours-row:last-child {
+            border: none;
+        }
+
+        .location-map {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(91, 26, 140, 0.15);
+        }
+
+        .location-map iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+        }
+
+        /* ========== FOOTER ========== */
+        footer {
+            background: var(--purple-deep);
+            color: var(--white);
+            padding: 3rem 5% 1.5rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-col h4 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--gold);
+        }
+
+        .footer-col p,
+        .footer-col a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .footer-col a:hover {
+            color: var(--gold);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .footer-social a {
+            width: 45px;
+            height: 45px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            transition: all 0.3s;
+        }
+
+        .footer-social a:hover {
+            background: var(--gold);
+            color: var(--purple-deep);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+        }
+
+        /* ========== WHATSAPP FLOAT ========== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 65px;
+            height: 65px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            text-decoration: none;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 35px rgba(37, 211, 102, 0.5);
+        }
+
+        /* ========== MOBILE RESPONSIVE ========== */
+        @media (max-width: 900px) {
+            .about-content,
+            .location-content {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image {
+                order: -1;
+            }
+
+            .about-image::before {
+                display: none;
+            }
+
+            .step-arrow {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 70%;
+                height: 100vh;
+                background: var(--white);
+                flex-direction: column;
+                padding: 5rem 2rem;
+                transition: right 0.3s;
+                box-shadow: -5px 0 30px rgba(0,0,0,0.1);
+            }
+
+            nav.active {
+                right: 0;
+            }
+
+            nav a {
+                color: var(--text-dark);
+                font-size: 1.2rem;
+                padding: 0.5rem 0;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+
+            .treatments-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .highlight-number {
+                font-size: 2rem;
+            }
+
+            .whatsapp-float {
+                width: 55px;
+                height: 55px;
+                font-size: 1.6rem;
+                bottom: 1.5rem;
+                right: 1.5rem;
+            }
+        }
+
+        /* ========== ANIMATIONS ========== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header id="header">
+        <a href="#" class="logo">Mademoiselle</a>
+        <nav id="nav">
+            <a href="#tratamentos">Tratamentos</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#depoimentos">Depoimentos</a>
+            <a href="#localizacao">Localização</a>
+            <a href="https://wa.me/5513996800070?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avaliação." target="_blank">Agendar</a>
+        </nav>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <!-- HERO BANNER -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="rating-badge">
+                <span class="stars">★★★★★</span>
+                <span>4.9 no Google · 47 avaliações</span>
+            </div>
+            <h1>Realce sua essência com naturalidade e carinho</h1>
+            <p>Estética facial e corporal no Boqueirão, Praia Grande. Mais de 1.000 mulheres transformadas.</p>
+            <div class="hero-buttons">
+                <a href="https://wa.me/5513996800070?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avaliação." class="btn btn-gold" target="_blank">
+                    Agendar minha avaliação
+                </a>
+                <a href="#tratamentos" class="btn btn-outline">
+                    Conhecer tratamentos
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- HIGHLIGHT BAR -->
+    <div class="highlight-bar">
+        <div class="highlight-item fade-in">
+            <div class="highlight-icon">⭐</div>
+            <div class="highlight-number">4.9</div>
+            <div class="highlight-label">Nota no Google</div>
+        </div>
+        <div class="highlight-item fade-in">
+            <div class="highlight-icon">💖</div>
+            <div class="highlight-number">1.000+</div>
+            <div class="highlight-label">Mulheres transformadas</div>
+        </div>
+        <div class="highlight-item fade-in">
+            <div class="highlight-icon">👥</div>
+            <div class="highlight-number">3.2k</div>
+            <div class="highlight-label">Seguidoras no Instagram</div>
+        </div>
+        <div class="highlight-item fade-in">
+            <div class="highlight-icon">💬</div>
+            <div class="highlight-number">47</div>
+            <div class="highlight-label">Avaliações 5 estrelas</div>
+        </div>
+    </div>
+
+    <!-- TREATMENTS -->
+    <section class="treatments" id="tratamentos">
+        <div class="section-title fade-in">
+            <h2>Nossos Tratamentos</h2>
+            <p>Cuidados personalizados para realçar sua beleza natural</p>
+        </div>
+
+        <div class="treatments-tabs">
+            <button class="tab-btn active" onclick="showTreatments('facial')">Facial</button>
+            <button class="tab-btn" onclick="showTreatments('corporal')">Corporal</button>
+            <button class="tab-btn" onclick="showTreatments('olhar')">Olhar</button>
+        </div>
+
+        <!-- Tratamentos Facial -->
+        <div class="treatments-grid active" id="facial">
+            <div class="treatment-card">
+                <!-- Imagem: limpeza de pele - TROCAR pela foto real -->
+                <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80" alt="Limpeza de Pele" loading="lazy">
+                <div class="treatment-card-content">
+                    <h3>Limpeza de Pele</h3>
+                    <p>Tratamento profundo para remover impurezas, cravos e células mortas, deixando a pele renovada e saudável.</p>
+                    <a href="https://wa.me/5513996800070?text=Olá!%20Vim%20pelo%20site%20e%20tenho%20interesse%20em%20Limpeza%20de%20Pele." class="btn btn-purple" target="_blank">Quero saber mais</a>
+                </div>
+            </div>
+            <div class="treatment-card">
+                <!-- Imagem: tratamento facial - TROCAR pela foto real -->
+                <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=600&q=80" alt="Tratamentos Faciais" loading="lazy">
+                <div class="treatment-card-content">
+                    <h3>Estética Facial Avançada</h3>
+                    <p>Protocolos personalizados para tratar manchas, linhas de expressão, flacidez e rejuvenescimento da pele.</p>
+                    <a href="https://wa.me/5513996800070?text=Olá!%20Vim%20pelo%20site%20e%20tenho%20interesse%20em%20Estética%20Facial." class="btn btn-purple" target="_blank">Quero saber mais</a>
+                </div>
+            </div>
+            <div class="treatment-card">
+                <!-- Imagem: skincare - TROCAR pela foto real -->
+                <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&q=80" alt="Skincare Profissional" loading="lazy">
+                <div class="treatment-card-content">
+                    <h3>Skincare Profissional</h3>
+                    <p>Avaliação completa da sua pele e orientação personalizada de cuidados diários para manter os resultados.</p>
+                    <a href="https://wa.me/5513996800070?text=Olá!%20Vim%20pelo%20site%20e%20tenho%20interesse%20em%20Skincare." class="btn btn-purple" target="_blank">Quero saber mais</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tratamentos Corporal -->
+        <div class="treatments-grid" id="corporal">
+            <div class="treatment-card">
+                <!-- Imagem: drenagem linfática - TROCAR pela foto real -->
+                <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&q=80" alt="Drenagem Linfática" loading="lazy">
+                <div class="treatment-card-content">
+                    <h3>Drenagem Linfática</h3>
+                    <p>Massagem especializada que estimula o sistema linfático, reduzindo inchaços e melhorando a circulação.</p>
+                    <a href="https://wa.me/5513996800070?text=Olá!%20Vim%20pelo%20site%20e%20tenho%20interesse%20em%20Drenagem%20Linfática." class="btn btn-purple" target="_blank">Quero saber mais</a>
+                </div>
+            </div>
+            <div class="treatment-card">
+                <!-- Imagem: massagem modeladora - TROCAR pela foto real -->
+                <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=600&q=80" alt="Estética Corporal" loading="lazy">
+                <div class="treatment-card-content">
+                    <h3>Estética Corporal</h3>
+                    <p>Tratamentos para modelar o corpo, combater celulite e gordura localizada com técnicas avançadas.</p>
+                    <a href="https://wa.me/5513996800070?text=Olá!%20Vim%20pelo%20site%20e%20tenho%20interesse%20em%20Estética%20Corporal." class="btn btn-purple" target="_blank">Quero saber mais</a>
+                </div>
+            </div>
+            <div class="treatment-card">
+                <!-- Imagem: unhas - TROCAR pela foto real -->
+                <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80" alt="Unhas" loading="lazy">
+                <div class="treatment-card-content">
+                    <h3>Unhas</h3>
+                    <p>Serviços completos para suas unhas, com técnicas e produtos de alta qualidade.</p>
+                    <a href="https://wa.me/5513996800070?text=Olá!%20Vim%20pelo%20site%20e%20tenho%20interesse%20em%20serviços%20de%20Unhas." class="btn btn-purple" target="_blank">Quero saber mais</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tratamentos Olhar -->
+        <div class="treatments-grid" id="olhar">
+            <div class="treatment-card">
+                <!-- Imagem: extensão de cílios - TROCAR pela foto real -->
+                <img src="https://images.unsplash.com/photo-1583001931096-959e9a1a6223?w=600&q=80" alt="Extensão de Cílios" loading="lazy">
+                <div class="treatment-card-content">
+                    <h3>Extensão de Cílios</h3>
+                    <p>Cílios mais longos e volumosos que realçam seu olhar, com técnicas fio a fio ou volume russo.</p>
+                    <a href="https://wa.me/5513996800070?text=Olá!%20Vim%20pelo%20site%20e%20tenho%20interesse%20em%20Extensão%20de%20Cílios." class="btn btn-purple" target="_blank">Quero saber mais</a>
+                </div>
+            </div>
+            <div class="treatment-card">
+                <!-- Imagem: design de sobrancelhas - TROCAR pela foto real -->
+                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80" alt="Design de Sobrancelhas" loading="lazy">
+                <div class="treatment-card-content">
+                    <h3>Design de Sobrancelhas</h3>
+                    <p>Sobrancelhas perfeitamente desenhadas que harmonizam com seu rosto e realçam sua expressão.</p>
+                    <a href="https://wa.me/5513996800070?text=Olá!%20Vim%20pelo%20site%20e%20tenho%20interesse%20em%20Design%20de%20Sobrancelhas." class="btn btn-purple" target="_blank">Quero saber mais</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="sobre">
+        <div class="about-content">
+            <div class="about-image fade-in">
+                <!-- Imagem: profissional ou ambiente - TROCAR pela foto real -->
+                <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=80" alt="Ambiente Mademoiselle Estética">
+            </div>
+            <div class="about-text fade-in">
+                <h2>Mademoiselle Estética</h2>
+                <p class="tagline">"Realço sua essência com naturalidade e carinho"</p>
+                <p>No coração do Boqueirão, a Mademoiselle Estética é o seu refúgio de autocuidado e bem-estar. Oferecemos tratamentos faciais, corporais e de embelezamento do olhar com técnicas modernas e atendimento personalizado.</p>
+                <p>Já transformamos mais de 1.000 mulheres que buscavam realçar sua beleza natural. Nosso compromisso é entregar resultados que elevam sua autoestima, sempre com carinho e profissionalismo.</p>
+                <div class="about-badges">
+                    <span class="about-badge">💖 +1.000 Transformações</span>
+                    <span class="about-badge">⭐ 4.9 no Google</span>
+                    <span class="about-badge">📍 Boqueirão</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIFFERENTIALS -->
+    <section class="differentials">
+        <div class="section-title fade-in">
+            <h2>Por que escolher a Mademoiselle?</h2>
+            <p>Diferenciais que fazem toda a diferença</p>
+        </div>
+        <div class="diff-grid">
+            <div class="diff-card fade-in">
+                <div class="diff-icon">💝</div>
+                <h3>Atendimento Acolhedor</h3>
+                <p>Você é recebida com carinho e atenção em um ambiente pensado para seu conforto.</p>
+            </div>
+            <div class="diff-card fade-in">
+                <div class="diff-icon">✨</div>
+                <h3>Resultados Naturais</h3>
+                <p>Técnicas que realçam sua beleza natural, sem exageros ou artificialidade.</p>
+            </div>
+            <div class="diff-card fade-in">
+                <div class="diff-icon">🎯</div>
+                <h3>Tratamentos Personalizados</h3>
+                <p>Cada protocolo é adaptado às suas necessidades e objetivos específicos.</p>
+            </div>
+            <div class="diff-card fade-in">
+                <div class="diff-icon">⭐</div>
+                <h3>Profissionais Qualificadas</h3>
+                <p>Equipe capacitada e atualizada com as melhores técnicas do mercado.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="how-it-works">
+        <div class="section-title fade-in">
+            <h2>Como Funciona</h2>
+            <p>Sua jornada de transformação</p>
+        </div>
+        <div class="steps">
+            <div class="step fade-in">
+                <div class="step-number">1</div>
+                <h3>Agende sua avaliação</h3>
+                <p>Entre em contato pelo WhatsApp e escolha o melhor horário para você.</p>
+                <span class="step-arrow">→</span>
+            </div>
+            <div class="step fade-in">
+                <div class="step-number">2</div>
+                <h3>Avaliação personalizada</h3>
+                <p>Analisamos suas necessidades e montamos um plano de tratamento sob medida.</p>
+                <span class="step-arrow">→</span>
+            </div>
+            <div class="step fade-in">
+                <div class="step-number">3</div>
+                <h3>Comece sua transformação</h3>
+                <p>Inicie os tratamentos e veja os resultados aparecendo a cada sessão.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery" id="ambiente">
+        <div class="section-title fade-in">
+            <h2>Nosso Espaço</h2>
+            <p>Um ambiente pensado para seu conforto e bem-estar</p>
+        </div>
+        <div class="gallery-grid">
+            <!-- Imagens: fotos do ambiente da clínica - TROCAR pelas fotos reais -->
+            <div class="gallery-item fade-in">
+                <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&q=80" alt="Recepção acolhedora" loading="lazy">
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80" alt="Sala de tratamento facial" loading="lazy">
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80" alt="Ambiente de trabalho" loading="lazy">
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&q=80" alt="Sala de massagem" loading="lazy">
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="https://images.unsplash.com/photo-1583001931096-959e9a1a6223?w=600&q=80" alt="Área de cílios" loading="lazy">
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=600&q=80" alt="Detalhes do ambiente" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials" id="depoimentos">
+        <div class="section-title fade-in">
+            <h2>O que nossas clientes dizem</h2>
+            <p>Histórias reais de transformação</p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card fade-in">
+                <div class="testimonial-stars">★★★★★</div>
+                <p>"Profissional qualificada, lugar agradável, recepção nota 10. The best!"</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">C</div>
+                    <span class="author-name">Cliente Google</span>
+                </div>
+            </div>
+            <div class="testimonial-card fade-in">
+                <div class="testimonial-stars">★★★★★</div>
+                <p>"Recomendo de olhos fechados os serviços da clínica. Atendimento impecável!"</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">C</div>
+                    <span class="author-name">Cliente Google</span>
+                </div>
+            </div>
+            <div class="testimonial-card fade-in">
+                <div class="testimonial-stars">★★★★★</div>
+                <p>"Super profissionais! Faço tudo: cílios, drenagem e unhas. Amo o resultado."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">C</div>
+                    <span class="author-name">Cliente Google</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="duvidas">
+        <div class="section-title fade-in">
+            <h2>Dúvidas Frequentes</h2>
+            <p>Respondemos suas principais perguntas</p>
+        </div>
+        <div class="faq-container">
+            <div class="faq-item fade-in">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    A avaliação é gratuita?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    Entre em contato pelo WhatsApp para saber mais sobre nossa avaliação e condições especiais para novos clientes.
+                </div>
+            </div>
+            <div class="faq-item fade-in">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    Como faço para agendar?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    Você pode agendar pelo WhatsApp clicando em qualquer botão desta página. Nossa equipe responderá rapidamente para encontrar o melhor horário para você.
+                </div>
+            </div>
+            <div class="faq-item fade-in">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    Quantas sessões são necessárias?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    O número de sessões varia de acordo com cada tratamento e objetivo. Durante a avaliação, explicamos o protocolo ideal para seu caso.
+                </div>
+            </div>
+            <div class="faq-item fade-in">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    Vocês oferecem cursos?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    Sim! Oferecemos cursos para profissionais da área de estética. Entre em contato para saber as próximas turmas disponíveis.
+                </div>
+            </div>
+            <div class="faq-item fade-in">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    Qual a localização exata?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    Estamos na R. Oswaldo de Oliveira, 170 - 1º andar, sala 17, no Boqueirão, Praia Grande. Fácil acesso e estacionamento nas proximidades.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section">
+        <div class="cta-content fade-in">
+            <h2>Sua melhor versão começa com uma avaliação</h2>
+            <p>Agende agora e descubra como podemos realçar sua beleza natural</p>
+            <a href="https://wa.me/5513996800070?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avaliação." class="btn btn-gold">
+                Agendar minha avaliação
+            </a>
+        </div>
+    </section>
+
+    <!-- LOCATION -->
+    <section class="location" id="localizacao">
+        <div class="section-title fade-in">
+            <h2>Localização e Horários</h2>
+            <p>Venha nos conhecer</p>
+        </div>
+        <div class="location-content">
+            <div class="location-info fade-in">
+                <h3>Como chegar</h3>
+                <div class="location-item">
+                    <span class="location-icon">📍</span>
+                    <div>
+                        <strong>Endereço</strong>
+                        <span>R. Oswaldo de Oliveira, 170<br>1º andar, sala 17 - Boqueirão<br>Praia Grande - SP, 11701-120</span>
+                    </div>
+                </div>
+                <div class="location-item">
+                    <span class="location-icon">📱</span>
+                    <div>
+                        <strong>WhatsApp</strong>
+                        <span>(13) 99680-0070</span>
+                    </div>
+                </div>
+                <div class="location-item">
+                    <span class="location-icon">📸</span>
+                    <div>
+                        <strong>Instagram</strong>
+                        <span>@mademoiselleestetica</span>
+                    </div>
+                </div>
+                <div class="hours-list">
+                    <div class="hours-row">
+                        <span>Segunda a Sexta</span>
+                        <strong>09:00 - 16:00</strong>
+                    </div>
+                    <div class="hours-row">
+                        <span>Sábado</span>
+                        <strong>Consultar</strong>
+                    </div>
+                    <div class="hours-row">
+                        <span>Domingo</span>
+                        <strong>Fechado</strong>
+                    </div>
+                </div>
+            </div>
+            <div class="location-map fade-in">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3645.5!2d-46.413!3d-24.006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sR.%20Oswaldo%20de%20Oliveira%2C%20170%20-%20Boqueir%C3%A3o%2C%20Praia%20Grande%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1699999999999"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Localização Mademoiselle Estética">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>Mademoiselle Estética</h4>
+                <p>Realçamos sua essência com naturalidade e carinho</p>
+                <p>+1.000 mulheres transformadas</p>
+                <div class="footer-social">
+                    <a href="https://wa.me/5513996800070" target="_blank" title="WhatsApp">💬</a>
+                    <a href="https://www.instagram.com/mademoiselleestetica/" target="_blank" title="Instagram">📸</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Tratamentos</h4>
+                <a href="https://wa.me/5513996800070?text=Olá!%20Quero%20saber%20sobre%20Estética%20Facial.">Estética Facial</a>
+                <a href="https://wa.me/5513996800070?text=Olá!%20Quero%20saber%20sobre%20Drenagem%20Linfática.">Drenagem Linfática</a>
+                <a href="https://wa.me/5513996800070?text=Olá!%20Quero%20saber%20sobre%20Extensão%20de%20Cílios.">Extensão de Cílios</a>
+                <a href="https://wa.me/5513996800070?text=Olá!%20Quero%20saber%20sobre%20Design%20de%20Sobrancelhas.">Design de Sobrancelhas</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contato</h4>
+                <p>📍 R. Oswaldo de Oliveira, 170</p>
+                <p>1º andar, sala 17 - Boqueirão</p>
+                <p>Praia Grande - SP</p>
+                <p>📱 (13) 99680-0070</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Mademoiselle Estética. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOAT -->
+    <a href="https://wa.me/5513996800070?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avaliação." class="whatsapp-float" target="_blank" title="Fale conosco no WhatsApp">
+        💬
+    </a>
+
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        function toggleMenu() {
+            document.getElementById('nav').classList.toggle('active');
+        }
+
+        // Close menu when clicking a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('nav').classList.remove('active');
+            });
+        });
+
+        // Treatment tabs
+        function showTreatments(category) {
+            // Remove active from all tabs and grids
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.treatments-grid').forEach(grid => grid.classList.remove('active'));
+
+            // Add active to clicked tab and corresponding grid
+            event.target.classList.add('active');
+            document.getElementById(category).classList.add('active');
+
+            // Animate cards
+            document.querySelectorAll(`#${category} .treatment-card`).forEach((card, index) => {
+                card.classList.remove('animate');
+                setTimeout(() => {
+                    card.classList.add('animate');
+                }, index * 100);
+            });
+        }
+
+        // FAQ toggle
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            faqItem.classList.toggle('active');
+        }
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    if (entry.target.classList.contains('treatment-card')) {
+                        entry.target.classList.add('animate');
+                    }
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in, .treatment-card').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Initialize first tab cards
+        document.querySelectorAll('#facial .treatment-card').forEach((card, index) => {
+            setTimeout(() => {
+                card.classList.add('animate');
+            }, index * 100);
+        });
+    </script>
+</body>
+</html>
