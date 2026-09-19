@@ -1,0 +1,1633 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Eletricista Magrão | Eletricista em Praia Grande SP - Instalações e Reparos</title>
+    <meta name="description" content="Eletricista em Praia Grande SP. Nota 5.0 no Google com 481 avaliações. Instalação de chuveiro, troca de disjuntores, ventilador de teto, emergências elétricas. Atendimento rápido!">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Electrician",
+        "name": "Eletricista Magrão",
+        "description": "Eletricista em Praia Grande SP. Instalações, reparos e emergências elétricas residenciais e comerciais.",
+        "telephone": "+5513978032662",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "R. Otacília da Luz Brasil - Anhanguera",
+            "addressLocality": "Praia Grande",
+            "addressRegion": "SP",
+            "postalCode": "11717-300",
+            "addressCountry": "BR"
+        },
+        "areaServed": {
+            "@type": "City",
+            "name": "Praia Grande"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "481"
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                "opens": "08:00",
+                "closes": "20:30"
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --yellow-electric: #FFC400;
+            --navy-dark: #0B1D3A;
+            --blue-electric: #1E6BFF;
+            --white: #FFFFFF;
+            --bg-light: #F4F7FB;
+            --text-dark: #1A1A1A;
+            --gradient-navy: linear-gradient(135deg, #0B1D3A 0%, #1E6BFF 100%);
+            --gradient-reverse: linear-gradient(135deg, #1E6BFF 0%, #0B1D3A 100%);
+            --shadow-yellow: 0 8px 30px rgba(255, 196, 0, 0.4);
+            --shadow-navy: 0 8px 30px rgba(11, 29, 58, 0.3);
+            --whatsapp-green: #25D366;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ========== HEADER ========== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            background: var(--navy-dark);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--yellow-electric);
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--yellow-electric);
+        }
+
+        .header-phone {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--yellow-electric);
+            color: var(--navy-dark);
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .header-phone:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-yellow);
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .menu-toggle span {
+            width: 28px;
+            height: 3px;
+            background: var(--white);
+            border-radius: 3px;
+            transition: all 0.3s;
+        }
+
+        /* ========== HERO BANNER ========== */
+        .hero {
+            min-height: 100vh;
+            /* Imagem: eletricista trabalhando em quadro de disjuntores - TROCAR pela foto real */
+            background: url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1920&q=80') center/cover no-repeat;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(11, 29, 58, 0.9) 0%, rgba(30, 107, 255, 0.75) 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            animation: slideUp 1s ease-out;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero-badges {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255,255,255,0.95);
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            color: var(--navy-dark);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        .badge .stars {
+            color: var(--yellow-electric);
+        }
+
+        .badge-yellow {
+            background: var(--yellow-electric);
+            color: var(--navy-dark);
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            text-shadow: 0 4px 30px rgba(0,0,0,0.3);
+        }
+
+        .hero h1 .highlight {
+            color: var(--yellow-electric);
+        }
+
+        .hero p {
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            color: rgba(255,255,255,0.95);
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-yellow {
+            background: var(--yellow-electric);
+            color: var(--navy-dark);
+            box-shadow: var(--shadow-yellow);
+        }
+
+        .btn-yellow:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 40px rgba(255, 196, 0, 0.5);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-outline:hover {
+            background: var(--white);
+            color: var(--navy-dark);
+            transform: translateY(-3px);
+        }
+
+        .hero-note {
+            color: rgba(255,255,255,0.8);
+            font-size: 0.95rem;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            animation: bounce 2s infinite;
+        }
+
+        .scroll-indicator span {
+            display: block;
+            width: 30px;
+            height: 50px;
+            border: 2px solid rgba(255,255,255,0.6);
+            border-radius: 20px;
+            position: relative;
+        }
+
+        .scroll-indicator span::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 6px;
+            height: 6px;
+            background: var(--yellow-electric);
+            border-radius: 50%;
+            animation: scrollDown 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(-10px); }
+        }
+
+        @keyframes scrollDown {
+            0% { opacity: 1; top: 8px; }
+            100% { opacity: 0; top: 30px; }
+        }
+
+        /* ========== EMERGENCY BAR ========== */
+        .emergency-bar {
+            background: var(--yellow-electric);
+            padding: 1.5rem 5%;
+            text-align: center;
+        }
+
+        .emergency-bar p {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--navy-dark);
+            margin-bottom: 1rem;
+        }
+
+        .emergency-bar .btn {
+            background: var(--navy-dark);
+            color: var(--white);
+        }
+
+        .emergency-bar .btn:hover {
+            background: var(--blue-electric);
+        }
+
+        /* ========== SECTIONS GENERAL ========== */
+        section {
+            padding: 5rem 5%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 700;
+            color: var(--navy-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title h2 .highlight {
+            color: var(--blue-electric);
+        }
+
+        .section-title p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .section-title.light h2,
+        .section-title.light p {
+            color: var(--white);
+        }
+
+        /* ========== SERVICES ========== */
+        .services {
+            background: var(--bg-light);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(11, 29, 58, 0.1);
+            transition: all 0.3s;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .service-card.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(11, 29, 58, 0.2);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .service-card-content {
+            padding: 1.5rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--navy-dark);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .service-card h3 span {
+            color: var(--yellow-electric);
+        }
+
+        .service-card p {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .service-card .btn {
+            width: 100%;
+            justify-content: center;
+            padding: 0.8rem;
+            font-size: 0.9rem;
+        }
+
+        .btn-navy {
+            background: var(--gradient-navy);
+            color: var(--white);
+            box-shadow: var(--shadow-navy);
+        }
+
+        .btn-navy:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(11, 29, 58, 0.4);
+        }
+
+        /* ========== DIFFERENTIALS ========== */
+        .differentials {
+            background: var(--gradient-navy);
+            padding: 5rem 5%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .differentials::before {
+            content: '⚡';
+            position: absolute;
+            font-size: 20rem;
+            opacity: 0.05;
+            right: -5rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .diff-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .diff-card {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s;
+        }
+
+        .diff-card:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-5px);
+        }
+
+        .diff-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--yellow-electric);
+        }
+
+        .diff-card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--yellow-electric);
+            margin-bottom: 0.5rem;
+        }
+
+        .diff-card p {
+            color: rgba(255,255,255,0.85);
+            font-size: 0.95rem;
+        }
+
+        /* ========== HOW IT WORKS ========== */
+        .how-it-works {
+            background: var(--white);
+        }
+
+        .steps {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .step {
+            flex: 1;
+            min-width: 250px;
+            max-width: 300px;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-navy);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--yellow-electric);
+            margin: 0 auto 1.5rem;
+            box-shadow: var(--shadow-navy);
+        }
+
+        .step h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--navy-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .step p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .step-arrow {
+            position: absolute;
+            right: -1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            color: var(--yellow-electric);
+        }
+
+        /* ========== ABOUT ========== */
+        .about {
+            background: var(--bg-light);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            /* Imagem: eletricista profissional - TROCAR pela foto real do Rodrigo */
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(11, 29, 58, 0.2);
+        }
+
+        .about-image::before {
+            content: '⚡';
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            font-size: 4rem;
+            color: var(--yellow-electric);
+            text-shadow: 0 4px 20px rgba(255, 196, 0, 0.5);
+        }
+
+        .about-text h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--navy-dark);
+            margin-bottom: 1rem;
+        }
+
+        .about-text h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--blue-electric);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text p {
+            color: #555;
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+        }
+
+        .about-badges {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .about-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--white);
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--navy-dark);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        /* ========== AREAS ========== */
+        .areas {
+            background: var(--white);
+        }
+
+        .areas-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .area-chip {
+            background: var(--bg-light);
+            color: var(--navy-dark);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .area-chip:hover {
+            border-color: var(--blue-electric);
+            background: var(--white);
+        }
+
+        .area-chip.main {
+            background: var(--gradient-navy);
+            color: var(--white);
+        }
+
+        /* ========== TESTIMONIALS ========== */
+        .testimonials {
+            background: var(--bg-light);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(11, 29, 58, 0.08);
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 5rem;
+            font-family: Georgia, serif;
+            color: var(--bg-light);
+            line-height: 1;
+        }
+
+        .testimonial-stars {
+            color: var(--yellow-electric);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-card p {
+            color: #555;
+            font-size: 1rem;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-navy);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--yellow-electric);
+        }
+
+        .author-name {
+            font-weight: 600;
+            color: var(--navy-dark);
+        }
+
+        /* ========== GALLERY ========== */
+        .gallery {
+            background: var(--white);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(11, 29, 58, 0.7), transparent);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .gallery-item:hover::after {
+            opacity: 1;
+        }
+
+        /* ========== FAQ ========== */
+        .faq {
+            background: var(--bg-light);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border-radius: 16px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: var(--navy-dark);
+            padding: 1.5rem;
+            transition: background 0.3s;
+        }
+
+        .faq-question:hover {
+            background: var(--bg-light);
+        }
+
+        .faq-icon {
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+            color: var(--blue-electric);
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+        }
+
+        .faq-answer-content {
+            padding: 0 1.5rem 1.5rem;
+        }
+
+        /* ========== CTA SECTION ========== */
+        .cta-section {
+            /* Imagem: eletricista trabalhando - TROCAR pela foto real */
+            background: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=80') center/cover no-repeat;
+            position: relative;
+            padding: 6rem 5%;
+            text-align: center;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(11, 29, 58, 0.95) 0%, rgba(30, 107, 255, 0.85) 100%);
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cta-section h2 {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ========== FOOTER ========== */
+        footer {
+            background: var(--navy-dark);
+            color: var(--white);
+            padding: 3rem 5% 1.5rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-col h4 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--yellow-electric);
+        }
+
+        .footer-col p,
+        .footer-col a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .footer-col a:hover {
+            color: var(--yellow-electric);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .footer-social a {
+            width: 45px;
+            height: 45px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            transition: all 0.3s;
+        }
+
+        .footer-social a:hover {
+            background: var(--yellow-electric);
+            color: var(--navy-dark);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+        }
+
+        /* ========== WHATSAPP FLOAT (Desktop) ========== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 65px;
+            height: 65px;
+            background: var(--whatsapp-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            text-decoration: none;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 35px rgba(37, 211, 102, 0.5);
+        }
+
+        /* ========== MOBILE BOTTOM BAR ========== */
+        .mobile-bar {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: var(--white);
+            padding: 0.8rem;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+        }
+
+        .mobile-bar-buttons {
+            display: flex;
+            gap: 0.8rem;
+        }
+
+        .mobile-bar a {
+            flex: 1;
+            padding: 1rem;
+            border-radius: 12px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 1rem;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .mobile-bar .btn-whatsapp {
+            background: var(--whatsapp-green);
+            color: var(--white);
+        }
+
+        .mobile-bar .btn-call {
+            background: var(--yellow-electric);
+            color: var(--navy-dark);
+        }
+
+        /* ========== MOBILE RESPONSIVE ========== */
+        @media (max-width: 900px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image {
+                order: -1;
+            }
+
+            .about-image::before {
+                display: none;
+            }
+
+            .step-arrow {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 70%;
+                height: 100vh;
+                background: var(--navy-dark);
+                flex-direction: column;
+                padding: 5rem 2rem;
+                transition: right 0.3s;
+                box-shadow: -5px 0 30px rgba(0,0,0,0.3);
+            }
+
+            nav.active {
+                right: 0;
+            }
+
+            nav a {
+                font-size: 1.2rem;
+                padding: 0.5rem 0;
+            }
+
+            .header-phone {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .whatsapp-float {
+                display: none;
+            }
+
+            .mobile-bar {
+                display: block;
+            }
+
+            body {
+                padding-bottom: 80px;
+            }
+
+            .emergency-bar p {
+                font-size: 1rem;
+            }
+        }
+
+        /* ========== ANIMATIONS ========== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header id="header">
+        <a href="#" class="logo">⚡ Magrão <span>Eletricista</span></a>
+        <nav id="nav">
+            <a href="#servicos">Serviços</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#depoimentos">Depoimentos</a>
+            <a href="#duvidas">Dúvidas</a>
+            <a href="tel:+5513978032662" class="header-phone">📞 (13) 97803-2662</a>
+        </nav>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <!-- HERO BANNER -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badges">
+                <div class="badge">
+                    <span class="stars">★★★★★</span>
+                    <span>5.0 no Google · 481 avaliações</span>
+                </div>
+            </div>
+            <h1>Problema elétrico? Resolvemos rápido e com <span class="highlight">segurança ⚡</span></h1>
+            <p>Eletricista em Praia Grande: instalações, reparos e emergências. Atendimento ágil em toda a cidade e região.</p>
+            <div class="hero-buttons">
+                <a href="https://wa.me/5513978032662?text=Olá!%20Vim%20pelo%20site%20e%20preciso%20de%20um%20eletricista." class="btn btn-yellow" target="_blank">
+                    💬 Chamar no WhatsApp
+                </a>
+                <a href="tel:+5513978032662" class="btn btn-outline">
+                    📞 Ligar agora
+                </a>
+            </div>
+            <p class="hero-note">Orçamento sem compromisso · Resposta rápida</p>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- EMERGENCY BAR -->
+    <div class="emergency-bar">
+        <p>⚡ Ficou sem luz? Disjuntor desarmando? Cheiro de queimado? Chame agora!</p>
+        <a href="https://wa.me/5513978032662?text=Olá!%20Estou%20com%20uma%20emergência%20elétrica%20e%20preciso%20de%20atendimento%20urgente." class="btn" target="_blank">
+            Chamar eletricista de emergência
+        </a>
+    </div>
+
+    <!-- SERVICES -->
+    <section class="services" id="servicos">
+        <div class="section-title fade-in">
+            <h2>Nossos <span class="highlight">Serviços</span></h2>
+            <p>Soluções elétricas completas para sua casa ou empresa</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <!-- Imagem: instalação de chuveiro elétrico - TROCAR pela foto real -->
+                <img src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=600&q=80" alt="Instalação de Chuveiro Elétrico" loading="lazy">
+                <div class="service-card-content">
+                    <h3><span>⚡</span> Instalação de Chuveiro</h3>
+                    <p>Instalação e troca de chuveiro elétrico com segurança, incluindo fiação adequada e disjuntor correto.</p>
+                    <a href="https://wa.me/5513978032662?text=Olá!%20Vim%20pelo%20site%20e%20preciso%20de%20instalação%20de%20chuveiro." class="btn btn-navy" target="_blank">Pedir orçamento</a>
+                </div>
+            </div>
+            <div class="service-card">
+                <!-- Imagem: quadro de disjuntores - TROCAR pela foto real -->
+                <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&q=80" alt="Quadro de Disjuntores" loading="lazy">
+                <div class="service-card-content">
+                    <h3><span>⚡</span> Quadro de Disjuntores</h3>
+                    <p>Troca de disjuntores, organização e manutenção de quadro de distribuição elétrica.</p>
+                    <a href="https://wa.me/5513978032662?text=Olá!%20Vim%20pelo%20site%20e%20preciso%20de%20serviço%20no%20quadro%20de%20disjuntores." class="btn btn-navy" target="_blank">Pedir orçamento</a>
+                </div>
+            </div>
+            <div class="service-card">
+                <!-- Imagem: ventilador de teto / lustre - TROCAR pela foto real -->
+                <img src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=600&q=80" alt="Ventilador de Teto e Lustres" loading="lazy">
+                <div class="service-card-content">
+                    <h3><span>⚡</span> Ventilador e Lustres</h3>
+                    <p>Instalação de ventilador de teto, lustres, luminárias e iluminação decorativa.</p>
+                    <a href="https://wa.me/5513978032662?text=Olá!%20Vim%20pelo%20site%20e%20preciso%20de%20instalação%20de%20ventilador%20ou%20lustre." class="btn btn-navy" target="_blank">Pedir orçamento</a>
+                </div>
+            </div>
+            <div class="service-card">
+                <!-- Imagem: tomada 220V - TROCAR pela foto real -->
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Tomada para Ar-Condicionado" loading="lazy">
+                <div class="service-card-content">
+                    <h3><span>⚡</span> Tomada 220V</h3>
+                    <p>Instalação de tomada 220V para ar-condicionado, forno elétrico e outros equipamentos de alta potência.</p>
+                    <a href="https://wa.me/5513978032662?text=Olá!%20Vim%20pelo%20site%20e%20preciso%20de%20tomada%20220V." class="btn btn-navy" target="_blank">Pedir orçamento</a>
+                </div>
+            </div>
+            <div class="service-card">
+                <!-- Imagem: fiação elétrica - TROCAR pela foto real -->
+                <img src="https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?w=600&q=80" alt="Troca de Fiação" loading="lazy">
+                <div class="service-card-content">
+                    <h3><span>⚡</span> Troca de Fiação</h3>
+                    <p>Substituição de fiação antiga, instalação de novos circuitos e correção de problemas de energia.</p>
+                    <a href="https://wa.me/5513978032662?text=Olá!%20Vim%20pelo%20site%20e%20preciso%20de%20troca%20de%20fiação." class="btn btn-navy" target="_blank">Pedir orçamento</a>
+                </div>
+            </div>
+            <div class="service-card">
+                <!-- Imagem: manutenção elétrica - TROCAR pela foto real -->
+                <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&q=80" alt="Manutenção Elétrica" loading="lazy">
+                <div class="service-card-content">
+                    <h3><span>⚡</span> Manutenção Geral</h3>
+                    <p>Curto-circuito, falta de energia, manutenção residencial e comercial com diagnóstico completo.</p>
+                    <a href="https://wa.me/5513978032662?text=Olá!%20Vim%20pelo%20site%20e%20preciso%20de%20manutenção%20elétrica." class="btn btn-navy" target="_blank">Pedir orçamento</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIFFERENTIALS -->
+    <section class="differentials">
+        <div class="section-title light fade-in">
+            <h2>Por que chamar o Magrão?</h2>
+            <p>Diferenciais que fazem a diferença no seu serviço</p>
+        </div>
+        <div class="diff-grid">
+            <div class="diff-card fade-in">
+                <div class="diff-icon">⚡</div>
+                <h3>Atendimento Rápido</h3>
+                <p>Chegamos rápido para resolver seu problema. Sua urgência é nossa prioridade.</p>
+            </div>
+            <div class="diff-card fade-in">
+                <div class="diff-icon">🛡️</div>
+                <h3>Segurança Total</h3>
+                <p>Serviço executado com técnica correta e materiais de qualidade. Zero riscos.</p>
+            </div>
+            <div class="diff-card fade-in">
+                <div class="diff-icon">💰</div>
+                <h3>Preço Justo</h3>
+                <p>Orçamento transparente, sem surpresas. Você sabe exatamente o que está pagando.</p>
+            </div>
+            <div class="diff-card fade-in">
+                <div class="diff-icon">✨</div>
+                <h3>Serviço Organizado</h3>
+                <p>Trabalho limpo e organizado. Deixamos tudo no lugar quando terminamos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="how-it-works">
+        <div class="section-title fade-in">
+            <h2>Como <span class="highlight">Funciona</span></h2>
+            <p>Simples e rápido para você</p>
+        </div>
+        <div class="steps">
+            <div class="step fade-in">
+                <div class="step-number">1</div>
+                <h3>Chame no WhatsApp</h3>
+                <p>Mande uma mensagem explicando o problema ou o serviço que precisa.</p>
+                <span class="step-arrow">→</span>
+            </div>
+            <div class="step fade-in">
+                <div class="step-number">2</div>
+                <h3>Receba o orçamento</h3>
+                <p>Respondemos rápido com o valor e combinamos o melhor horário.</p>
+                <span class="step-arrow">→</span>
+            </div>
+            <div class="step fade-in">
+                <div class="step-number">3</div>
+                <h3>Problema resolvido</h3>
+                <p>Executamos o serviço com qualidade e você volta a ter energia.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="sobre">
+        <div class="about-content">
+            <div class="about-image fade-in">
+                <!-- Imagem: foto do eletricista - TROCAR pela foto real do Rodrigo -->
+                <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&q=80" alt="Rodrigo - Eletricista Magrão">
+            </div>
+            <div class="about-text fade-in">
+                <h2>Rodrigo & Eliz</h2>
+                <h3>Eletricista Magrão - Praia Grande SP</h3>
+                <p>Somos uma equipe de eletricistas profissionais atendendo Praia Grande e região. Nosso compromisso é resolver seu problema elétrico com agilidade, segurança e preço justo.</p>
+                <p>Com centenas de clientes satisfeitos e nota máxima no Google, trazemos a tranquilidade que você precisa ao contratar um serviço elétrico para sua casa ou empresa.</p>
+                <div class="about-badges">
+                    <span class="about-badge">⭐ 5.0 no Google</span>
+                    <span class="about-badge">💬 481 Avaliações</span>
+                    <span class="about-badge">📍 Praia Grande</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AREAS -->
+    <section class="areas">
+        <div class="section-title fade-in">
+            <h2>Área de <span class="highlight">Atendimento</span></h2>
+            <p>Atendemos Praia Grande e região</p>
+        </div>
+        <div class="areas-grid fade-in">
+            <span class="area-chip main">⚡ Praia Grande</span>
+            <span class="area-chip">Boqueirão</span>
+            <span class="area-chip">Guilhermina</span>
+            <span class="area-chip">Aviação</span>
+            <span class="area-chip">Tupi</span>
+            <span class="area-chip">Ocian</span>
+            <span class="area-chip">Caiçara</span>
+            <span class="area-chip">Anhanguera</span>
+            <span class="area-chip">Mirim</span>
+            <span class="area-chip">Vila Caiçara</span>
+            <span class="area-chip">Real</span>
+            <span class="area-chip">Sítio do Campo</span>
+            <span class="area-chip">E toda a região</span>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials" id="depoimentos">
+        <div class="section-title fade-in">
+            <h2>O que nossos <span class="highlight">clientes</span> dizem</h2>
+            <p>481 avaliações 5 estrelas no Google</p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card fade-in">
+                <div class="testimonial-stars">★★★★★</div>
+                <p>"O Rodrigo e sua esposa Eliz fizeram um ótimo trabalho no meu apartamento. Super recomendo!"</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">H</div>
+                    <span class="author-name">Heloyse Meireles</span>
+                </div>
+            </div>
+            <div class="testimonial-card fade-in">
+                <div class="testimonial-stars">★★★★★</div>
+                <p>"Prestatividade, educação, preço justo, organização e pontualidade! Muito satisfeito."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">N</div>
+                    <span class="author-name">Nilo Scandaroli</span>
+                </div>
+            </div>
+            <div class="testimonial-card fade-in">
+                <div class="testimonial-stars">★★★★★</div>
+                <p>"Precisei de um socorro de emergência para conserto do chuveiro. Atendimento rápido e eficiente!"</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">C</div>
+                    <span class="author-name">Camila Quintaneira</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery">
+        <div class="section-title fade-in">
+            <h2>Nossos <span class="highlight">Trabalhos</span></h2>
+            <p>Veja alguns serviços que realizamos</p>
+        </div>
+        <div class="gallery-grid">
+            <!-- Imagens: fotos de serviços - TROCAR pelas fotos reais dos trabalhos -->
+            <div class="gallery-item fade-in">
+                <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&q=80" alt="Quadro de disjuntores organizado" loading="lazy">
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Instalação elétrica" loading="lazy">
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&q=80" alt="Manutenção elétrica" loading="lazy">
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?w=600&q=80" alt="Fiação organizada" loading="lazy">
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600&q=80" alt="Eletricista trabalhando" loading="lazy">
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=600&q=80" alt="Instalação de equipamentos" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="duvidas">
+        <div class="section-title fade-in">
+            <h2>Dúvidas <span class="highlight">Frequentes</span></h2>
+            <p>Respondemos suas principais perguntas</p>
+        </div>
+        <div class="faq-container">
+            <div class="faq-item fade-in">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    Vocês atendem emergência?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Sim! Atendemos emergências elétricas como falta de luz, curto-circuito e cheiro de queimado. Entre em contato pelo WhatsApp para atendimento prioritário.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item fade-in">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    O orçamento é cobrado?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        O orçamento inicial é gratuito e sem compromisso. Passamos todas as informações antes de começar o serviço.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item fade-in">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    Quais formas de pagamento?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Aceitamos Pix, dinheiro e outras formas. Consulte no momento do orçamento as opções disponíveis.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item fade-in">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    Qual o horário de atendimento?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Atendemos todos os dias até as 20:30. Para emergências fora do horário, envie mensagem pelo WhatsApp que retornaremos assim que possível.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item fade-in">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    Atendem em quais bairros?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Atendemos toda a cidade de Praia Grande e região. Boqueirão, Guilhermina, Aviação, Tupi, Ocian, Caiçara, Anhanguera e demais bairros.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section">
+        <div class="cta-content fade-in">
+            <h2>Não arrisque sua segurança ⚡</h2>
+            <p>Serviço elétrico mal feito é perigoso. Fale com um profissional agora.</p>
+            <div class="cta-buttons">
+                <a href="https://wa.me/5513978032662?text=Olá!%20Vim%20pelo%20site%20e%20preciso%20de%20um%20eletricista." class="btn btn-yellow" target="_blank">
+                    💬 Chamar no WhatsApp
+                </a>
+                <a href="tel:+5513978032662" class="btn btn-outline">
+                    📞 Ligar agora
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>⚡ Eletricista Magrão</h4>
+                <p>Eletricista em Praia Grande SP</p>
+                <p>Instalações, reparos e emergências</p>
+                <p>Nota 5.0 com 481 avaliações</p>
+                <div class="footer-social">
+                    <a href="https://wa.me/5513978032662" target="_blank" title="WhatsApp">💬</a>
+                    <a href="tel:+5513978032662" title="Telefone">📞</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Serviços</h4>
+                <a href="https://wa.me/5513978032662?text=Olá!%20Preciso%20de%20instalação%20de%20chuveiro.">Instalação de Chuveiro</a>
+                <a href="https://wa.me/5513978032662?text=Olá!%20Preciso%20de%20serviço%20no%20quadro%20de%20disjuntores.">Quadro de Disjuntores</a>
+                <a href="https://wa.me/5513978032662?text=Olá!%20Preciso%20de%20instalação%20de%20ventilador.">Ventilador de Teto</a>
+                <a href="https://wa.me/5513978032662?text=Olá!%20Preciso%20de%20tomada%20220V.">Tomada 220V</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contato</h4>
+                <p>📍 Praia Grande - SP</p>
+                <p>📱 (13) 97803-2662</p>
+                <p>⏰ Todos os dias até 20:30</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Eletricista Magrão. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOAT (Desktop) -->
+    <a href="https://wa.me/5513978032662?text=Olá!%20Vim%20pelo%20site%20e%20preciso%20de%20um%20eletricista." class="whatsapp-float" target="_blank" title="Fale conosco no WhatsApp">
+        💬
+    </a>
+
+    <!-- MOBILE BOTTOM BAR -->
+    <div class="mobile-bar">
+        <div class="mobile-bar-buttons">
+            <a href="https://wa.me/5513978032662?text=Olá!%20Vim%20pelo%20site%20e%20preciso%20de%20um%20eletricista." class="btn-whatsapp" target="_blank">
+                💬 WhatsApp
+            </a>
+            <a href="tel:+5513978032662" class="btn-call">
+                📞 Ligar
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        function toggleMenu() {
+            document.getElementById('nav').classList.toggle('active');
+        }
+
+        // Close menu when clicking a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('nav').classList.remove('active');
+            });
+        });
+
+        // FAQ toggle
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            faqItem.classList.toggle('active');
+        }
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    if (entry.target.classList.contains('service-card')) {
+                        entry.target.classList.add('animate');
+                    }
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in, .service-card').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Animate service cards on load
+        setTimeout(() => {
+            document.querySelectorAll('.service-card').forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add('animate');
+                }, index * 100);
+            });
+        }, 500);
+    </script>
+</body>
+</html>

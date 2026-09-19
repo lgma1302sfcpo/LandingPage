@@ -51,6 +51,14 @@
       "dest": "/clientes/mademoiselle-estetica/$1"
     },
     {
+      "src": "/eletricista-magrao",
+      "dest": "/clientes/eletricista-magrao/index.html"
+    },
+    {
+      "src": "/eletricista-magrao/(.*)",
+      "dest": "/clientes/eletricista-magrao/$1"
+    },
+    {
       "src": "/(.*)",
       "dest": "/clientes/$1"
     }
