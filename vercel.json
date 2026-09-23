@@ -83,6 +83,14 @@
       "dest": "/clientes/magno-resolve/$1"
     },
     {
+      "src": "/laine-petshop",
+      "dest": "/clientes/laine-petshop/index.html"
+    },
+    {
+      "src": "/laine-petshop/(.*)",
+      "dest": "/clientes/laine-petshop/$1"
+    },
+    {
       "src": "/advogada-carla-oliveira",
       "dest": "/clientes/advogada-carla-oliveira/index.html"
     },
