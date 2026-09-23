@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nAdd lawyer landing pages and remove inactive clients\n\n- Add Advogada Carla Oliveira \\(Family, Real Estate, Banking, Tax Law\\)\n- Add Dra. Andrea Alves \\(Labor Law - Transportation focus\\)\n- Add Advogada Caroline Ferreira \\(Labor and Social Security Law\\)\n- Remove Esmalteria Brandão \\(client opted out\\)\n- Remove Marianna Nail Arts \\(client opted out\\)\n- Update index with categories and new lawyers section\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git push:*)"
     ]
   }
 }
