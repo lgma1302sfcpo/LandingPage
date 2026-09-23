@@ -67,6 +67,14 @@
       "dest": "/clientes/eletricista-24h-praia-grande/$1"
     },
     {
+      "src": "/eletricista-felipe",
+      "dest": "/clientes/eletricista-felipe/index.html"
+    },
+    {
+      "src": "/eletricista-felipe/(.*)",
+      "dest": "/clientes/eletricista-felipe/$1"
+    },
+    {
       "src": "/advogada-carla-oliveira",
       "dest": "/clientes/advogada-carla-oliveira/index.html"
     },
