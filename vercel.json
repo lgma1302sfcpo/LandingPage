@@ -91,6 +91,14 @@
       "dest": "/clientes/laine-petshop/$1"
     },
     {
+      "src": "/petshop-pacocao",
+      "dest": "/clientes/petshop-pacocao/index.html"
+    },
+    {
+      "src": "/petshop-pacocao/(.*)",
+      "dest": "/clientes/petshop-pacocao/$1"
+    },
+    {
       "src": "/advogada-carla-oliveira",
       "dest": "/clientes/advogada-carla-oliveira/index.html"
     },
