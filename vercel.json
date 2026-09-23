@@ -59,6 +59,14 @@
       "dest": "/clientes/messias-eletrica/$1"
     },
     {
+      "src": "/eletricista-24h-praia-grande",
+      "dest": "/clientes/eletricista-24h-praia-grande/index.html"
+    },
+    {
+      "src": "/eletricista-24h-praia-grande/(.*)",
+      "dest": "/clientes/eletricista-24h-praia-grande/$1"
+    },
+    {
       "src": "/advogada-carla-oliveira",
       "dest": "/clientes/advogada-carla-oliveira/index.html"
     },

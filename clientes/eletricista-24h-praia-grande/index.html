@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eletricista 24 horas em Praia Grande. Atendimento residencial e comercial. Troca de fiação, ventiladores, chuveiros, disjuntores. Ligue agora: (13) 98801-4041">
+    <meta name="keywords" content="eletricista praia grande, eletricista 24 horas, eletricista residencial, eletricista cidade ocian, eletricista boqueirão">
+    <title>Eletricista 24 Horas Praia Grande | Atendimento Imediato</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1E3A5F;
+            --primary-dark: #152A45;
+            --accent: #F5A623;
+            --accent-light: #FFD700;
+            --text-dark: #1A1A1A;
+            --text-light: #666666;
+            --background: #F8F9FA;
+            --white: #FFFFFF;
+            --gradient: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: var(--gradient);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M30 30l15-15v30l-15-15zm0 0L15 15v30l15-15z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            pointer-events: none;
+        }
+
+        .hero-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 100px 20px 60px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .badge-24h {
+            background: var(--accent);
+            color: var(--primary-dark);
+            padding: 8px 24px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 16px;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+
+        .hero h1 span {
+            color: var(--accent);
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 32px;
+            max-width: 600px;
+        }
+
+        .rating-box {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 20px 32px;
+            margin-bottom: 32px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .rating-stars {
+            color: var(--accent);
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+        }
+
+        .rating-text {
+            color: var(--white);
+            font-size: 1rem;
+        }
+
+        .rating-text strong {
+            font-size: 1.3rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: var(--white);
+            padding: 18px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(37, 211, 102, 0.5);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--primary);
+            padding: 16px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: var(--accent);
+            color: var(--primary-dark);
+        }
+
+        /* DIFERENCIAIS */
+        .diferenciais {
+            background: var(--white);
+            padding: 80px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            font-size: 1.1rem;
+            margin-bottom: 48px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .diferenciais-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+        }
+
+        .diferencial-card {
+            background: var(--background);
+            padding: 32px 24px;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .diferencial-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .diferencial-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 20px;
+        }
+
+        .diferencial-card h3 {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .diferencial-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* SERVIÇOS */
+        .servicos {
+            background: var(--background);
+            padding: 80px 20px;
+        }
+
+        .servicos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .servico-card {
+            background: var(--white);
+            padding: 32px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .servico-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--accent);
+        }
+
+        .servico-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+        }
+
+        .servico-icon {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+
+        .servico-card h3 {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .servico-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* ÁREAS ATENDIDAS */
+        .areas {
+            background: var(--gradient);
+            padding: 80px 20px;
+            color: var(--white);
+        }
+
+        .areas .section-title {
+            color: var(--white);
+        }
+
+        .areas .section-subtitle {
+            color: rgba(255,255,255,0.8);
+        }
+
+        .bairros-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .bairro-item {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 16px 20px;
+            border-radius: 12px;
+            text-align: center;
+            font-weight: 500;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .bairro-item:hover {
+            background: var(--accent);
+            color: var(--primary-dark);
+            transform: scale(1.05);
+        }
+
+        /* DEPOIMENTOS */
+        .depoimentos {
+            background: var(--white);
+            padding: 80px 20px;
+        }
+
+        .depoimentos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .depoimento-card {
+            background: var(--background);
+            padding: 32px;
+            border-radius: 20px;
+            position: relative;
+        }
+
+        .depoimento-card::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 24px;
+            font-size: 4rem;
+            color: var(--accent);
+            font-family: Georgia, serif;
+            line-height: 1;
+            opacity: 0.5;
+        }
+
+        .depoimento-text {
+            font-style: italic;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            padding-top: 24px;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .depoimento-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .author-avatar {
+            width: 48px;
+            height: 48px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .author-info h4 {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .author-stars {
+            color: var(--accent);
+            font-size: 0.9rem;
+        }
+
+        /* CTA FINAL */
+        .cta-final {
+            background: var(--accent);
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .cta-final h2 {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            color: var(--primary-dark);
+            margin-bottom: 16px;
+            font-weight: 800;
+        }
+
+        .cta-final p {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 32px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-final .btn-primary {
+            background: var(--primary);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .cta-final .btn-primary:hover {
+            background: var(--primary-dark);
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--primary-dark);
+            color: rgba(255,255,255,0.8);
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-info {
+            margin-bottom: 16px;
+        }
+
+        .footer-info p {
+            margin-bottom: 8px;
+        }
+
+        .footer-info a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        /* WHATSAPP FIXO */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 64px;
+            height: 64px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 30px rgba(37, 211, 102, 0.5);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            animation: bounce 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        .whatsapp-float svg {
+            width: 36px;
+            height: 36px;
+            fill: white;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero-content {
+                padding: 80px 20px 40px;
+            }
+
+            .rating-box {
+                padding: 16px 24px;
+            }
+
+            .diferenciais, .servicos, .areas, .depoimentos, .cta-final {
+                padding: 60px 20px;
+            }
+
+            .bairros-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Electrician",
+        "name": "Eletricista 24 Horas Praia Grande",
+        "image": "",
+        "telephone": "+55-13-98801-4041",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Av. Pres. Kennedy, 7715",
+            "addressLocality": "Praia Grande",
+            "addressRegion": "SP",
+            "postalCode": "11704-100",
+            "addressCountry": "BR"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "4892"
+        },
+        "openingHours": "Mo-Su 00:00-23:59",
+        "priceRange": "$$",
+        "areaServed": "Praia Grande, SP"
+    }
+    </script>
+</head>
+<body>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="badge-24h">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.2 3.2.8-1.3-4.5-2.7V7z"/>
+                </svg>
+                ATENDIMENTO 24 HORAS
+            </div>
+
+            <h1>Eletricista <span>24 Horas</span><br>Praia Grande</h1>
+
+            <p class="hero-subtitle">Serviços elétricos residenciais e comerciais com qualidade e segurança. Atendemos toda Praia Grande!</p>
+
+            <div class="rating-box">
+                <div class="rating-stars">★★★★★</div>
+                <p class="rating-text"><strong>4.892</strong> avaliações no Google</p>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="https://wa.me/5513988014041?text=Olá! Vi o perfil de vocês e preciso de um eletricista." class="btn-primary">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                    Chamar no WhatsApp
+                </a>
+                <a href="tel:+5513988014041" class="btn-secondary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                    </svg>
+                    (13) 98801-4041
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIFERENCIAIS -->
+    <section class="diferenciais">
+        <div class="container">
+            <h2 class="section-title">Por que nos escolher?</h2>
+            <p class="section-subtitle">Qualidade, rapidez e confiança em cada serviço</p>
+
+            <div class="diferenciais-grid">
+                <div class="diferencial-card">
+                    <div class="diferencial-icon">🕐</div>
+                    <h3>24 Horas</h3>
+                    <p>Atendimento de emergência a qualquer hora do dia ou da noite</p>
+                </div>
+                <div class="diferencial-card">
+                    <div class="diferencial-icon">⚡</div>
+                    <h3>Atendimento Rápido</h3>
+                    <p>Chegamos até você em poucos minutos em toda Praia Grande</p>
+                </div>
+                <div class="diferencial-card">
+                    <div class="diferencial-icon">✅</div>
+                    <h3>Profissionais Qualificados</h3>
+                    <p>Equipe experiente e capacitada para qualquer serviço</p>
+                </div>
+                <div class="diferencial-card">
+                    <div class="diferencial-icon">💰</div>
+                    <h3>Preço Justo</h3>
+                    <p>Orçamento transparente e sem surpresas no final</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section class="servicos">
+        <div class="container">
+            <h2 class="section-title">Nossos Serviços</h2>
+            <p class="section-subtitle">Soluções completas para sua residência ou empresa</p>
+
+            <div class="servicos-grid">
+                <div class="servico-card">
+                    <div class="servico-icon">🏠</div>
+                    <h3>Elétrica Residencial</h3>
+                    <p>Instalações, manutenções e reparos em residências. Tomadas, interruptores, iluminação e muito mais.</p>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon">🔌</div>
+                    <h3>Troca de Fiação</h3>
+                    <p>Substituição de fiação antiga, adequação de circuitos e modernização da rede elétrica.</p>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon">🌀</div>
+                    <h3>Ventiladores de Teto</h3>
+                    <p>Instalação de ventiladores de teto e parede com total segurança e garantia de funcionamento.</p>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon">🚿</div>
+                    <h3>Chuveiros Elétricos</h3>
+                    <p>Instalação e manutenção de chuveiros elétricos de todas as marcas e modelos.</p>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon">🔲</div>
+                    <h3>Quadro de Disjuntores</h3>
+                    <p>Instalação, ampliação e manutenção de quadros de distribuição e disjuntores.</p>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon">🏢</div>
+                    <h3>Elétrica Comercial</h3>
+                    <p>Atendemos comércios, escritórios e empresas com serviços profissionais.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ÁREAS ATENDIDAS -->
+    <section class="areas">
+        <div class="container">
+            <h2 class="section-title">Áreas Atendidas</h2>
+            <p class="section-subtitle">Atendemos toda Praia Grande e região</p>
+
+            <div class="bairros-grid">
+                <div class="bairro-item">Cidade Ocian</div>
+                <div class="bairro-item">Vila Tupi</div>
+                <div class="bairro-item">Guilhermina</div>
+                <div class="bairro-item">Canto do Forte</div>
+                <div class="bairro-item">Boqueirão</div>
+                <div class="bairro-item">Caiçara</div>
+                <div class="bairro-item">Vila Mirim</div>
+                <div class="bairro-item">Jardim Anhanguera</div>
+                <div class="bairro-item">Aviação</div>
+                <div class="bairro-item">Maracanã</div>
+                <div class="bairro-item">Jardim Real</div>
+                <div class="bairro-item">Flórida</div>
+                <div class="bairro-item">Jardim Quietude</div>
+                <div class="bairro-item">Curva do S</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section class="depoimentos">
+        <div class="container">
+            <h2 class="section-title">O que dizem nossos clientes</h2>
+            <p class="section-subtitle">Avaliações reais de clientes satisfeitos</p>
+
+            <div class="depoimentos-grid">
+                <div class="depoimento-card">
+                    <p class="depoimento-text">Excelente profissional, atencioso, preço justo, serviço de qualidade, recomendo!</p>
+                    <div class="depoimento-author">
+                        <div class="author-avatar">V</div>
+                        <div class="author-info">
+                            <h4>Valdir Cesar</h4>
+                            <div class="author-stars">★★★★★</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="depoimento-card">
+                    <p class="depoimento-text">Ótimo atendimento e trabalho de ótima qualidade e organização.</p>
+                    <div class="depoimento-author">
+                        <div class="author-avatar">M</div>
+                        <div class="author-info">
+                            <h4>Maria Garcia</h4>
+                            <div class="author-stars">★★★★★</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta-final">
+        <div class="container">
+            <h2>Precisa de um eletricista agora?</h2>
+            <p>Estamos disponíveis 24 horas para atender você em toda Praia Grande!</p>
+            <a href="https://wa.me/5513988014041?text=Olá! Preciso de um eletricista urgente." class="btn-primary">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                Chamar Eletricista Agora
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-info">
+                <p><strong>Eletricista 24 Horas Praia Grande</strong></p>
+                <p>Av. Pres. Kennedy, 7715 - Cidade Ocian, Praia Grande - SP</p>
+                <p><a href="tel:+5513988014041">(13) 98801-4041</a></p>
+            </div>
+            <p>&copy; 2024 Eletricista 24 Horas Praia Grande. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLUTUANTE -->
+    <a href="https://wa.me/5513988014041?text=Olá! Preciso de um eletricista." class="whatsapp-float" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <script>
+        // Animação de entrada dos elementos
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.diferencial-card, .servico-card, .depoimento-card, .bairro-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
