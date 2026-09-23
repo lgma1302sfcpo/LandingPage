@@ -75,6 +75,14 @@
       "dest": "/clientes/advogada-caroline-ferreira/$1"
     },
     {
+      "src": "/dra-ana-cibele",
+      "dest": "/clientes/dra-ana-cibele/index.html"
+    },
+    {
+      "src": "/dra-ana-cibele/(.*)",
+      "dest": "/clientes/dra-ana-cibele/$1"
+    },
+    {
       "src": "/(.*)",
       "dest": "/clientes/$1"
     }
