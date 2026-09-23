@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Angel's Pet Studio - Banho e Tosa Premium em Praia Grande. Referência em Spitz. Canto do Forte. Ligue: (13) 99747-5295">
+    <meta name="keywords" content="pet shop praia grande, banho e tosa spitz, angels pet studio, pet shop canto do forte, tosa spitz">
+    <title>Angel's Pet Studio | Banho & Tosa Premium - Praia Grande</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #B76E79;
+            --primary-dark: #9A5B65;
+            --primary-light: #D4A5AC;
+            --gold: #C9A962;
+            --gold-light: #E8D5A3;
+            --cream: #FDF8F5;
+            --text-dark: #2D2A2E;
+            --text-light: #6B6369;
+            --white: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background: var(--cream);
+        }
+
+        h1, h2, .elegant-text {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        /* Decorative elements */
+        .sparkle {
+            position: fixed;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .sparkle::before,
+        .sparkle::after {
+            content: '✨';
+            position: absolute;
+            font-size: 1.5rem;
+            opacity: 0.15;
+            animation: twinkle 3s ease-in-out infinite;
+        }
+
+        .sparkle:nth-child(1)::before { top: 10%; left: 5%; animation-delay: 0s; }
+        .sparkle:nth-child(1)::after { top: 30%; right: 8%; animation-delay: 1s; }
+        .sparkle:nth-child(2)::before { top: 50%; left: 3%; animation-delay: 0.5s; }
+        .sparkle:nth-child(2)::after { top: 70%; right: 5%; animation-delay: 1.5s; }
+        .sparkle:nth-child(3)::before { top: 85%; left: 10%; animation-delay: 2s; }
+        .sparkle:nth-child(3)::after { top: 20%; right: 12%; animation-delay: 2.5s; }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.1; transform: scale(1); }
+            50% { opacity: 0.3; transform: scale(1.2); }
+        }
+
+        /* HERO SECTION */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 50m-2 0a2 2 0 1 0 4 0a2 2 0 1 0-4 0' fill='%23ffffff' fill-opacity='0.05'/%3E%3C/svg%3E");
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 150px;
+            background: var(--cream);
+            clip-path: polygon(0 60%, 100% 0, 100% 100%, 0 100%);
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 100px 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content {
+            color: var(--white);
+        }
+
+        .studio-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            color: var(--text-dark);
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 28px;
+            box-shadow: 0 10px 30px rgba(201, 169, 98, 0.3);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            letter-spacing: 1px;
+        }
+
+        .hero h1 span {
+            display: block;
+            font-size: 0.5em;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            opacity: 0.9;
+            margin-top: 8px;
+        }
+
+        .hero-tagline {
+            font-size: 1.15rem;
+            opacity: 0.95;
+            margin-bottom: 20px;
+            font-style: italic;
+            max-width: 450px;
+        }
+
+        .hero-subtitle {
+            font-size: 1rem;
+            opacity: 0.85;
+            margin-bottom: 32px;
+            max-width: 480px;
+        }
+
+        .spitz-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 32px;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .hero-rating {
+            display: inline-flex;
+            align-items: center;
+            gap: 16px;
+            background: var(--white);
+            color: var(--text-dark);
+            padding: 20px 32px;
+            border-radius: 20px;
+            margin-bottom: 32px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+        }
+
+        .rating-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1;
+        }
+
+        .rating-info {
+            border-left: 2px solid var(--primary-light);
+            padding-left: 16px;
+        }
+
+        .rating-stars {
+            color: var(--gold);
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+        }
+
+        .rating-text {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 18px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-family: inherit;
+            border: none;
+            cursor: pointer;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-whatsapp {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: var(--white);
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.5);
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            color: var(--text-dark);
+            box-shadow: 0 10px 30px rgba(201, 169, 98, 0.4);
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-3px);
+        }
+
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .hero-image-frame {
+            position: relative;
+            padding: 15px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            border-radius: 30px;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.3);
+        }
+
+        .hero-image {
+            width: 100%;
+            max-width: 380px;
+            border-radius: 20px;
+            display: block;
+        }
+
+        .hero-floating-tag {
+            position: absolute;
+            background: var(--white);
+            padding: 14px 22px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .hero-floating-tag.top {
+            top: -20px;
+            right: -30px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+        }
+
+        .hero-floating-tag.bottom {
+            bottom: 30px;
+            left: -40px;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+
+        /* ABOUT SECTION */
+        .about {
+            padding: 100px 20px;
+            background: var(--cream);
+            position: relative;
+            z-index: 1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: var(--primary);
+            margin-bottom: 24px;
+            font-weight: 700;
+        }
+
+        .about-text p {
+            color: var(--text-light);
+            font-size: 1.05rem;
+            line-height: 1.9;
+            margin-bottom: 20px;
+        }
+
+        .about-text .highlight {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 32px;
+        }
+
+        .about-feature {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 20px;
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .about-feature-icon {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, var(--primary-light), var(--primary));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+        }
+
+        .about-feature span {
+            font-weight: 600;
+            color: var(--text-dark);
+            font-size: 0.9rem;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        }
+
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 100%;
+            height: 100%;
+            border: 3px solid var(--gold);
+            border-radius: 24px;
+            z-index: -1;
+        }
+
+        /* SERVICES */
+        .services {
+            padding: 100px 20px;
+            background: var(--white);
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--white);
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            font-size: 1.05rem;
+            color: var(--text-light);
+            max-width: 550px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--cream);
+            border-radius: 24px;
+            padding: 40px 32px;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--gold), var(--primary));
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 60px rgba(183, 110, 121, 0.15);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, var(--white), var(--cream));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin: 0 auto 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border: 3px solid var(--gold-light);
+        }
+
+        .service-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* SCHEDULE */
+        .schedule {
+            padding: 100px 20px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            position: relative;
+            z-index: 1;
+        }
+
+        .schedule-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .schedule-info {
+            color: var(--white);
+        }
+
+        .schedule-info h2 {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            margin-bottom: 24px;
+            font-weight: 700;
+        }
+
+        .schedule-info p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 32px;
+            line-height: 1.8;
+        }
+
+        .schedule-info .btn-whatsapp {
+            background: var(--white);
+            color: var(--primary);
+        }
+
+        .schedule-info .btn-whatsapp:hover {
+            background: var(--gold);
+            color: var(--text-dark);
+        }
+
+        .schedule-table {
+            background: var(--white);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+        }
+
+        .schedule-table h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 24px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .schedule-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 14px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.08);
+        }
+
+        .schedule-row:last-child {
+            border-bottom: none;
+        }
+
+        .schedule-day {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .schedule-time {
+            color: var(--text-light);
+        }
+
+        .schedule-time.closed {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* TESTIMONIALS */
+        .testimonials {
+            padding: 100px 20px;
+            background: var(--cream);
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            border-radius: 24px;
+            padding: 40px;
+            position: relative;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+        }
+
+        .testimonial-quote {
+            position: absolute;
+            top: 30px;
+            right: 35px;
+            font-size: 5rem;
+            color: var(--gold);
+            opacity: 0.3;
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        .testimonial-stars {
+            color: var(--gold);
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            letter-spacing: 4px;
+        }
+
+        .testimonial-text {
+            font-size: 1.05rem;
+            color: var(--text-dark);
+            line-height: 1.8;
+            margin-bottom: 24px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .author-avatar {
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .author-info h4 {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .author-info span {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        /* CTA */
+        .cta {
+            padding: 100px 20px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: var(--text-dark);
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .cta p {
+            font-size: 1.15rem;
+            color: var(--text-dark);
+            opacity: 0.8;
+            margin-bottom: 40px;
+            max-width: 550px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta .btn-whatsapp {
+            background: var(--primary);
+            font-size: 1.05rem;
+            padding: 20px 40px;
+        }
+
+        .cta .btn-whatsapp:hover {
+            background: var(--primary-dark);
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 60px 20px 30px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--gold);
+        }
+
+        .footer-tagline {
+            font-style: italic;
+            opacity: 0.7;
+            margin-bottom: 24px;
+            font-size: 0.95rem;
+        }
+
+        .footer-info p {
+            margin-bottom: 8px;
+            opacity: 0.8;
+        }
+
+        .footer-info a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        .footer-social {
+            margin: 24px 0;
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .footer-social a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            background: rgba(255,255,255,0.1);
+            padding: 10px 20px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .footer-social a:hover {
+            background: var(--gold);
+            color: var(--text-dark);
+        }
+
+        .footer-bottom {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.85rem;
+            opacity: 0.5;
+        }
+
+        /* WHATSAPP FLOAT */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 68px;
+            height: 68px;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        .whatsapp-float svg {
+            width: 36px;
+            height: 36px;
+            fill: white;
+        }
+
+        @keyframes glow {
+            from { box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4); }
+            to { box-shadow: 0 8px 40px rgba(37, 211, 102, 0.7); }
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 992px) {
+            .hero-container,
+            .about-content,
+            .schedule-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-content {
+                order: 2;
+            }
+
+            .hero-visual {
+                order: 1;
+            }
+
+            .hero-tagline,
+            .hero-subtitle {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .about-features {
+                max-width: 400px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .about-image::before {
+                display: none;
+            }
+
+            .hero-floating-tag {
+                display: none;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                padding-top: 40px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .about-features {
+                grid-template-columns: 1fr;
+            }
+
+            .services, .about, .testimonials, .schedule, .cta {
+                padding: 60px 20px;
+            }
+
+            .footer-social {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "PetStore",
+        "name": "Angel's Pet Studio",
+        "image": "",
+        "telephone": "+55-13-99747-5295",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "R. Espírito Santo, 381",
+            "addressLocality": "Praia Grande",
+            "addressRegion": "SP",
+            "postalCode": "11700-190",
+            "addressCountry": "BR"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "29"
+        },
+        "openingHours": ["Tu-Sa 09:00-18:00"],
+        "priceRange": "$$$"
+    }
+    </script>
+</head>
+<body>
+    <!-- Sparkle effects -->
+    <div class="sparkle"></div>
+    <div class="sparkle"></div>
+    <div class="sparkle"></div>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content" data-aos="fade-right" data-aos-duration="1000">
+                <div class="studio-badge">
+                    ✨ Pet Studio Premium
+                </div>
+
+                <h1>Angel's Pet Studio
+                    <span>Banho & Tosa • Canto do Forte</span>
+                </h1>
+
+                <p class="hero-tagline">"Mais que um atendimento, um gesto de amor e carinho em cada detalhe."</p>
+
+                <p class="hero-subtitle">Seu pet merece um tratamento especial. Somos referência em cuidados com Spitz e todas as raças.</p>
+
+                <div class="spitz-badge">
+                    🦊 Referência em Spitz
+                </div>
+
+                <div class="hero-rating">
+                    <div class="rating-number">4.8</div>
+                    <div class="rating-info">
+                        <div class="rating-stars">★★★★★</div>
+                        <div class="rating-text">29 avaliações no Google</div>
+                    </div>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="https://wa.me/5513997475295?text=Olá! Gostaria de agendar um horário para meu pet no Angel's Pet Studio." class="btn btn-whatsapp">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                        Agendar Horário
+                    </a>
+                    <a href="https://instagram.com/angelspetstudio" target="_blank" class="btn btn-gold">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z"/>
+                        </svg>
+                        @angelspetstudio
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-visual" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                <div class="hero-image-frame">
+                    <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&h=500&fit=crop" alt="Pet feliz no Angel's Pet Studio" class="hero-image">
+                    <div class="hero-floating-tag top">
+                        🦊 Especialistas em Spitz
+                    </div>
+                    <div class="hero-floating-tag bottom">
+                        💫 Atendimento Premium
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">✨ Nossos Serviços</span>
+                <h2 class="section-title">Cuidados especiais para seu pet</h2>
+                <p class="section-subtitle">Tratamentos premium com muito amor e carinho em cada detalhe</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="service-icon">🛁</div>
+                    <h3>Banho Premium</h3>
+                    <p>Banho relaxante com produtos de alta qualidade, secagem completa e perfumaria especial.</p>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">✂️</div>
+                    <h3>Tosa Artística</h3>
+                    <p>Tosa profissional respeitando o padrão de cada raça. Especialistas em Spitz!</p>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">🦊</div>
+                    <h3>Especialidade Spitz</h3>
+                    <p>Somos referência no cuidado com Spitz. Conhecemos cada detalhe da raça.</p>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">💆</div>
+                    <h3>Spa & Hidratação</h3>
+                    <p>Tratamentos de hidratação profunda para pelagem macia e brilhante.</p>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon">💅</div>
+                    <h3>Corte de Unhas</h3>
+                    <p>Corte cuidadoso e seguro para o conforto do seu pet.</p>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-icon">👂</div>
+                    <h3>Limpeza de Ouvidos</h3>
+                    <p>Higienização delicada para prevenir infecções e manter a saúde.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCHEDULE -->
+    <section class="schedule">
+        <div class="container">
+            <div class="schedule-content">
+                <div class="schedule-info" data-aos="fade-right">
+                    <h2>Agende o dia de beleza do seu pet</h2>
+                    <p>Estamos no Canto do Forte, em Praia Grande. Agende pelo WhatsApp e garanta o melhor cuidado para seu melhor amigo.</p>
+                    <a href="https://wa.me/5513997475295?text=Olá! Gostaria de agendar um horário." class="btn btn-whatsapp">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                        </svg>
+                        Agendar pelo WhatsApp
+                    </a>
+                </div>
+
+                <div class="schedule-table" data-aos="fade-left">
+                    <h3>Horário de Funcionamento</h3>
+                    <div class="schedule-row">
+                        <span class="schedule-day">Segunda-feira</span>
+                        <span class="schedule-time closed">Fechado</span>
+                    </div>
+                    <div class="schedule-row">
+                        <span class="schedule-day">Terça-feira</span>
+                        <span class="schedule-time">09:00 - 18:00</span>
+                    </div>
+                    <div class="schedule-row">
+                        <span class="schedule-day">Quarta-feira</span>
+                        <span class="schedule-time">09:00 - 18:00</span>
+                    </div>
+                    <div class="schedule-row">
+                        <span class="schedule-day">Quinta-feira</span>
+                        <span class="schedule-time">09:00 - 18:00</span>
+                    </div>
+                    <div class="schedule-row">
+                        <span class="schedule-day">Sexta-feira</span>
+                        <span class="schedule-time">09:00 - 18:00</span>
+                    </div>
+                    <div class="schedule-row">
+                        <span class="schedule-day">Sábado</span>
+                        <span class="schedule-time">09:00 - 18:00</span>
+                    </div>
+                    <div class="schedule-row">
+                        <span class="schedule-day">Domingo</span>
+                        <span class="schedule-time closed">Fechado</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">💬 Depoimentos</span>
+                <h2 class="section-title">O que dizem sobre nós</h2>
+                <p class="section-subtitle">A satisfação dos tutores é nossa maior recompensa</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
+                    <span class="testimonial-quote">"</span>
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Não há melhor lugar no mundo para levar seu melhor amigo para tomar um banho."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">🐕</div>
+                        <div class="author-info">
+                            <h4>Cliente Google</h4>
+                            <span>Avaliação verificada</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <span class="testimonial-quote">"</span>
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"O melhor Banho e Tosa da Região! Recomendo demais!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">🐩</div>
+                        <div class="author-info">
+                            <h4>Cliente Google</h4>
+                            <span>Avaliação verificada</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <span class="testimonial-quote">"</span>
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Atenciosos, rápido, cuidou bem do meu tininho que já é idoso."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">🦮</div>
+                        <div class="author-info">
+                            <h4>Cliente Google</h4>
+                            <span>Avaliação verificada</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container" data-aos="zoom-in">
+            <h2>Agende o dia de spa do seu pet! ✨</h2>
+            <p>Seu melhor amigo merece um tratamento especial. Entre em contato pelo WhatsApp.</p>
+            <a href="https://wa.me/5513997475295?text=Olá! Gostaria de agendar um horário no Angel's Pet Studio." class="btn btn-whatsapp">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                </svg>
+                Agendar Agora
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">Angel's Pet Studio</div>
+            <p class="footer-tagline">"Mais que um atendimento, um gesto de amor e carinho em cada detalhe."</p>
+            <div class="footer-info">
+                <p>R. Espírito Santo, 381 - Canto do Forte, Praia Grande - SP</p>
+                <p><a href="tel:+5513997475295">(13) 99747-5295</a></p>
+            </div>
+            <div class="footer-social">
+                <a href="https://instagram.com/angelspetstudio" target="_blank">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069z"/>
+                    </svg>
+                    @angelspetstudio
+                </a>
+                <a href="https://instagram.com/widipet" target="_blank">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069z"/>
+                    </svg>
+                    @widipet
+                </a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Angel's Pet Studio. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOAT -->
+    <a href="https://wa.me/5513997475295?text=Olá! Gostaria de agendar um horário." class="whatsapp-float" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+        </svg>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 50
+        });
+    </script>
+</body>
+</html>

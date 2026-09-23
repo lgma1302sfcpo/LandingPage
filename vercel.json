@@ -3,6 +3,14 @@
   "name": "demos-landing-pages",
   "routes": [
     {
+      "src": "/bicho-forte",
+      "dest": "/clientes/bicho-forte/index.html"
+    },
+    {
+      "src": "/bicho-forte/(.*)",
+      "dest": "/clientes/bicho-forte/$1"
+    },
+    {
       "src": "/pet-joia",
       "dest": "/clientes/pet-joia/index.html"
     },
@@ -105,6 +113,14 @@
     {
       "src": "/petshop-pacocao/(.*)",
       "dest": "/clientes/petshop-pacocao/$1"
+    },
+    {
+      "src": "/angels-pet-studio",
+      "dest": "/clientes/angels-pet-studio/index.html"
+    },
+    {
+      "src": "/angels-pet-studio/(.*)",
+      "dest": "/clientes/angels-pet-studio/$1"
     },
     {
       "src": "/advogada-carla-oliveira",
