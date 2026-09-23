@@ -3,12 +3,12 @@
   "name": "demos-landing-pages",
   "routes": [
     {
-      "src": "/pet-minas",
-      "dest": "/clientes/pet-minas/index.html"
+      "src": "/pet-joia",
+      "dest": "/clientes/pet-joia/index.html"
     },
     {
-      "src": "/pet-minas/(.*)",
-      "dest": "/clientes/pet-minas/$1"
+      "src": "/pet-joia/(.*)",
+      "dest": "/clientes/pet-joia/$1"
     },
     {
       "src": "/ana-fernandes-nails",
