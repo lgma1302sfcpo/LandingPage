@@ -3,6 +3,14 @@
   "name": "demos-landing-pages",
   "routes": [
     {
+      "src": "/petcacau",
+      "dest": "/clientes/petcacau/index.html"
+    },
+    {
+      "src": "/petcacau/(.*)",
+      "dest": "/clientes/petcacau/$1"
+    },
+    {
       "src": "/bicho-forte",
       "dest": "/clientes/bicho-forte/index.html"
     },
