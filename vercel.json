@@ -3,14 +3,6 @@
   "name": "demos-landing-pages",
   "routes": [
     {
-      "src": "/esmalteria-brandao",
-      "dest": "/clientes/esmalteria-brandao/index.html"
-    },
-    {
-      "src": "/esmalteria-brandao/(.*)",
-      "dest": "/clientes/esmalteria-brandao/$1"
-    },
-    {
       "src": "/ana-fernandes-nails",
       "dest": "/clientes/ana-fernandes-nails/index.html"
     },
@@ -25,14 +17,6 @@
     {
       "src": "/maria-tatiane-nails/(.*)",
       "dest": "/clientes/maria-tatiane-nails/$1"
-    },
-    {
-      "src": "/marianna-nailarts",
-      "dest": "/clientes/marianna-nailarts/index.html"
-    },
-    {
-      "src": "/marianna-nailarts/(.*)",
-      "dest": "/clientes/marianna-nailarts/$1"
     },
     {
       "src": "/instituto-belle-vie",
@@ -65,6 +49,30 @@
     {
       "src": "/eletricista-garcez/(.*)",
       "dest": "/clientes/eletricista-garcez/$1"
+    },
+    {
+      "src": "/advogada-carla-oliveira",
+      "dest": "/clientes/advogada-carla-oliveira/index.html"
+    },
+    {
+      "src": "/advogada-carla-oliveira/(.*)",
+      "dest": "/clientes/advogada-carla-oliveira/$1"
+    },
+    {
+      "src": "/dra-andrea-alves",
+      "dest": "/clientes/dra-andrea-alves/index.html"
+    },
+    {
+      "src": "/dra-andrea-alves/(.*)",
+      "dest": "/clientes/dra-andrea-alves/$1"
+    },
+    {
+      "src": "/advogada-caroline-ferreira",
+      "dest": "/clientes/advogada-caroline-ferreira/index.html"
+    },
+    {
+      "src": "/advogada-caroline-ferreira/(.*)",
+      "dest": "/clientes/advogada-caroline-ferreira/$1"
     },
     {
       "src": "/(.*)",
