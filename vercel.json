@@ -3,6 +3,14 @@
   "name": "demos-landing-pages",
   "routes": [
     {
+      "src": "/pet-bichinhos",
+      "dest": "/clientes/pet-bichinhos/index.html"
+    },
+    {
+      "src": "/pet-bichinhos/(.*)",
+      "dest": "/clientes/pet-bichinhos/$1"
+    },
+    {
       "src": "/patas-e-pets",
       "dest": "/clientes/patas-e-pets/index.html"
     },
