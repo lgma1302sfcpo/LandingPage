@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Petit Royale - Clínica Veterinária, Neurologia e Estética Animal em Praia Grande. Desde 2013 cuidando do seu pet com excelência. Ligue: (13) 3395-1272">
+    <meta name="keywords" content="clínica veterinária praia grande, neurologia veterinária, pet shop canto do forte, estética animal, petit royale">
+    <title>Petit Royale | Clínica Veterinária, Neurologia & Estética - Praia Grande</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #4A1D6A;
+            --primary-light: #6B3FA0;
+            --primary-dark: #321248;
+            --gold: #D4AF37;
+            --gold-light: #E8D48A;
+            --cream: #FAF8F5;
+            --mint: #E8F4F2;
+            --text-dark: #1A1A2E;
+            --text-light: #5A5A6E;
+            --white: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background: var(--cream);
+        }
+
+        h1, h2, h3, .elegant {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D4AF37' fill-opacity='0.05'%3E%3Cpath d='M30 30l15-15v30l-15-15zm0 0L15 15v30l15-15z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 120px;
+            background: var(--cream);
+            clip-path: polygon(0 80%, 100% 0, 100% 100%, 0 100%);
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 100px 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content {
+            color: var(--white);
+        }
+
+        .since-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            color: var(--primary-dark);
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 8px;
+        }
+
+        .hero h1 .highlight {
+            color: var(--gold);
+            font-style: italic;
+        }
+
+        .hero-tagline {
+            font-size: 1.1rem;
+            color: var(--gold-light);
+            margin-bottom: 24px;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.05rem;
+            opacity: 0.9;
+            margin-bottom: 32px;
+            max-width: 500px;
+            line-height: 1.8;
+        }
+
+        .hero-services {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 32px;
+        }
+
+        .service-tag {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid rgba(255,255,255,0.2);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .hero-rating {
+            display: inline-flex;
+            align-items: center;
+            gap: 16px;
+            background: var(--white);
+            color: var(--text-dark);
+            padding: 20px 28px;
+            border-radius: 20px;
+            margin-bottom: 32px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+        }
+
+        .rating-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1;
+        }
+
+        .rating-info {
+            border-left: 2px solid var(--gold);
+            padding-left: 16px;
+        }
+
+        .rating-stars {
+            color: var(--gold);
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+        }
+
+        .rating-text {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 18px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-family: inherit;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-whatsapp {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: var(--white);
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.5);
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            color: var(--primary-dark);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-3px);
+        }
+
+        .hero-visual {
+            position: relative;
+        }
+
+        .hero-card {
+            background: var(--white);
+            border-radius: 30px;
+            padding: 40px;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.3);
+            position: relative;
+        }
+
+        .hero-card::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            background: linear-gradient(135deg, var(--gold), var(--primary-light));
+            border-radius: 33px;
+            z-index: -1;
+        }
+
+        .hero-card-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--cream);
+        }
+
+        .hero-card-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+
+        .hero-card-title h3 {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+
+        .hero-card-title span {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .hero-card-services {
+            display: grid;
+            gap: 12px;
+        }
+
+        .card-service {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 18px;
+            background: var(--cream);
+            border-radius: 14px;
+            font-weight: 500;
+            color: var(--text-dark);
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .card-service:hover {
+            background: var(--mint);
+            transform: translateX(5px);
+        }
+
+        .card-service-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--white);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        /* SERVICES SECTION */
+        .services {
+            padding: 100px 20px;
+            background: var(--cream);
+            position: relative;
+            z-index: 1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: var(--white);
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            font-size: 1.05rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: 24px;
+            padding: 40px 32px;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+        }
+
+        .service-card.featured {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--white);
+            grid-row: span 2;
+        }
+
+        .service-card.featured .service-icon {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .service-card.featured h3 {
+            color: var(--white);
+        }
+
+        .service-card.featured p {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .service-card:not(.featured):hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 60px rgba(74, 29, 106, 0.15);
+        }
+
+        .service-icon {
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, var(--cream), var(--mint));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin: 0 auto 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .service-card h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .service-card.featured .service-list {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .service-card.featured .service-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.95rem;
+        }
+
+        .service-card.featured .service-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* HYDRA PARTNER */
+        .partner {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, var(--mint), var(--cream));
+            position: relative;
+            z-index: 1;
+        }
+
+        .partner-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        .partner-badge {
+            background: var(--white);
+            padding: 30px 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.08);
+        }
+
+        .partner-badge h3 {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .partner-badge .partner-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        /* TESTIMONIALS */
+        .testimonials {
+            padding: 100px 20px;
+            background: var(--white);
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: var(--cream);
+            border-radius: 24px;
+            padding: 40px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+        }
+
+        .testimonial-quote {
+            position: absolute;
+            top: 25px;
+            right: 30px;
+            font-size: 5rem;
+            color: var(--primary);
+            opacity: 0.1;
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        .testimonial-stars {
+            color: var(--gold);
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            letter-spacing: 4px;
+        }
+
+        .testimonial-text {
+            font-size: 1.05rem;
+            color: var(--text-dark);
+            line-height: 1.8;
+            margin-bottom: 24px;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .author-avatar {
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .author-info h4 {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .author-info span {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        /* CTA */
+        .cta {
+            padding: 100px 20px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: 50%;
+        }
+
+        .cta h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: var(--white);
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .cta p {
+            font-size: 1.15rem;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta .btn-whatsapp {
+            background: var(--gold);
+            color: var(--primary-dark);
+            font-size: 1.05rem;
+            padding: 20px 40px;
+        }
+
+        .cta .btn-whatsapp:hover {
+            background: var(--gold-light);
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 60px 20px 30px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .footer-logo span {
+            color: var(--gold);
+            font-style: italic;
+        }
+
+        .footer-tagline {
+            color: var(--gold-light);
+            font-size: 0.95rem;
+            margin-bottom: 24px;
+        }
+
+        .footer-info p {
+            margin-bottom: 8px;
+            opacity: 0.8;
+        }
+
+        .footer-info a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        .footer-social {
+            margin: 24px 0;
+        }
+
+        .footer-social a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            background: rgba(255,255,255,0.1);
+            padding: 12px 24px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            background: var(--gold);
+            color: var(--primary-dark);
+        }
+
+        .footer-bottom {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.85rem;
+            opacity: 0.5;
+        }
+
+        /* WHATSAPP FLOAT */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 68px;
+            height: 68px;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        .whatsapp-float svg {
+            width: 36px;
+            height: 36px;
+            fill: white;
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+            50% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 992px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-content {
+                order: 1;
+            }
+
+            .hero-visual {
+                order: 2;
+            }
+
+            .hero-subtitle {
+                margin: 0 auto 32px;
+            }
+
+            .hero-services {
+                justify-content: center;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .service-card.featured {
+                grid-row: auto;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .services, .testimonials, .cta, .partner {
+                padding: 60px 20px;
+            }
+
+            .partner-content {
+                flex-direction: column;
+            }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VeterinaryCare",
+        "name": "Petit Royale Estética e Saúde Animal",
+        "image": "",
+        "telephone": "+55-13-3395-1272",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "R. Gen. Euclides de Figueiredo, 300",
+            "addressLocality": "Praia Grande",
+            "addressRegion": "SP",
+            "postalCode": "11700-780",
+            "addressCountry": "BR"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "135"
+        },
+        "openingHours": "Mo-Sa 08:00-18:00",
+        "priceRange": "$$$"
+    }
+    </script>
+</head>
+<body>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content" data-aos="fade-right" data-aos-duration="1000">
+                <div class="since-badge">
+                    👑 Desde 2013
+                </div>
+
+                <h1>Petit <span class="highlight">Royale</span></h1>
+                <p class="hero-tagline">Estética e Saúde Animal</p>
+
+                <p class="hero-subtitle">Onde saúde e bem-estar se encontram. Clínica veterinária completa com neurologia, estética e spa para seu pet.</p>
+
+                <div class="hero-services">
+                    <span class="service-tag">🏥 Clínica Veterinária</span>
+                    <span class="service-tag">🧠 Neurologia</span>
+                    <span class="service-tag">✨ Estética</span>
+                    <span class="service-tag">💉 Vacinas</span>
+                </div>
+
+                <div class="hero-rating">
+                    <div class="rating-number">4.8</div>
+                    <div class="rating-info">
+                        <div class="rating-stars">★★★★★</div>
+                        <div class="rating-text">135 avaliações no Google</div>
+                    </div>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="https://wa.me/551333951272?text=Olá! Gostaria de agendar uma consulta no Petit Royale." class="btn btn-whatsapp">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                        Agendar Consulta
+                    </a>
+                    <a href="https://instagram.com/petit_royale" target="_blank" class="btn btn-gold">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069z"/>
+                        </svg>
+                        @petit_royale
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-visual" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                <div class="hero-card">
+                    <div class="hero-card-header">
+                        <div class="hero-card-icon">🏥</div>
+                        <div class="hero-card-title">
+                            <h3>Serviços Completos</h3>
+                            <span>Saúde + Estética + Bem-estar</span>
+                        </div>
+                    </div>
+                    <div class="hero-card-services">
+                        <div class="card-service">
+                            <div class="card-service-icon">🧠</div>
+                            Neurologia Veterinária
+                        </div>
+                        <div class="card-service">
+                            <div class="card-service-icon">💉</div>
+                            Vacinas e Consultas
+                        </div>
+                        <div class="card-service">
+                            <div class="card-service-icon">✂️</div>
+                            Banho e Tosa Premium
+                        </div>
+                        <div class="card-service">
+                            <div class="card-service-icon">🐱</div>
+                            Atendimento para Gatos
+                        </div>
+                        <div class="card-service">
+                            <div class="card-service-icon">🥗</div>
+                            Alimentação Natural
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">✨ Nossos Serviços</span>
+                <h2 class="section-title">Cuidado completo para seu pet</h2>
+                <p class="section-subtitle">Da saúde à estética, oferecemos tudo que seu melhor amigo precisa em um só lugar</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card featured" data-aos="fade-up" data-aos-delay="0">
+                    <div class="service-icon">🏥</div>
+                    <h3>Clínica Veterinária</h3>
+                    <p>Atendimento veterinário especializado com profissionais experientes</p>
+                    <ul class="service-list">
+                        <li>✓ Consultas gerais</li>
+                        <li>✓ Neurologia veterinária</li>
+                        <li>✓ Vacinação completa</li>
+                        <li>✓ Atendimento cães e gatos</li>
+                        <li>✓ Exames e diagnósticos</li>
+                    </ul>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">🧠</div>
+                    <h3>Neurologia</h3>
+                    <p>Especialistas em neurologia veterinária para diagnóstico e tratamento</p>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">✂️</div>
+                    <h3>Banho e Tosa</h3>
+                    <p>Serviço completo de estética com produtos premium</p>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">💆</div>
+                    <h3>Spa Pet</h3>
+                    <p>Tratamentos relaxantes e hidratação para pelagem perfeita</p>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon">🥗</div>
+                    <h3>Alimentação Natural</h3>
+                    <p>Nutrição personalizada e alimentação natural para cães</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HYDRA PARTNER -->
+    <section class="partner">
+        <div class="container">
+            <div class="partner-content" data-aos="fade-up">
+                <div class="partner-badge">
+                    <h3>Parceiro Oficial</h3>
+                    <div class="partner-name">Hydra Pet Society</div>
+                </div>
+                <p style="max-width: 400px; color: var(--text-light);">
+                    Utilizamos produtos de alta qualidade da Hydra Pet Society para garantir o melhor cuidado com a pelagem do seu pet.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">💬 Depoimentos</span>
+                <h2 class="section-title">O que nossos clientes dizem</h2>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
+                    <span class="testimonial-quote">"</span>
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Essa equipe é nota 10, minhas pets são tratadas com muito carinho..."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">🐕</div>
+                        <div class="author-info">
+                            <h4>Cliente Google</h4>
+                            <span>Avaliação verificada</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <span class="testimonial-quote">"</span>
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Pessoal atencioso. Banho e tosa, atendimento veterinário, muito bom."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">🐩</div>
+                        <div class="author-info">
+                            <h4>Cliente Google</h4>
+                            <span>Avaliação verificada</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <span class="testimonial-quote">"</span>
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Trabalho impecável e meus cães amam o tio Jô, a tia Paty e a tia Thaynara!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">🐶</div>
+                        <div class="author-info">
+                            <h4>Cliente Google</h4>
+                            <span>Avaliação verificada</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container" data-aos="zoom-in">
+            <h2>Agende uma consulta pelo WhatsApp 👑</h2>
+            <p>Seu pet merece o tratamento royal. Entre em contato e cuide da saúde e beleza do seu melhor amigo.</p>
+            <a href="https://wa.me/551333951272?text=Olá! Gostaria de agendar um horário no Petit Royale." class="btn btn-whatsapp">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                </svg>
+                Agendar Agora
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">Petit <span>Royale</span></div>
+            <p class="footer-tagline">Onde saúde e bem-estar se encontram. Desde 2013.</p>
+            <div class="footer-info">
+                <p>R. Gen. Euclides de Figueiredo, 300 - Canto do Forte</p>
+                <p>Praia Grande - SP, 11700-780</p>
+                <p><a href="tel:+551333951272">(13) 3395-1272</a></p>
+            </div>
+            <div class="footer-social">
+                <a href="https://instagram.com/petit_royale" target="_blank">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069z"/>
+                    </svg>
+                    @petit_royale
+                </a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Petit Royale. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOAT -->
+    <a href="https://wa.me/551333951272?text=Olá! Gostaria de agendar um horário." class="whatsapp-float" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+        </svg>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 50
+        });
+    </script>
+</body>
+</html>
