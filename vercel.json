@@ -3,6 +3,22 @@
   "name": "demos-landing-pages",
   "routes": [
     {
+      "src": "/petit-royale",
+      "dest": "/clientes/petit-royale/index.html"
+    },
+    {
+      "src": "/petit-royale/(.*)",
+      "dest": "/clientes/petit-royale/$1"
+    },
+    {
+      "src": "/pet-forte",
+      "dest": "/clientes/pet-forte/index.html"
+    },
+    {
+      "src": "/pet-forte/(.*)",
+      "dest": "/clientes/pet-forte/$1"
+    },
+    {
       "src": "/petcacau",
       "dest": "/clientes/petcacau/index.html"
     },
