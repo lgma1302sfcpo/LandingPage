@@ -3,6 +3,14 @@
   "name": "demos-landing-pages",
   "routes": [
     {
+      "src": "/magic-pet-santos",
+      "dest": "/clientes/magic-pet-santos/index.html"
+    },
+    {
+      "src": "/magic-pet-santos/(.*)",
+      "dest": "/clientes/magic-pet-santos/$1"
+    },
+    {
       "src": "/pet-bichinhos",
       "dest": "/clientes/pet-bichinhos/index.html"
     },
