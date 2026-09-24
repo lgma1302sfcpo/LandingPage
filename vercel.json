@@ -3,6 +3,14 @@
   "name": "demos-landing-pages",
   "routes": [
     {
+      "src": "/lar-dog-lar",
+      "dest": "/clientes/lar-dog-lar/index.html"
+    },
+    {
+      "src": "/lar-dog-lar/(.*)",
+      "dest": "/clientes/lar-dog-lar/$1"
+    },
+    {
       "src": "/petit-royale",
       "dest": "/clientes/petit-royale/index.html"
     },
