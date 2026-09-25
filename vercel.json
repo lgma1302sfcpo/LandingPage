@@ -3,6 +3,14 @@
   "name": "demos-landing-pages",
   "routes": [
     {
+      "src": "/pet-garden",
+      "dest": "/clientes/pet-garden/index.html"
+    },
+    {
+      "src": "/pet-garden/(.*)",
+      "dest": "/clientes/pet-garden/$1"
+    },
+    {
       "src": "/pet-da-ilha",
       "dest": "/clientes/pet-da-ilha/index.html"
     },
