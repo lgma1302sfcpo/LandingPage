@@ -3,6 +3,14 @@
   "name": "demos-landing-pages",
   "routes": [
     {
+      "src": "/especies-pet-aviacao",
+      "dest": "/clientes/especies-pet-aviacao/index.html"
+    },
+    {
+      "src": "/especies-pet-aviacao/(.*)",
+      "dest": "/clientes/especies-pet-aviacao/$1"
+    },
+    {
       "src": "/petshop-barricao",
       "dest": "/clientes/petshop-barricao/index.html"
     },
