@@ -3,6 +3,14 @@
   "name": "demos-landing-pages",
   "routes": [
     {
+      "src": "/petshop-barricao",
+      "dest": "/clientes/petshop-barricao/index.html"
+    },
+    {
+      "src": "/petshop-barricao/(.*)",
+      "dest": "/clientes/petshop-barricao/$1"
+    },
+    {
       "src": "/duheels-veiculos",
       "dest": "/clientes/duheels-veiculos/index.html"
     },
@@ -57,14 +65,6 @@
     {
       "src": "/pet-forte/(.*)",
       "dest": "/clientes/pet-forte/$1"
-    },
-    {
-      "src": "/petcacau",
-      "dest": "/clientes/petcacau/index.html"
-    },
-    {
-      "src": "/petcacau/(.*)",
-      "dest": "/clientes/petcacau/$1"
     },
     {
       "src": "/bicho-forte",
@@ -177,14 +177,6 @@
     {
       "src": "/petshop-pacocao/(.*)",
       "dest": "/clientes/petshop-pacocao/$1"
-    },
-    {
-      "src": "/angels-pet-studio",
-      "dest": "/clientes/angels-pet-studio/index.html"
-    },
-    {
-      "src": "/angels-pet-studio/(.*)",
-      "dest": "/clientes/angels-pet-studio/$1"
     },
     {
       "src": "/advogada-carla-oliveira",
