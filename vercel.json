@@ -3,6 +3,14 @@
   "name": "demos-landing-pages",
   "routes": [
     {
+      "src": "/pet-da-ilha",
+      "dest": "/clientes/pet-da-ilha/index.html"
+    },
+    {
+      "src": "/pet-da-ilha/(.*)",
+      "dest": "/clientes/pet-da-ilha/$1"
+    },
+    {
       "src": "/especies-pet-aviacao",
       "dest": "/clientes/especies-pet-aviacao/index.html"
     },
