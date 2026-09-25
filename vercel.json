@@ -3,6 +3,14 @@
   "name": "demos-landing-pages",
   "routes": [
     {
+      "src": "/duheels-veiculos",
+      "dest": "/clientes/duheels-veiculos/index.html"
+    },
+    {
+      "src": "/duheels-veiculos/(.*)",
+      "dest": "/clientes/duheels-veiculos/$1"
+    },
+    {
       "src": "/magic-pet-santos",
       "dest": "/clientes/magic-pet-santos/index.html"
     },
