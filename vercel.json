@@ -3,6 +3,14 @@
   "name": "demos-landing-pages",
   "routes": [
     {
+      "src": "/marina-gomes",
+      "dest": "/clientes/marina-gomes/index.html"
+    },
+    {
+      "src": "/marina-gomes/(.*)",
+      "dest": "/clientes/marina-gomes/$1"
+    },
+    {
       "src": "/aliny-araujo",
       "dest": "/clientes/aliny-araujo/index.html"
     },
