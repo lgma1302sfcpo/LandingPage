@@ -3,6 +3,86 @@
   "name": "demos-landing-pages",
   "routes": [
     {
+      "src": "/simone-alvarenga",
+      "dest": "/clientes/simone-alvarenga/index.html"
+    },
+    {
+      "src": "/simone-alvarenga/(.*)",
+      "dest": "/clientes/simone-alvarenga/$1"
+    },
+    {
+      "src": "/ketrin-balieiro",
+      "dest": "/clientes/ketrin-balieiro/index.html"
+    },
+    {
+      "src": "/ketrin-balieiro/(.*)",
+      "dest": "/clientes/ketrin-balieiro/$1"
+    },
+    {
+      "src": "/carina-cunha",
+      "dest": "/clientes/carina-cunha/index.html"
+    },
+    {
+      "src": "/carina-cunha/(.*)",
+      "dest": "/clientes/carina-cunha/$1"
+    },
+    {
+      "src": "/victoria-costa",
+      "dest": "/clientes/victoria-costa/index.html"
+    },
+    {
+      "src": "/victoria-costa/(.*)",
+      "dest": "/clientes/victoria-costa/$1"
+    },
+    {
+      "src": "/fernanda-de-bona",
+      "dest": "/clientes/fernanda-de-bona/index.html"
+    },
+    {
+      "src": "/fernanda-de-bona/(.*)",
+      "dest": "/clientes/fernanda-de-bona/$1"
+    },
+    {
+      "src": "/cassia-rodrigues",
+      "dest": "/clientes/cassia-rodrigues/index.html"
+    },
+    {
+      "src": "/cassia-rodrigues/(.*)",
+      "dest": "/clientes/cassia-rodrigues/$1"
+    },
+    {
+      "src": "/poliane-marques",
+      "dest": "/clientes/poliane-marques/index.html"
+    },
+    {
+      "src": "/poliane-marques/(.*)",
+      "dest": "/clientes/poliane-marques/$1"
+    },
+    {
+      "src": "/monique-fonseca",
+      "dest": "/clientes/monique-fonseca/index.html"
+    },
+    {
+      "src": "/monique-fonseca/(.*)",
+      "dest": "/clientes/monique-fonseca/$1"
+    },
+    {
+      "src": "/raisa-fornazari",
+      "dest": "/clientes/raisa-fornazari/index.html"
+    },
+    {
+      "src": "/raisa-fornazari/(.*)",
+      "dest": "/clientes/raisa-fornazari/$1"
+    },
+    {
+      "src": "/caroline-guerreiro",
+      "dest": "/clientes/caroline-guerreiro/index.html"
+    },
+    {
+      "src": "/caroline-guerreiro/(.*)",
+      "dest": "/clientes/caroline-guerreiro/$1"
+    },
+    {
       "src": "/amanda-appolario",
       "dest": "/clientes/amanda-appolario/index.html"
     },
