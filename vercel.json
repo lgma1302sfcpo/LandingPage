@@ -3,6 +3,126 @@
   "name": "demos-landing-pages",
   "routes": [
     {
+      "src": "/aliny-araujo",
+      "dest": "/clientes/aliny-araujo/index.html"
+    },
+    {
+      "src": "/aliny-araujo/(.*)",
+      "dest": "/clientes/aliny-araujo/$1"
+    },
+    {
+      "src": "/anna-clara-psi",
+      "dest": "/clientes/anna-clara-psi/index.html"
+    },
+    {
+      "src": "/anna-clara-psi/(.*)",
+      "dest": "/clientes/anna-clara-psi/$1"
+    },
+    {
+      "src": "/grasielly-tome",
+      "dest": "/clientes/grasielly-tome/index.html"
+    },
+    {
+      "src": "/grasielly-tome/(.*)",
+      "dest": "/clientes/grasielly-tome/$1"
+    },
+    {
+      "src": "/claudia-peixoto",
+      "dest": "/clientes/claudia-peixoto/index.html"
+    },
+    {
+      "src": "/claudia-peixoto/(.*)",
+      "dest": "/clientes/claudia-peixoto/$1"
+    },
+    {
+      "src": "/samara-araujo",
+      "dest": "/clientes/samara-araujo/index.html"
+    },
+    {
+      "src": "/samara-araujo/(.*)",
+      "dest": "/clientes/samara-araujo/$1"
+    },
+    {
+      "src": "/louise-martins",
+      "dest": "/clientes/louise-martins/index.html"
+    },
+    {
+      "src": "/louise-martins/(.*)",
+      "dest": "/clientes/louise-martins/$1"
+    },
+    {
+      "src": "/lara-franca",
+      "dest": "/clientes/lara-franca/index.html"
+    },
+    {
+      "src": "/lara-franca/(.*)",
+      "dest": "/clientes/lara-franca/$1"
+    },
+    {
+      "src": "/danielle-aranda",
+      "dest": "/clientes/danielle-aranda/index.html"
+    },
+    {
+      "src": "/danielle-aranda/(.*)",
+      "dest": "/clientes/danielle-aranda/$1"
+    },
+    {
+      "src": "/ana-carolina-gontijo",
+      "dest": "/clientes/ana-carolina-gontijo/index.html"
+    },
+    {
+      "src": "/ana-carolina-gontijo/(.*)",
+      "dest": "/clientes/ana-carolina-gontijo/$1"
+    },
+    {
+      "src": "/thaiani-godoy",
+      "dest": "/clientes/thaiani-godoy/index.html"
+    },
+    {
+      "src": "/thaiani-godoy/(.*)",
+      "dest": "/clientes/thaiani-godoy/$1"
+    },
+    {
+      "src": "/ana-carolina-souza",
+      "dest": "/clientes/ana-carolina-souza/index.html"
+    },
+    {
+      "src": "/ana-carolina-souza/(.*)",
+      "dest": "/clientes/ana-carolina-souza/$1"
+    },
+    {
+      "src": "/liane-granjeiro",
+      "dest": "/clientes/liane-granjeiro/index.html"
+    },
+    {
+      "src": "/liane-granjeiro/(.*)",
+      "dest": "/clientes/liane-granjeiro/$1"
+    },
+    {
+      "src": "/ana-claudia-menini",
+      "dest": "/clientes/ana-claudia-menini/index.html"
+    },
+    {
+      "src": "/ana-claudia-menini/(.*)",
+      "dest": "/clientes/ana-claudia-menini/$1"
+    },
+    {
+      "src": "/josiane-faltz",
+      "dest": "/clientes/josiane-faltz/index.html"
+    },
+    {
+      "src": "/josiane-faltz/(.*)",
+      "dest": "/clientes/josiane-faltz/$1"
+    },
+    {
+      "src": "/erica-arruda",
+      "dest": "/clientes/erica-arruda/index.html"
+    },
+    {
+      "src": "/erica-arruda/(.*)",
+      "dest": "/clientes/erica-arruda/$1"
+    },
+    {
       "src": "/simone-alvarenga",
       "dest": "/clientes/simone-alvarenga/index.html"
     },
