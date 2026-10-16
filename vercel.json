@@ -3,6 +3,206 @@
   "name": "demos-landing-pages",
   "routes": [
     {
+      "src": "/amanda-appolario",
+      "dest": "/clientes/amanda-appolario/index.html"
+    },
+    {
+      "src": "/amanda-appolario/(.*)",
+      "dest": "/clientes/amanda-appolario/$1"
+    },
+    {
+      "src": "/gabrielly-goes",
+      "dest": "/clientes/gabrielly-goes/index.html"
+    },
+    {
+      "src": "/gabrielly-goes/(.*)",
+      "dest": "/clientes/gabrielly-goes/$1"
+    },
+    {
+      "src": "/mariana-guarenti",
+      "dest": "/clientes/mariana-guarenti/index.html"
+    },
+    {
+      "src": "/mariana-guarenti/(.*)",
+      "dest": "/clientes/mariana-guarenti/$1"
+    },
+    {
+      "src": "/bruna-medeiros",
+      "dest": "/clientes/bruna-medeiros/index.html"
+    },
+    {
+      "src": "/bruna-medeiros/(.*)",
+      "dest": "/clientes/bruna-medeiros/$1"
+    },
+    {
+      "src": "/yuri-bauer",
+      "dest": "/clientes/yuri-bauer/index.html"
+    },
+    {
+      "src": "/yuri-bauer/(.*)",
+      "dest": "/clientes/yuri-bauer/$1"
+    },
+    {
+      "src": "/antonio-marcos-oliveira",
+      "dest": "/clientes/antonio-marcos-oliveira/index.html"
+    },
+    {
+      "src": "/antonio-marcos-oliveira/(.*)",
+      "dest": "/clientes/antonio-marcos-oliveira/$1"
+    },
+    {
+      "src": "/ana-paula-rubio",
+      "dest": "/clientes/ana-paula-rubio/index.html"
+    },
+    {
+      "src": "/ana-paula-rubio/(.*)",
+      "dest": "/clientes/ana-paula-rubio/$1"
+    },
+    {
+      "src": "/maria-julia-perrenoud",
+      "dest": "/clientes/maria-julia-perrenoud/index.html"
+    },
+    {
+      "src": "/maria-julia-perrenoud/(.*)",
+      "dest": "/clientes/maria-julia-perrenoud/$1"
+    },
+    {
+      "src": "/rafaela-mancilha",
+      "dest": "/clientes/rafaela-mancilha/index.html"
+    },
+    {
+      "src": "/rafaela-mancilha/(.*)",
+      "dest": "/clientes/rafaela-mancilha/$1"
+    },
+    {
+      "src": "/beatriz-marinho",
+      "dest": "/clientes/beatriz-marinho/index.html"
+    },
+    {
+      "src": "/beatriz-marinho/(.*)",
+      "dest": "/clientes/beatriz-marinho/$1"
+    },
+    {
+      "src": "/deborah-cunha",
+      "dest": "/clientes/deborah-cunha/index.html"
+    },
+    {
+      "src": "/deborah-cunha/(.*)",
+      "dest": "/clientes/deborah-cunha/$1"
+    },
+    {
+      "src": "/eduarda-barreira",
+      "dest": "/clientes/eduarda-barreira/index.html"
+    },
+    {
+      "src": "/eduarda-barreira/(.*)",
+      "dest": "/clientes/eduarda-barreira/$1"
+    },
+    {
+      "src": "/viviane-bayer",
+      "dest": "/clientes/viviane-bayer/index.html"
+    },
+    {
+      "src": "/viviane-bayer/(.*)",
+      "dest": "/clientes/viviane-bayer/$1"
+    },
+    {
+      "src": "/carolina-fialho",
+      "dest": "/clientes/carolina-fialho/index.html"
+    },
+    {
+      "src": "/carolina-fialho/(.*)",
+      "dest": "/clientes/carolina-fialho/$1"
+    },
+    {
+      "src": "/kelly-oliveira",
+      "dest": "/clientes/kelly-oliveira/index.html"
+    },
+    {
+      "src": "/kelly-oliveira/(.*)",
+      "dest": "/clientes/kelly-oliveira/$1"
+    },
+    {
+      "src": "/livia-rosa",
+      "dest": "/clientes/livia-rosa/index.html"
+    },
+    {
+      "src": "/livia-rosa/(.*)",
+      "dest": "/clientes/livia-rosa/$1"
+    },
+    {
+      "src": "/beatriz-fernandes",
+      "dest": "/clientes/beatriz-fernandes/index.html"
+    },
+    {
+      "src": "/beatriz-fernandes/(.*)",
+      "dest": "/clientes/beatriz-fernandes/$1"
+    },
+    {
+      "src": "/julia-montelione",
+      "dest": "/clientes/julia-montelione/index.html"
+    },
+    {
+      "src": "/julia-montelione/(.*)",
+      "dest": "/clientes/julia-montelione/$1"
+    },
+    {
+      "src": "/sara-raquel",
+      "dest": "/clientes/sara-raquel/index.html"
+    },
+    {
+      "src": "/sara-raquel/(.*)",
+      "dest": "/clientes/sara-raquel/$1"
+    },
+    {
+      "src": "/vinicius-santos",
+      "dest": "/clientes/vinicius-santos/index.html"
+    },
+    {
+      "src": "/vinicius-santos/(.*)",
+      "dest": "/clientes/vinicius-santos/$1"
+    },
+    {
+      "src": "/andressa-nascimento",
+      "dest": "/clientes/andressa-nascimento/index.html"
+    },
+    {
+      "src": "/andressa-nascimento/(.*)",
+      "dest": "/clientes/andressa-nascimento/$1"
+    },
+    {
+      "src": "/deisiane-silva",
+      "dest": "/clientes/deisiane-silva/index.html"
+    },
+    {
+      "src": "/deisiane-silva/(.*)",
+      "dest": "/clientes/deisiane-silva/$1"
+    },
+    {
+      "src": "/jessica-silva",
+      "dest": "/clientes/jessica-silva/index.html"
+    },
+    {
+      "src": "/jessica-silva/(.*)",
+      "dest": "/clientes/jessica-silva/$1"
+    },
+    {
+      "src": "/lucas-cardoso",
+      "dest": "/clientes/lucas-cardoso/index.html"
+    },
+    {
+      "src": "/lucas-cardoso/(.*)",
+      "dest": "/clientes/lucas-cardoso/$1"
+    },
+    {
+      "src": "/lorena-ferreira",
+      "dest": "/clientes/lorena-ferreira/index.html"
+    },
+    {
+      "src": "/lorena-ferreira/(.*)",
+      "dest": "/clientes/lorena-ferreira/$1"
+    },
+    {
       "src": "/bianca-lima",
       "dest": "/clientes/bianca-lima/index.html"
     },
