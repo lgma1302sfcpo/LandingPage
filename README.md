@@ -1,5 +1,7 @@
 # Sistema de Landing Pages para Clientes Locais
 
+> **Sites animados (estilo Pitombas, com GSAP):** ficam em `animados/`. O passo a passo está em `animados/README.md`.
+
 ## Estrutura de Pastas
 
 ```

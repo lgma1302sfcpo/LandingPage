@@ -3,6 +3,14 @@
   "name": "demos-landing-pages",
   "routes": [
     {
+      "src": "/uncle-black-burger",
+      "dest": "/animados/clientes/uncle-black-burger/index.html"
+    },
+    {
+      "src": "/uncle-black-burger/(.*)",
+      "dest": "/animados/clientes/uncle-black-burger/$1"
+    },
+    {
       "src": "/mariana-apostolo",
       "dest": "/clientes/mariana-apostolo/index.html"
     },
