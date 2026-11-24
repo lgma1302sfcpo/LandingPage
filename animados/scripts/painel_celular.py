@@ -16,7 +16,7 @@ for i, L in enumerate(leads, 1):
                   'ig': s['instagram'], 'seg': p['seguidores'], 'nota': s['nota'], 'aval': s['avaliacoes'],
                   'num': num, 'wa': '55' + dig, 'conf': conf, 'fixo': len(dig) == 10,
                   'linkBio': p['whatsapp'] == 'link na bio (sem número)', 'just': p['justificativa'],
-                  'm': [p['mensagemInicial'], p['mensagemLink'], p['mensagemAcompanhamento']]})
+                  'm': [p['mensagemInicial'], p['mensagemLink'], p['mensagemAcompanhamento'], p['mensagemCompleta']]})
 tpl = (RAIZ / 'animados' / 'scripts' / 'painel_celular.tpl.html').read_text(encoding='utf-8')
 out = RAIZ / 'mensagens' / f'hamburguerias-{tag}-celular.html'
 out.write_text(tpl.replace('/*DADOS*/[]', json.dumps(dados, ensure_ascii=False)), encoding='utf-8')

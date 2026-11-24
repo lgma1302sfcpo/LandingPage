@@ -75,7 +75,13 @@ def mensagens(slug, nome, nota):
         f'Olá! Só retomando a mensagem sobre a demonstração de site que preparei para a {nome}. Se tiver interesse em ver, é só me avisar por aqui. Se não, tudo certo também.',
         f'Oi! Não quero incomodar, só confirmando se a mensagem sobre o site da {nome} chegou. Se quiserem ver a demonstração em algum momento, é só chamar.',
     ])
-    return m1, m2, m3
+    url = f'{BASE_URL}/{slug}/'
+    m4 = var(slug + '4', [
+        f'{ola} Sou desenvolvedor de sites e conheci a {nome} pelo Instagram. Montei uma demonstração de como ficaria um site próprio de vocês, já com endereço, horário e as avaliações do Google:\n\n{url}\n\nÉ só uma prévia, não oficial: as fotos e o cardápio estão como exemplo, e no site de verdade entram as fotos e os itens de vocês. Abre no celular e depois me conta o que achou?',
+        f'{ola} Trabalho criando sites e encontrei a {nome} aqui no Instagram. Fiz uma demonstração de site personalizada para a hamburgueria, com a nota {nota} e avaliações reais do Google. Dá uma olhada:\n\n{url}\n\nÉ uma prévia não oficial: onde aparecem fotos e cardápio de exemplo entram os de vocês. Se gostar, te explico como funciona, sem compromisso.',
+        f'{ola} Sou desenvolvedor de sites e vi a {nome} pelo Instagram. Acabei montando uma demonstração de site para vocês, com endereço, horário e as avaliações do Google. Segue o link:\n\n{url}\n\nÉ só uma demonstração (ainda não é um site oficial): as fotos e o cardápio são exemplos. Me fala o que achou?',
+    ])
+    return m1, m2, m3, m4
 
 
 # ---------------- bloco do site ----------------
@@ -138,7 +144,7 @@ def main(tag):
     for v in mod.VERIFICADOS:
         slug = v.get('slug') or slugify(v['nome'])
         total, partes, dias = pontuar(v, hoje)
-        m1, m2, m3 = mensagens(slug, v['nome'], v['notaTxt'])
+        m1, m2, m3, m4 = mensagens(slug, v['nome'], v['notaTxt'])
         leads.append({'slug': slug, 'site': site(v, slug, hoje), 'prospeccao': {
             'pontuacao': total, 'partesPontuacao': partes,
             'cidadeUF': f'{v["cidade"]}/{v["uf"]}', 'seguidores': v['seguidores'],
@@ -147,7 +153,7 @@ def main(tag):
             'fonteWhatsapp': v.get('whatsappFonte', ''), 'telefoneGoogle': v.get('telefoneGoogle', ''),
             'siteAtual': v.get('siteAtual', ''), 'justificativa': v['justificativa'],
             'limitacoes': v.get('limitacoes', ''),
-            'mensagemInicial': m1, 'mensagemLink': m2, 'mensagemAcompanhamento': m3, 'status': 'Não contatado'}})
+            'mensagemInicial': m1, 'mensagemLink': m2, 'mensagemAcompanhamento': m3, 'mensagemCompleta': m4, 'status': 'Não contatado'}})
     leads.sort(key=lambda L: -L['prospeccao']['pontuacao'])
     destino = RAIZ / 'pesquisa' / f'hamburguerias-{tag}.json'
     destino.write_text(json.dumps({'geradoEm': tag, 'leads': leads}, ensure_ascii=False, indent=1), encoding='utf-8')

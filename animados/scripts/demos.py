@@ -99,11 +99,12 @@ def validar(leads, verboso=True):
         for r in site.get('depoimentos', []):
             if not r.get('texto') or not r.get('autor'): e('depoimento sem texto/autor')
             if ' ' in r.get('autor', '').strip(): e(f'autor com sobrenome: {r["autor"]}')
-        for k in ['mensagemInicial', 'mensagemLink', 'mensagemAcompanhamento']:
+        for k in ['mensagemInicial', 'mensagemLink', 'mensagemAcompanhamento', 'mensagemCompleta']:
             if not p.get(k): e(f'falta {k}')
         if TEM_LINK.search(p.get('mensagemInicial', '')): e('mensagem inicial contém link')
         if TEM_LINK.search(p.get('mensagemAcompanhamento', '')): e('mensagem de acompanhamento contém link')
         if link_demo(s) not in p.get('mensagemLink', ''): e('mensagem do link não tem o link exclusivo')
+        if link_demo(s) not in p.get('mensagemCompleta', ''): e('mensagem 4 não tem o link exclusivo')
         if site.get('nomeCompleto', '') and site['nomeCompleto'].split()[0].lower() not in p.get('mensagemInicial', '').lower():
             e('mensagem inicial não cita o nome')
         if 'cardapio' in site: e('demo não deve ter cardápio (seria inventado)')
@@ -134,7 +135,7 @@ def gerar(caminho):
 COLUNAS = ['Pontuação', 'Hamburgueria', 'Cidade/UF', 'Instagram', 'Seguidores', 'Última publicação',
            'WhatsApp comercial', 'Fonte do WhatsApp', 'Telefone no Google', 'Google Maps', 'Nota Google', 'Avaliações', 'Site atual',
            'Demonstração', 'Justificativa', 'Mensagem inicial (sem link)', 'Mensagem com link',
-           'Mensagem de acompanhamento', 'Status', 'Verificado em', 'Observações/limitações']
+           'Mensagem de acompanhamento', 'Mensagem 4 (apresentação + link)', 'Status', 'Verificado em', 'Observações/limitações']
 
 
 def linha(L):
@@ -143,7 +144,7 @@ def linha(L):
             p['ultimaPublicacao'], p.get('whatsapp') or 'não confirmado', p.get('fonteWhatsapp', ''), p.get('telefoneGoogle', ''),
             s['linkGoogle'], s['nota'], s['avaliacoes'], p.get('siteAtual') or 'nenhum',
             link_demo(L['slug']), p['justificativa'], p['mensagemInicial'], p['mensagemLink'],
-            p['mensagemAcompanhamento'], p.get('status', 'Não contatado'), s['verificadoEm'],
+            p['mensagemAcompanhamento'], p['mensagemCompleta'], p.get('status', 'Não contatado'), s['verificadoEm'],
             p.get('limitacoes', '')]
 
 
@@ -163,7 +164,7 @@ def painel(leads, destino, tag):
         msgs = ''.join(
             f'<div class="m"><h4>{t}</h4><pre>{html.escape(p[k])}</pre><button data-k="{L["slug"]}:{k}">Copiar</button></div>'
             for t, k in [('1 · Primeiro contato (sem link)', 'mensagemInicial'), ('2 · Se responder com interesse', 'mensagemLink'),
-                         ('3 · Acompanhamento (sem resposta)', 'mensagemAcompanhamento')])
+                         ('3 · Acompanhamento (sem resposta)', 'mensagemAcompanhamento'), ('4 · Apresentação + link (tudo junto)', 'mensagemCompleta')])
         top = '<span class="top">TOP 10</span>' if i <= 10 else ''
         wa = p.get('whatsapp')
         wa_html = (f'<a href="https://wa.me/55{re.sub(r"[^0-9]", "", wa)}" target="_blank" rel="noopener">WhatsApp {html.escape(wa)}</a>' if wa and wa[0] == '('
@@ -184,7 +185,7 @@ h1{{font-size:26px;margin:0 0 4px}}.sub{{color:#555;margin:0 0 20px}}.c{{backgro
 .c header{{display:flex;gap:14px;align-items:flex-start}}.c header div{{flex:1}}.sc{{font-size:24px;background:#1b1b1b;color:#ffc719;border-radius:10px;padding:8px 10px;min-width:56px;text-align:center}}
 h3{{margin:0;font-size:18px}}.c header p{{margin:2px 0 0;color:#555;font-size:13px}}.top{{background:#e8352a;color:#fff;font-size:11px;padding:2px 6px;border-radius:4px;vertical-align:middle}}
 .lk{{font-size:13px}}.lk code{{font-size:12px;color:#555}}.j{{margin:6px 0}}.lim{{font-size:13px;color:#8a5a00;background:#fff6dc;padding:6px 8px;border-radius:6px}}.mut{{color:#888}}
-.ms{{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}}.m{{border:1px solid #e3e3e3;border-radius:8px;padding:10px;display:flex;flex-direction:column}}
+.ms{{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}}.m{{border:1px solid #e3e3e3;border-radius:8px;padding:10px;display:flex;flex-direction:column}}
 .m h4{{margin:0 0 6px;font-size:12px;text-transform:uppercase;color:#666}}pre{{white-space:pre-wrap;font:14px/1.4 system-ui,sans-serif;margin:0 0 8px;flex:1}}
 button{{border:0;background:#1b1b1b;color:#fff;border-radius:6px;padding:8px;cursor:pointer}}button.ok{{background:#e8352a}}select{{padding:6px;border-radius:6px}}
 @media(max-width:800px){{.ms{{grid-template-columns:1fr}}}}</style></head><body><main>
