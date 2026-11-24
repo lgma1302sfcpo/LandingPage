@@ -1,0 +1,118 @@
+<title>Hamburguerias · Prospecção</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&family=Archivo+Black&display=swap">
+<style>
+/* layout: lista de cartões, um por hamburgueria, ordem = pontuação; ação principal sempre visível no cartão */
+:root{
+  --bg:#f6f3ee;--card:#ffffff;--fg:#1d1a17;--mut:#6f675e;--line:#e4ddd2;
+  --acc:#c8361f;--acc-fg:#ffffff;--mus:#e8a614;--ok:#1f7a45;--warn:#a1620b;--chip:#efe8dc;
+  --d:"Archivo Black","Archivo",system-ui,sans-serif;--b:"Archivo",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#16130f;--card:#211d18;--fg:#f3ede4;--mut:#a89f93;--line:#3a332b;--acc:#e5533a;--acc-fg:#ffffff;--mus:#f0b93a;--ok:#4cc07c;--warn:#e8a33d;--chip:#2c2620;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#16130f;--card:#211d18;--fg:#f3ede4;--mut:#a89f93;--line:#3a332b;--acc:#e5533a;--acc-fg:#ffffff;--mus:#f0b93a;--ok:#4cc07c;--warn:#e8a33d;--chip:#2c2620;color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font:15px/1.45 var(--b)}
+.wrap{max-width:720px;margin:0 auto;padding-block:18px 60px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1{font:400 26px/1.05 var(--d);letter-spacing:-.01em;text-wrap:balance;margin:0}
+.sub{color:var(--mut);margin:6px 0 14px;font-size:14px}
+.note{background:var(--chip);border-radius:10px;padding:10px 12px;font-size:13px;color:var(--mut);margin-bottom:14px}
+.note b{color:var(--fg)}
+.bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.bar button{font:600 13px var(--b);border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:999px;padding:8px 12px;cursor:pointer}
+.bar button[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.bar .count{margin-left:auto;align-self:center;color:var(--mut);font-size:13px;font-variant-numeric:tabular-nums}
+.list{display:grid;gap:12px}
+.c{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;display:grid;gap:10px;min-width:0}
+.c.done{opacity:.62}
+.top{display:flex;gap:12px;align-items:flex-start}
+.pts{font:400 20px/1 var(--d);background:var(--fg);color:var(--bg);border-radius:10px;min-width:48px;text-align:center;padding:9px 6px;font-variant-numeric:tabular-nums}
+.pts small{display:block;font:600 10px/1 var(--b);letter-spacing:.06em;margin-top:3px;opacity:.75}
+.who{min-width:0;flex:1}
+.who h2{font:800 17px/1.2 var(--b);margin:0;text-wrap:balance}
+.meta{color:var(--mut);font-size:13px;margin-top:2px}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.chip{font:600 11px/1 var(--b);letter-spacing:.03em;text-transform:uppercase;background:var(--chip);border-radius:999px;padding:5px 8px}
+.chip.ok{color:var(--ok)}.chip.warn{color:var(--warn)}.chip.t10{background:var(--mus);color:#1d1a17}
+.tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;background:var(--chip);padding:4px;border-radius:10px}
+.tabs button{font:600 12.5px/1.15 var(--b);border:0;background:transparent;color:var(--mut);border-radius:7px;padding:8px 4px;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--card);color:var(--fg);box-shadow:0 1px 2px rgba(0,0,0,.12)}
+.msg{white-space:pre-wrap;font-size:14.5px;line-height:1.5;margin:0;border-left:3px solid var(--mus);padding:2px 0 2px 10px;overflow-wrap:anywhere}
+.acts{display:grid;grid-template-columns:1fr auto;gap:8px}
+.wa{display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font:800 15px var(--b);background:var(--acc);color:var(--acc-fg);border-radius:10px;padding:13px 12px;text-align:center}
+.cp{font:600 14px var(--b);border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:10px;padding:0 14px;cursor:pointer}
+.cp.ok{border-color:var(--ok);color:var(--ok)}
+.links{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;align-items:center}
+.links a{color:var(--fg);font-weight:600}
+.num{font-variant-numeric:tabular-nums;user-select:all;color:var(--mut)}
+select{font:600 13px var(--b);background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:7px 8px;margin-left:auto}
+details{font-size:13px;color:var(--mut)}
+summary{cursor:pointer}
+:focus-visible{outline:3px solid var(--mus);outline-offset:2px}
+@media (prefers-reduced-motion:no-preference){.c{transition:opacity .2s}}
+</style>
+
+<div class="wrap">
+  <h1>Hamburguerias · prospecção</h1>
+  <p class="sub">24 casas verificadas em 24/11/2026, da maior para a menor pontuação. O botão vermelho abre a conversa no WhatsApp com a mensagem já escrita; nada é enviado até você tocar em enviar lá.</p>
+  <p class="note"><b>Antes de mandar a mensagem 2:</b> os links das demonstrações só abrem depois que as páginas forem publicadas na Vercel. <b>“Não confirmado”</b> = número tirado do Google; pode não ter WhatsApp (aí use o Instagram).</p>
+  <div class="bar" role="group" aria-label="Filtro">
+    <button type="button" data-f="todas" aria-pressed="true">Todas</button>
+    <button type="button" data-f="top">Top 10</button>
+    <button type="button" data-f="pend">Não contatadas</button>
+    <button type="button" data-f="conf">WhatsApp confirmado</button>
+    <span class="count" id="count"></span>
+  </div>
+  <div class="list" id="list"></div>
+</div>
+
+<script>
+var D=/*DADOS*/[];
+var K='hamb-celular-2026-11-24',ST={};
+try{ST=JSON.parse(localStorage.getItem(K)||'{}')}catch(e){ST={}}
+function save(){try{localStorage.setItem(K,JSON.stringify(ST))}catch(e){}}
+var STATUS=['Não contatado','Msg 1 enviada','Respondeu','Link enviado','Acompanhamento enviado','Negociando','Fechou','Sem interesse'];
+var TABS=['1 · Primeiro contato','2 · Com o link','3 · Acompanhamento'];
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function waLink(x,i){return 'https://wa.me/'+x.wa+'?text='+encodeURIComponent(x.m[i])}
+function card(x){
+  var st=ST[x.slug]||{s:'Não contatado',t:0},t=st.t||0;
+  var chip=x.conf?'<span class="chip ok">WhatsApp confirmado</span>':'<span class="chip warn">'+(x.fixo?'Telefone fixo · não confirmado':'Não confirmado')+'</span>';
+  return '<article class="c'+(st.s==='Fechou'||st.s==='Sem interesse'?' done':'')+'" data-slug="'+x.slug+'">'+
+   '<div class="top"><div class="pts">'+x.pts+'<small>PTS</small></div><div class="who"><h2>'+x.r+'. '+esc(x.nome)+'</h2>'+
+   '<div class="meta">'+esc(x.cidade)+' · ★ '+String(x.nota).replace('.',',')+' ('+x.aval+') · '+x.seg.toLocaleString('pt-BR')+' seguidores</div>'+
+   '<div class="chips">'+(x.r<=10?'<span class="chip t10">Top 10</span>':'')+chip+'</div></div></div>'+
+   '<div class="tabs" role="tablist">'+TABS.map(function(n,i){return '<button type="button" role="tab" data-t="'+i+'" aria-selected="'+(i===t)+'">'+n+'</button>'}).join('')+'</div>'+
+   '<p class="msg">'+esc(x.m[t])+'</p>'+
+   '<div class="acts"><a class="wa" target="_blank" rel="noopener" href="'+waLink(x,t)+'">Abrir no WhatsApp</a><button type="button" class="cp">Copiar</button></div>'+
+   '<div class="links"><span class="num">'+esc(x.num)+'</span><a target="_blank" rel="noopener" href="https://www.instagram.com/'+esc(x.ig)+'/">@'+esc(x.ig)+'</a>'+
+   '<select aria-label="Status de '+esc(x.nome)+'">'+STATUS.map(function(s){return '<option'+(s===st.s?' selected':'')+'>'+s+'</option>'}).join('')+'</select></div>'+
+   (x.linkBio?'<details><summary>Sobre o número</summary>A bio tem um link de WhatsApp sem número visível; o botão usa o telefone do Google. Se não abrir, chame pelo Instagram.</details>':'')+
+   '<details><summary>Por que esta casa</summary>'+esc(x.just)+'</details>'+
+  '</article>';
+}
+var filtro='todas';
+function render(){
+  var v=D.filter(function(x){var s=(ST[x.slug]||{}).s||'Não contatado';
+    return filtro==='todas'||(filtro==='top'&&x.r<=10)||(filtro==='pend'&&s==='Não contatado')||(filtro==='conf'&&x.conf)});
+  document.getElementById('list').innerHTML=v.map(card).join('');
+  document.getElementById('count').textContent=v.length+' de '+D.length;
+}
+document.querySelector('.bar').addEventListener('click',function(e){var b=e.target.closest('button[data-f]');if(!b)return;filtro=b.dataset.f;
+  document.querySelectorAll('.bar button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});render()});
+var list=document.getElementById('list');
+function get(el){var c=el.closest('.c');return{c:c,x:D.filter(function(d){return d.slug===c.dataset.slug})[0]}}
+list.addEventListener('click',function(e){
+  var tb=e.target.closest('button[data-t]');
+  if(tb){var g=get(tb),t=+tb.dataset.t;ST[g.x.slug]=ST[g.x.slug]||{s:'Não contatado'};ST[g.x.slug].t=t;save();
+    g.c.querySelectorAll('[data-t]').forEach(function(b){b.setAttribute('aria-selected',b===tb)});
+    g.c.querySelector('.msg').textContent=g.x.m[t];g.c.querySelector('.wa').href=waLink(g.x,t);return}
+  var cp=e.target.closest('.cp');
+  if(cp){var g2=get(cp),txt=g2.c.querySelector('.msg').textContent;
+    function ok(){cp.textContent='Copiado';cp.classList.add('ok');setTimeout(function(){cp.textContent='Copiar';cp.classList.remove('ok')},1800)}
+    function fallback(){var r=document.createRange();r.selectNodeContents(g2.c.querySelector('.msg'));var s=getSelection();s.removeAllRanges();s.addRange(r);cp.textContent='Selecionado'}
+    try{navigator.clipboard.writeText(txt).then(ok,fallback)}catch(err){fallback()}}
+});
+list.addEventListener('change',function(e){if(e.target.tagName!=='SELECT')return;var g=get(e.target);
+  ST[g.x.slug]=ST[g.x.slug]||{t:0};ST[g.x.slug].s=e.target.value;save();
+  g.c.classList.toggle('done',e.target.value==='Fechou'||e.target.value==='Sem interesse')});
+render();
+</script>

@@ -1731,6 +1731,21 @@
       "dest": "/clientes/dra-ana-cibele/$1"
     },
     {
+      "src": "/(1924-burger|bingos-burguer|burgers-nobre|desejos-burger|fire-burger-angus|forja-burguer|galo-burger|hamburgueria-09|hamburgueria-do-polaco|high-burger|homer-burguer|insanos-hamburgueria|leao-hamburgueria|maverick-burger|moreiras-burguer|o-burger-lavras|peso-pesado-hamburgueria|philadelphia-burger|puro-burguer-smash|renascer-burger|saci-burgers|tata-burguer|tenda-burguer|vasques-burguer)/dados\\.js",
+      "dest": "/animados/demos/dados/$1.js",
+      "headers": {
+        "X-Robots-Tag": "noindex, nofollow, noarchive, nosnippet",
+        "Cache-Control": "public, max-age=600"
+      }
+    },
+    {
+      "src": "/(1924-burger|bingos-burguer|burgers-nobre|desejos-burger|fire-burger-angus|forja-burguer|galo-burger|hamburgueria-09|hamburgueria-do-polaco|high-burger|homer-burguer|insanos-hamburgueria|leao-hamburgueria|maverick-burger|moreiras-burguer|o-burger-lavras|peso-pesado-hamburgueria|philadelphia-burger|puro-burguer-smash|renascer-burger|saci-burgers|tata-burguer|tenda-burguer|vasques-burguer)/?",
+      "dest": "/animados/demos/index.html",
+      "headers": {
+        "X-Robots-Tag": "noindex, nofollow, noarchive, nosnippet"
+      }
+    },
+    {
       "src": "/(.*)",
       "dest": "/clientes/$1"
     }
