@@ -57,15 +57,17 @@
       '<rect x="40" y="322" width="220" height="44" rx="6" fill="'+INK+'"/><text x="150" y="352" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="21" fill="#fff">SUA FOTO AQUI</text><text x="150" y="388" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="13" fill="'+INK+'">ilustração · demonstração</text></svg>';
     return 'data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);
   }
-  var D='Espaço reservado: no site final entram a foto, a descrição e o preço reais deste item do cardápio.';
-  function grupo(cat,nota,base,k,n,off){var it=[];for(var i=1;i<=n;i++)it.push({n:base+' '+i,p:'R$ 00,00',d:D,img:ph(k,i+off)});return{cat:cat,nota:nota,itens:it}}
+  var D='Exemplo: no site final entram a foto, a descrição e o preço reais deste item do cardápio.';
+  // fotos de exemplo (as mesmas do site modelo); sem foto, cai na ilustração
+  var FOTOS={"burger":[["https://images.abrahao.com.br/x900/uploads/6380/product/1392821/assets/images/1311887.jpeg?v=1770192860","https://images.abrahao.com.br/x250/uploads/6380/product/1392821/assets/images/1311887.jpeg?v=1770192860"],["https://images.abrahao.com.br/x900/uploads/6380/product/988007/assets/images/918281.jpg?v=1744844767","https://images.abrahao.com.br/x250/uploads/6380/product/988007/assets/images/918281.jpg?v=1744844767"],["https://images.abrahao.com.br/x900/uploads/6380/product/1242959/assets/images/1601540.jpg?v=1790877482","https://images.abrahao.com.br/x250/uploads/6380/product/1242959/assets/images/1601540.jpg?v=1790877482"],["https://images.abrahao.com.br/x900/uploads/6380/product/988008/assets/images/918256.jpg?v=1744844270","https://images.abrahao.com.br/x250/uploads/6380/product/988008/assets/images/918256.jpg?v=1744844270"],["https://images.abrahao.com.br/x900/uploads/6380/product/988005/assets/images/918303.jpg?v=1744844959","https://images.abrahao.com.br/x250/uploads/6380/product/988005/assets/images/918303.jpg?v=1744844959"],["https://images.abrahao.com.br/x900/uploads/6380/product/988009/assets/images/918286.jpg?v=1744844824","https://images.abrahao.com.br/x250/uploads/6380/product/988009/assets/images/918286.jpg?v=1744844824"]],"fritas":[["https://images.abrahao.com.br/x900/uploads/6380/product/987990/assets/images/1173076.jpg?v=1761631113","https://images.abrahao.com.br/x250/uploads/6380/product/987990/assets/images/1173076.jpg?v=1761631113"],["https://images.abrahao.com.br/x900/uploads/6380/product/987989/assets/images/918327.jpg?v=1744845206","https://images.abrahao.com.br/x250/uploads/6380/product/987989/assets/images/918327.jpg?v=1744845206"]],"doce":[["https://images.abrahao.com.br/x900/uploads/6380/product/988052/assets/images/1537552.jpg?v=1783988269","https://images.abrahao.com.br/x250/uploads/6380/product/988052/assets/images/1537552.jpg?v=1783988269"],["https://images.abrahao.com.br/x900/uploads/6380/product/988050/assets/images/1537556.jpg?v=1783989405","https://images.abrahao.com.br/x250/uploads/6380/product/988050/assets/images/1537556.jpg?v=1783989405"]],"bebida":[["https://images.abrahao.com.br/x900/uploads/6380/product/988055/assets/images/918308.jpg?v=1744845009","https://images.abrahao.com.br/x250/uploads/6380/product/988055/assets/images/918308.jpg?v=1744845009"],["https://images.abrahao.com.br/x900/uploads/6380/product/988056/assets/images/918309.jpg?v=1744845022","https://images.abrahao.com.br/x250/uploads/6380/product/988056/assets/images/918309.jpg?v=1744845022"]]};
+  function grupo(cat,nota,base,k,n,off){var it=[];for(var i=1;i<=n;i++){var f=(FOTOS[k]||[])[i-1];it.push({n:base+' '+i,p:'R$ 00,00',d:D,img:f?f[0]:ph(k,i+off),thumb:f?f[1]:''})}return{cat:cat,nota:nota,itens:it}}
   if(!S.cardapio){
     S.cardapio=[grupo('Burgers','exemplo','Seu burger','burger',6,0),grupo('Acompanhamentos','exemplo','Sua porção','fritas',2,1),grupo('Sobremesas','exemplo','Sua sobremesa','doce',2,2),grupo('Bebidas','exemplo','Sua bebida','bebida',2,0)];
     S.hero=['Seu burger 2','Sua porção 1','Seu burger 3','Sua bebida 1','Seu burger 1'];
     S.destaques=[1,2,3,4].map(function(i){return{n:'Seu burger '+i,tag:'Exemplo'}});
     S.leque={titulo:'Pra fechar',sub:'Espaço para sobremesas e bebidas da casa (exemplo).',itens:['Sua sobremesa 1','Sua bebida 1','Sua sobremesa 2','Sua bebida 2']};
     S.queda=['Seu burger 1','Sua porção 1','Seu burger 2','Sua bebida 1','Seu burger 3','Sua sobremesa 1','Seu burger 4','Sua porção 2','Seu burger 5','Sua sobremesa 2','Seu burger 6','Sua bebida 2'];
-    S.notaCardapio='Demonstração: os itens abaixo são espaços reservados. No site final entram os nomes, fotos, descrições e preços reais do cardápio da casa.';
+    S.notaCardapio='Demonstração: os itens e as fotos abaixo são apenas exemplos ilustrativos. No site final entram os nomes, fotos, descrições e preços reais do cardápio da casa.';
   }
   S.secoes=S.secoes||{destaques:'Destaques',cardapio:'Cardápio',casa:'A casa',casaCurto:'A casa'};
   S.notaPedido=S.notaPedido||'Na demonstração, o botão leva ao canal de pedidos que a casa já divulga.';
@@ -303,6 +305,8 @@ footer .brand{font-size:26px}
 @media (max-width:760px){.demo-tag{top:auto;bottom:10px;right:10px;font-size:10px;padding:6px 9px}}
 footer .aviso{flex-basis:100%;max-width:90ch;font-size:12px;line-height:1.5;border-top:1px solid rgba(255,255,255,.12);padding-top:14px}
 footer .aviso b{color:var(--c)}
+.panel{position:relative}
+.panel::after{content:'Foto ilustrativa';position:absolute;left:8px;bottom:8px;font:700 10px/1 var(--b);letter-spacing:.04em;text-transform:uppercase;color:#fff;background:rgba(0,0,0,.55);padding:4px 6px;border-radius:4px;pointer-events:none}
 html.lenis,html.lenis body{height:auto}
 .lenis.lenis-stopped{overflow:hidden}
 </style>
@@ -479,8 +483,8 @@ function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return
   S.linkRota='https://www.google.com/maps/dir/?api=1&destination='+encodeURIComponent(S.buscaGoogle);
   if(S.tamanhoNome)document.documentElement.style.setProperty('--mega',S.tamanhoNome);
   if(S.demo){
-    S.rodape=S.nomeCompleto+' · '+S.endereco.linha+', '+S.endereco.sub+'. Nota, número e trechos de avaliações públicas do Google consultados em '+S.verificadoEm+' (cada trecho mostra só o primeiro nome do autor; leia as avaliações completas no Google). Imagens: ilustrações provisórias.';
-    document.getElementById('aviso-demo').innerHTML='<b>Demonstração comercial não oficial.</b> Esta página é uma proposta de site criada por '+esc(S.autorDemo||'NexoFrame IA')+' para apresentar a ideia ao '+esc(S.nomeCompleto)+'. Ela não é o site oficial do estabelecimento e não foi contratada nem autorizada por ele. Os itens de cardápio e as fotos são espaços reservados; nenhum preço ou produto foi inventado.';
+    S.rodape=S.nomeCompleto+' · '+S.endereco.linha+', '+S.endereco.sub+'. Nota, número e trechos de avaliações públicas do Google consultados em '+S.verificadoEm+' (cada trecho mostra só o primeiro nome do autor; leia as avaliações completas no Google). Fotos: imagens ilustrativas de exemplo, não são produtos desta casa.';
+    document.getElementById('aviso-demo').innerHTML='<b>Demonstração comercial não oficial.</b> Esta página é uma proposta de site criada por '+esc(S.autorDemo||'NexoFrame IA')+' para apresentar a ideia ao '+esc(S.nomeCompleto)+'. Ela não é o site oficial do estabelecimento e não foi contratada nem autorizada por ele. Os itens de cardápio são espaços reservados e as fotos são apenas ilustrativas, de exemplo; no site final entram as fotos e os produtos da casa.';
   }
   document.querySelectorAll('[data-t]').forEach(function(el){var v=get(el.dataset.t);if(v!=null)el.textContent=v});
   document.querySelectorAll('[data-h]').forEach(function(el){el.innerHTML=get(el.dataset.h)||''});
